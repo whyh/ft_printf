@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="ft_printf"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ft_printf">
+				<Option output="/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/ft_printf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 ft_printf"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ft_printf/fast">
+				<Option output="/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/ft_printf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 ft_printf/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/ft_printf">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf.h">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_convs_cspf.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_convs_diouxx.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_fill_funs.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_flags_base.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_parse.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_atoi.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_atoibase.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_bzero.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_find_distance_to_char.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_get_next_line.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_intiteri.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_is_included.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_is_whitespace.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_isalnum.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_isalpha.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_isascii.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_isdigit.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_isprint.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_itoabase.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_linelen.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_linetrim.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_lstadd.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_lstdel.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_lstdelone.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_lstiter.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_lstmap.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_lstnew.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_memalloc.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_memccpy.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_memchr.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_memcmp.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_memcpy.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_memdel.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_memmove.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_memset.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_putchar.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_putchar_fd.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_putendl.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_putendl_fd.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_putnbr.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_putnbr_fd.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_putstr.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_putstr_fd.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strcat.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strchr.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strclr.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strcmp.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strcpy.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strdel.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strdup.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strequ.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strinject.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_striter.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_striteri.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strjoin.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strlcat.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strlen.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strmap.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strmapi.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strncat.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strncmp.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strncpy.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strndup.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strnequ.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strnew.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strnstr.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strrchr.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strsplit.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strstr.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strsub.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strtrim.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_tolower.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_toupper.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/libft.h">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/main.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
