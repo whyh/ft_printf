@@ -112,7 +112,7 @@ void		ft_printf_f_width(t_printf_mods mods, t_printf_buff *buff)
 	char	*tmp;
 
 	length = (int)ft_strlen(buff->buff);
-	if (ft_is_included(mods.flags, '0') && mods.conv != 'f'
+	if (ft_is_included(mods.flags, '0') && mods.conv != 'f' && mods.conv != '%'
 	&& !ft_is_included(PRINTF_CONVS_UNS, mods.conv)
 	&& !ft_is_included(PRINTF_CONVS_SN, mods.conv))
 		return ;//handle error

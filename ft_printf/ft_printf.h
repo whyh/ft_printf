@@ -18,9 +18,9 @@
 #include "../libft/libft.h"
 
 # define PRINTF_FLAGS "+- 0#"
-# define PRINTF_CONVS "cspdifouxX"
+# define PRINTF_CONVS "%cspdifouxX"
 # define PRINTF_CONVS_SN "di"
-# define PRINTF_CONVS_UNS "ouxX"
+# define PRINTF_CONVS_UNS "%ouxX"
 # define PRINTF_LENGTH "lhL"
 # define PRINTF_DLENGTH "lh"
 
@@ -64,6 +64,7 @@ int		ft_printf_conv_c(va_list *args, t_printf_mods mods, t_printf_buff *buff);
 int		ft_printf_conv_s(va_list *args, t_printf_mods mods, t_printf_buff *buff);
 int		ft_printf_conv_p(va_list *args, t_printf_mods mods, t_printf_buff *buff);
 int		ft_printf_conv_f(va_list *args, t_printf_mods mods, t_printf_buff *buff);
+int		ft_printf_conv_nothing(va_list *args, t_printf_mods mods, t_printf_buff *buff);
 void	ft_printf_fill_flags(t_printf_funs *funs);
 int		ft_printf_flag_hash(va_list *args, t_printf_mods mods, t_printf_buff *buff);
 int		ft_printf_flag_plus(va_list *args, t_printf_mods mods, t_printf_buff *buff);

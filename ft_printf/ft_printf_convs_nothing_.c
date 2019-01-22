@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_fill_funs.c                              :+:      :+:    :+:   */
+/*   ft_printf_convs_nothing_.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dderevyn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,24 +12,11 @@
 
 #include "ft_printf.h"
 
-void	ft_printf_fill_flags(t_printf_funs *funs)
+int		ft_printf_conv_nothing(va_list *args, t_printf_mods mods, t_printf_buff *buff)
 {
-	funs['#'] = &ft_printf_flag_hash;
-	funs['+'] = &ft_printf_flag_plus;
-	funs[' '] = &ft_printf_flag_blank;
+	(void)args;
+	(void)mods;
+	buff->buff = ft_strdup("%");
+	return (1);
 }
 
-void	ft_printf_fill_convs(t_printf_funs *funs)
-{
-	funs['d'] = &ft_printf_convs_di;
-	funs['i'] = &ft_printf_convs_di;
-	funs['o'] = &ft_printf_conv_o;
-	funs['u'] = &ft_printf_conv_u;
-	funs['x'] = &ft_printf_conv_x;
-	funs['X'] = &ft_printf_conv_cap_x;
-	funs['c'] = &ft_printf_conv_c;
-	funs['s'] = &ft_printf_conv_s;
-	funs['p'] = &ft_printf_conv_p;
-	funs['f'] = &ft_printf_conv_f;
-	funs['%'] = &ft_printf_conv_nothing;
-}

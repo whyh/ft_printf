@@ -204,6 +204,33 @@ ft_printf/ft_printf_convs_diouxx.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_convs_diouxx.c.s
 .PHONY : ft_printf/ft_printf_convs_diouxx.c.s
 
+ft_printf/ft_printf_convs_nothing_.o: ft_printf/ft_printf_convs_nothing_.c.o
+
+.PHONY : ft_printf/ft_printf_convs_nothing_.o
+
+# target to build an object file
+ft_printf/ft_printf_convs_nothing_.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_convs_nothing_.c.o
+.PHONY : ft_printf/ft_printf_convs_nothing_.c.o
+
+ft_printf/ft_printf_convs_nothing_.i: ft_printf/ft_printf_convs_nothing_.c.i
+
+.PHONY : ft_printf/ft_printf_convs_nothing_.i
+
+# target to preprocess a source file
+ft_printf/ft_printf_convs_nothing_.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_convs_nothing_.c.i
+.PHONY : ft_printf/ft_printf_convs_nothing_.c.i
+
+ft_printf/ft_printf_convs_nothing_.s: ft_printf/ft_printf_convs_nothing_.c.s
+
+.PHONY : ft_printf/ft_printf_convs_nothing_.s
+
+# target to generate assembly for a file
+ft_printf/ft_printf_convs_nothing_.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_convs_nothing_.c.s
+.PHONY : ft_printf/ft_printf_convs_nothing_.c.s
+
 ft_printf/ft_printf_fill_funs.o: ft_printf/ft_printf_fill_funs.c.o
 
 .PHONY : ft_printf/ft_printf_fill_funs.o
@@ -2193,6 +2220,9 @@ help:
 	@echo "... ft_printf/ft_printf_convs_diouxx.o"
 	@echo "... ft_printf/ft_printf_convs_diouxx.i"
 	@echo "... ft_printf/ft_printf_convs_diouxx.s"
+	@echo "... ft_printf/ft_printf_convs_nothing_.o"
+	@echo "... ft_printf/ft_printf_convs_nothing_.i"
+	@echo "... ft_printf/ft_printf_convs_nothing_.s"
 	@echo "... ft_printf/ft_printf_fill_funs.o"
 	@echo "... ft_printf/ft_printf_fill_funs.i"
 	@echo "... ft_printf/ft_printf_fill_funs.s"

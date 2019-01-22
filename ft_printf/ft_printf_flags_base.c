@@ -18,6 +18,8 @@ int	ft_printf_flag_plus(va_list *args, t_printf_mods mods, t_printf_buff *buff)
 	char	*tmp;
 
 	(void)args;
+	if (mods.conv == '%')
+		return (1);
 	if (!ft_is_included(PRINTF_CONVS_SN, mods.conv))
 			return (0);//handle error
 	i = 0;
@@ -38,6 +40,8 @@ int	ft_printf_flag_blank(va_list *args, t_printf_mods mods, t_printf_buff *buff)
 	char	*tmp;
 
 	(void)args;
+	if (mods.conv == '%')
+		return (1);
 	if (!ft_is_included(PRINTF_CONVS_SN, mods.conv))
 		return (0);//handle error
 	if (ft_is_included(mods.flags, '+'))

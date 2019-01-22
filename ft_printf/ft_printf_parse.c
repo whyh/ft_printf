@@ -20,11 +20,12 @@ void	ft_printf_parse_flags(char **format,t_printf_mods *mods)
 	i = 0;
 	n_of_flags = (int)ft_strlen(PRINTF_FLAGS);
 	mods->flags = ft_strnew((size_t)n_of_flags);
-	while (ft_is_included(PRINTF_FLAGS, **format) && i < n_of_flags
-	&& !ft_is_included(mods->flags, **format))
+	while (ft_is_included(PRINTF_FLAGS, **format))
 	{
-		mods->flags[i] = **format;
-		++i;
+		if (i < n_of_flags && !ft_is_included(mods->flags, **format))
+			mods->flags[i++] = **format;
+		while (**format == *(*format + 1))
+			(*format)++;
 		(*format)++;
 	}
 }

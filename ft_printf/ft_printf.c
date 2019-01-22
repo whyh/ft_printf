@@ -44,11 +44,6 @@ int ft_printf_iter(char **format, va_list *args, t_printf_buff *buff)
 			if (!ft_printf_parse_mods(format, args, buff))
 				return (0);
 		}
-		if (**format == '%' && *(*format + 1) == '%')
-		{
-			(*format)++;
-			ft_printf_save_to_buff(format, buff);
-		}
 		if (**format != '%')
 			ft_printf_save_to_buff(format, buff);
 	}

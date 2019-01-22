@@ -9,8 +9,8 @@ int main(void)
 
 	i = 2;
 	p = &i;
-	printf("|%.21f|%-20s|%05.0d|\n", -5235234.123456789, "string", 1);
-	ft_printf("|%.21f|%-20s|%05.0d|\n", -5235234.123456789, "string", 1);
+	   printf("   printf:-->%0-5s<--\n", "test");
+	ft_printf("ft_printf:-->%0-5s<--\n", "test");
 	return (1);
 }
 

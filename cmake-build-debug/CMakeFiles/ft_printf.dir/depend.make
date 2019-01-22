@@ -13,6 +13,10 @@ CMakeFiles/ft_printf.dir/ft_printf/ft_printf_convs_diouxx.c.o: ../ft_printf/ft_p
 CMakeFiles/ft_printf.dir/ft_printf/ft_printf_convs_diouxx.c.o: ../ft_printf/ft_printf_convs_diouxx.c
 CMakeFiles/ft_printf.dir/ft_printf/ft_printf_convs_diouxx.c.o: ../libft/libft.h
 
+CMakeFiles/ft_printf.dir/ft_printf/ft_printf_convs_nothing_.c.o: ../ft_printf/ft_printf.h
+CMakeFiles/ft_printf.dir/ft_printf/ft_printf_convs_nothing_.c.o: ../ft_printf/ft_printf_convs_nothing_.c
+CMakeFiles/ft_printf.dir/ft_printf/ft_printf_convs_nothing_.c.o: ../libft/libft.h
+
 CMakeFiles/ft_printf.dir/ft_printf/ft_printf_fill_funs.c.o: ../ft_printf/ft_printf.h
 CMakeFiles/ft_printf.dir/ft_printf/ft_printf_fill_funs.c.o: ../ft_printf/ft_printf_fill_funs.c
 CMakeFiles/ft_printf.dir/ft_printf/ft_printf_fill_funs.c.o: ../libft/libft.h
