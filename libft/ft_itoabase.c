@@ -75,6 +75,8 @@ char		*ft_itoabase(char *set, long long nb)
 	if (!set || static_ft_fdset(set))
 		return (NULL);
 	base = (int)ft_strlen(set);
+	if (nb == 0 && (str = ft_strnew(1)) && (str[0] = '0'))
+		return (str);
 	size = static_ft_size(1, nb, base);
 	if (!(str = ft_strnew((size_t)size)))
 		return (NULL);
@@ -100,7 +102,9 @@ char		*ft_itoabase_unsigned(char *set, unsigned long long nb)
 
 	if (!set || static_ft_fdset(set))
 		return (NULL);
-	base = (int)ft_strlen(set);
+	base = (int) ft_strlen(set);
+	if (nb == 0 && (str = ft_strnew(1)) && (str[0] = '0'))
+		return (str);
 	size = static_ft_size_unsigned(1, nb, base);
 	if (!(str = ft_strnew((size_t)size)))
 		return (NULL);

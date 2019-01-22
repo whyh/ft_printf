@@ -81,7 +81,6 @@ int ft_printf_parse_mods(char **format, va_list *args, t_printf_buff *buff)
 	t_printf_mods	mods;
 	t_printf_buff	*new_node;
 
-
 	if (**format == '\0')
 		return (0);
 	ft_printf_parse_flags(format, &mods);
@@ -102,7 +101,7 @@ int ft_printf_parse_mods(char **format, va_list *args, t_printf_buff *buff)
 
 int ft_printf_exec(t_printf_mods mods, va_list *args, t_printf_buff *buff)
 {
-	static t_printf_funs	*funs;
+	static t_printf_funs	*funs = NULL;
 	int 					i;
 
 	if (!funs)
@@ -113,16 +112,18 @@ int ft_printf_exec(t_printf_mods mods, va_list *args, t_printf_buff *buff)
 	}
 	if (!funs[(int)mods.conv](args, mods, buff)) // check for '\0' if so remove return in func upper
 		return (0);
-//	if (mods.prec != 1)
-//		ft_printf_prec();
-//	if (mods.f_width != 0)
-//		ft_printf_f_width();
-//	ft_printf_sort_flags(mods.flags);// compare with PRINTF_FLAGS to sort // put in parce flags file
+	if (mods.prec_spec == 1 || mods.conv == 'f')
+		if (!(ft_printf_prec(mods, buff)))
+			return (0);
 	i = 0;
 	while (mods.flags[i])
 	{
-		funs[(int)mods.flags[i]](args, mods, buff);
+		if (funs[(int)mods.flags[i]])
+			if (!(funs[(int)mods.flags[i]](args, mods, buff)))
+				return (0);
 		++i;
 	}
+	if (mods.f_width != 0)
+		ft_printf_f_width(mods, buff);
 	return (1);
 }

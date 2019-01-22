@@ -49,10 +49,11 @@ void	ft_printf_parce_prec(char **format, t_printf_mods *mods)
 {
 	int	precis;
 
+	mods->prec_spec = 0;
 	mods->prec = 1;
 	if (**format != '.')
 		return ;
-	mods->prec = -1;
+	mods->prec_spec = 1;
 	(*format)++;
 	precis = 0;
 	while (**format >= '0' && **format <= '9')
@@ -75,10 +76,11 @@ void	ft_printf_parce_length(char **format, t_printf_mods *mods)
 	mods->length[i] = **format;
 	++i;
 	(*format)++;
-	if (!ft_is_included(PRINTF_DLENGTH, **format) && **format == *(*format - 1))
-		return ;
-	mods->length[i] = **format;
-	(*format)++;
+	if (ft_is_included(PRINTF_DLENGTH, **format) && **format == *(*format - 1))
+	{
+		mods->length[i] = **format;
+		(*format)++;
+	}
 }
 
 int		ft_printf_parce_conv(char **format, t_printf_mods *mods)

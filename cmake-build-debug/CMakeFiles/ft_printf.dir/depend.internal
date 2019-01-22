@@ -25,6 +25,10 @@ CMakeFiles/ft_printf.dir/ft_printf/ft_printf_parse.c.o
  /Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf.h
  /Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_parse.c
  /Users/dderevyn/CLionProjects/ft_printf/libft/libft.h
+CMakeFiles/ft_printf.dir/ft_printf/ft_printf_prec_f_width.c.o
+ /Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf.h
+ /Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_prec_f_width.c
+ /Users/dderevyn/CLionProjects/ft_printf/libft/libft.h
 CMakeFiles/ft_printf.dir/libft/ft_atoi.c.o
  /Users/dderevyn/CLionProjects/ft_printf/libft/ft_atoi.c
  /Users/dderevyn/CLionProjects/ft_printf/libft/libft.h
@@ -36,6 +40,9 @@ CMakeFiles/ft_printf.dir/libft/ft_bzero.c.o
  /Users/dderevyn/CLionProjects/ft_printf/libft/libft.h
 CMakeFiles/ft_printf.dir/libft/ft_find_distance_to_char.c.o
  /Users/dderevyn/CLionProjects/ft_printf/libft/ft_find_distance_to_char.c
+ /Users/dderevyn/CLionProjects/ft_printf/libft/libft.h
+CMakeFiles/ft_printf.dir/libft/ft_get_next_line.c.o
+ /Users/dderevyn/CLionProjects/ft_printf/libft/ft_get_next_line.c
  /Users/dderevyn/CLionProjects/ft_printf/libft/libft.h
 CMakeFiles/ft_printf.dir/libft/ft_intiteri.c.o
  /Users/dderevyn/CLionProjects/ft_printf/libft/ft_intiteri.c
@@ -152,6 +159,9 @@ CMakeFiles/ft_printf.dir/libft/ft_strdup.c.o
 CMakeFiles/ft_printf.dir/libft/ft_strequ.c.o
  /Users/dderevyn/CLionProjects/ft_printf/libft/ft_strequ.c
  /Users/dderevyn/CLionProjects/ft_printf/libft/libft.h
+CMakeFiles/ft_printf.dir/libft/ft_strinject.c.o
+ /Users/dderevyn/CLionProjects/ft_printf/libft/ft_strinject.c
+ /Users/dderevyn/CLionProjects/ft_printf/libft/libft.h
 CMakeFiles/ft_printf.dir/libft/ft_striter.c.o
  /Users/dderevyn/CLionProjects/ft_printf/libft/ft_striter.c
  /Users/dderevyn/CLionProjects/ft_printf/libft/libft.h
@@ -182,6 +192,9 @@ CMakeFiles/ft_printf.dir/libft/ft_strncmp.c.o
 CMakeFiles/ft_printf.dir/libft/ft_strncpy.c.o
  /Users/dderevyn/CLionProjects/ft_printf/libft/ft_strncpy.c
  /Users/dderevyn/CLionProjects/ft_printf/libft/libft.h
+CMakeFiles/ft_printf.dir/libft/ft_strndup.c.o
+ /Users/dderevyn/CLionProjects/ft_printf/libft/ft_strndup.c
+ /Users/dderevyn/CLionProjects/ft_printf/libft/libft.h
 CMakeFiles/ft_printf.dir/libft/ft_strnequ.c.o
  /Users/dderevyn/CLionProjects/ft_printf/libft/ft_strnequ.c
  /Users/dderevyn/CLionProjects/ft_printf/libft/libft.h
@@ -210,9 +223,6 @@ CMakeFiles/ft_printf.dir/libft/ft_tolower.c.o
  /Users/dderevyn/CLionProjects/ft_printf/libft/ft_tolower.c
 CMakeFiles/ft_printf.dir/libft/ft_toupper.c.o
  /Users/dderevyn/CLionProjects/ft_printf/libft/ft_toupper.c
-CMakeFiles/ft_printf.dir/libft/get_next_line.c.o
- /Users/dderevyn/CLionProjects/ft_printf/libft/get_next_line.c
- /Users/dderevyn/CLionProjects/ft_printf/libft/libft.h
 CMakeFiles/ft_printf.dir/main.c.o
  /Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf.h
  /Users/dderevyn/CLionProjects/ft_printf/libft/libft.h

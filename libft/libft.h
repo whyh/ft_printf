@@ -20,9 +20,11 @@
 # include <sys/types.h>
 # include <sys/stat.h>
 
-# define LLONG_MAX 9223372036854775807
-# define INT_MIN	-2147483648
 # define GNL_BUFF_SIZE 80
+# define LLONG_MAX 9223372036854775807
+# define INT_MIN -2147483648
+# define HEX "0123456789abcdef"
+# define HEX_CAP "0123456789ABCDEF"
 
 typedef struct		s_list
 {

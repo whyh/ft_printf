@@ -25,6 +25,10 @@ CMakeFiles/ft_printf.dir/ft_printf/ft_printf_parse.c.o: ../ft_printf/ft_printf.h
 CMakeFiles/ft_printf.dir/ft_printf/ft_printf_parse.c.o: ../ft_printf/ft_printf_parse.c
 CMakeFiles/ft_printf.dir/ft_printf/ft_printf_parse.c.o: ../libft/libft.h
 
+CMakeFiles/ft_printf.dir/ft_printf/ft_printf_prec_f_width.c.o: ../ft_printf/ft_printf.h
+CMakeFiles/ft_printf.dir/ft_printf/ft_printf_prec_f_width.c.o: ../ft_printf/ft_printf_prec_f_width.c
+CMakeFiles/ft_printf.dir/ft_printf/ft_printf_prec_f_width.c.o: ../libft/libft.h
+
 CMakeFiles/ft_printf.dir/libft/ft_atoi.c.o: ../libft/ft_atoi.c
 CMakeFiles/ft_printf.dir/libft/ft_atoi.c.o: ../libft/libft.h
 
@@ -36,6 +40,9 @@ CMakeFiles/ft_printf.dir/libft/ft_bzero.c.o: ../libft/libft.h
 
 CMakeFiles/ft_printf.dir/libft/ft_find_distance_to_char.c.o: ../libft/ft_find_distance_to_char.c
 CMakeFiles/ft_printf.dir/libft/ft_find_distance_to_char.c.o: ../libft/libft.h
+
+CMakeFiles/ft_printf.dir/libft/ft_get_next_line.c.o: ../libft/ft_get_next_line.c
+CMakeFiles/ft_printf.dir/libft/ft_get_next_line.c.o: ../libft/libft.h
 
 CMakeFiles/ft_printf.dir/libft/ft_intiteri.c.o: ../libft/ft_intiteri.c
 
@@ -152,6 +159,9 @@ CMakeFiles/ft_printf.dir/libft/ft_strdup.c.o: ../libft/libft.h
 CMakeFiles/ft_printf.dir/libft/ft_strequ.c.o: ../libft/ft_strequ.c
 CMakeFiles/ft_printf.dir/libft/ft_strequ.c.o: ../libft/libft.h
 
+CMakeFiles/ft_printf.dir/libft/ft_strinject.c.o: ../libft/ft_strinject.c
+CMakeFiles/ft_printf.dir/libft/ft_strinject.c.o: ../libft/libft.h
+
 CMakeFiles/ft_printf.dir/libft/ft_striter.c.o: ../libft/ft_striter.c
 CMakeFiles/ft_printf.dir/libft/ft_striter.c.o: ../libft/libft.h
 
@@ -182,6 +192,9 @@ CMakeFiles/ft_printf.dir/libft/ft_strncmp.c.o: ../libft/libft.h
 CMakeFiles/ft_printf.dir/libft/ft_strncpy.c.o: ../libft/ft_strncpy.c
 CMakeFiles/ft_printf.dir/libft/ft_strncpy.c.o: ../libft/libft.h
 
+CMakeFiles/ft_printf.dir/libft/ft_strndup.c.o: ../libft/ft_strndup.c
+CMakeFiles/ft_printf.dir/libft/ft_strndup.c.o: ../libft/libft.h
+
 CMakeFiles/ft_printf.dir/libft/ft_strnequ.c.o: ../libft/ft_strnequ.c
 CMakeFiles/ft_printf.dir/libft/ft_strnequ.c.o: ../libft/libft.h
 
@@ -209,9 +222,6 @@ CMakeFiles/ft_printf.dir/libft/ft_strtrim.c.o: ../libft/libft.h
 CMakeFiles/ft_printf.dir/libft/ft_tolower.c.o: ../libft/ft_tolower.c
 
 CMakeFiles/ft_printf.dir/libft/ft_toupper.c.o: ../libft/ft_toupper.c
-
-CMakeFiles/ft_printf.dir/libft/get_next_line.c.o: ../libft/get_next_line.c
-CMakeFiles/ft_printf.dir/libft/get_next_line.c.o: ../libft/libft.h
 
 CMakeFiles/ft_printf.dir/main.c.o: ../ft_printf/ft_printf.h
 CMakeFiles/ft_printf.dir/main.c.o: ../libft/libft.h

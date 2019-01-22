@@ -285,6 +285,33 @@ ft_printf/ft_printf_parse.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_parse.c.s
 .PHONY : ft_printf/ft_printf_parse.c.s
 
+ft_printf/ft_printf_prec_f_width.o: ft_printf/ft_printf_prec_f_width.c.o
+
+.PHONY : ft_printf/ft_printf_prec_f_width.o
+
+# target to build an object file
+ft_printf/ft_printf_prec_f_width.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_prec_f_width.c.o
+.PHONY : ft_printf/ft_printf_prec_f_width.c.o
+
+ft_printf/ft_printf_prec_f_width.i: ft_printf/ft_printf_prec_f_width.c.i
+
+.PHONY : ft_printf/ft_printf_prec_f_width.i
+
+# target to preprocess a source file
+ft_printf/ft_printf_prec_f_width.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_prec_f_width.c.i
+.PHONY : ft_printf/ft_printf_prec_f_width.c.i
+
+ft_printf/ft_printf_prec_f_width.s: ft_printf/ft_printf_prec_f_width.c.s
+
+.PHONY : ft_printf/ft_printf_prec_f_width.s
+
+# target to generate assembly for a file
+ft_printf/ft_printf_prec_f_width.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_prec_f_width.c.s
+.PHONY : ft_printf/ft_printf_prec_f_width.c.s
+
 libft/ft_atoi.o: libft/ft_atoi.c.o
 
 .PHONY : libft/ft_atoi.o
@@ -2175,6 +2202,9 @@ help:
 	@echo "... ft_printf/ft_printf_parse.o"
 	@echo "... ft_printf/ft_printf_parse.i"
 	@echo "... ft_printf/ft_printf_parse.s"
+	@echo "... ft_printf/ft_printf_prec_f_width.o"
+	@echo "... ft_printf/ft_printf_prec_f_width.i"
+	@echo "... ft_printf/ft_printf_prec_f_width.s"
 	@echo "... libft/ft_atoi.o"
 	@echo "... libft/ft_atoi.i"
 	@echo "... libft/ft_atoi.s"

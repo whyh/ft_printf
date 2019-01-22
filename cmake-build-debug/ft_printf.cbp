@@ -106,6 +106,9 @@
 		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_parse.c">
 			<Option target="ft_printf"/>
 		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_prec_f_width.c">
+			<Option target="ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_atoi.c">
 			<Option target="ft_printf"/>
 		</Unit>
