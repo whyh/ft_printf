@@ -12,6 +12,7 @@
 
 NAME = libftprintf.a
 
+OBJS_DIR = .libftprintf_objects
 CC = clang
 CFLAGS = -Wall -Wextra -Werror
 RM = /bin/rm -rf
@@ -86,6 +87,8 @@ LIBFT_SRCS = 	ft_atoi.c\
 				ft_strtrim.c\
 				ft_tolower.c\
 				ft_toupper.c
+LIBFT_OBJS = $(LIBFT_SRCS:%.c=$(LIBFT_OBJS_DIR)/%.o)
+LIBFT_OBJS_DIR = $(OBJS_DIR)
 
 PRINTF_PATH = ft_printf/
 PRINTF_INCS = ft_printf.h
@@ -96,35 +99,42 @@ PRINTF_SRCS =	ft_printf.c\
 				ft_printf_flags_base.c\
 				ft_printf_parse.c\
 				ft_printf_prec_f_width.c
+PRINTF_OBJS = $(PRINTF_SRCS:%.c=$(PRINTF_OBJS_DIR)/%.o)
+PRINTF_OBJS_DIR = $(OBJS_DIR)
 
-INCS = $(addprefix $(LIBFT_PATH),$(LIBFT_INCS))
-INCS += $(addprefix $(PRINTF_PATH),$(PRINTF_INCS))
+all: $(OBJS_DIR) $(NAME)
 
-SRCS = $(addprefix $(LIBFT_PATH),$(LIBFT_SRCS))
-SRCS += $(addprefix $(PRINTF_PATH),$(PRINTF_SRCS))
+$(NAME): $(LIBFT_OBJS) $(PRINTF_OBJS)
+	@ar rc $(NAME) $^
+	@ranlib $(NAME)
 
-all: $(NAME)
+$(OBJS_DIR):
+	@mkdir -p $(LIBFT_OBJS_DIR)
 
-$(NAME):
-	$(CC) $(CFLAGS) -c $(SRCS) -I.$(INCS)
-	ar rc libft.a *.o
-	ranlib $(NAME)
+$(LIBFT_OBJS_DIR)/%.o: $(LIBFT_PATH)%.c
+	@$(CC) $(CFLAGS) -c $< -I.$(addprefix $(LIBFT_PATH),$(LIBFT_INCS)) -o $@
 
-libf:
-	cd libft && make
-
-run:
-	$(CC) $(CFLAGS) main.c -Llibftprintf -o  && ./a.out
-
-norm:
-	norminette $(SRCS) $(INCS) && cd libft && make norm
+$(PRINTF_OBJS_DIR)/%.o: $(PRINTF_PATH)%.c
+	@$(CC) $(CFLAGS) -c $< -I.$(addprefix $(PRINTF_PATH),$(PRINTF_INCS)) -o $@
 
 clean:
-	$(RM) $(OBJS) && cd libft && make clean
+	@$(RM) $(OBJS_DIR)
 
 fclean: clean
-	$(RM) $(NAME) && cd libft && make fclean
+	@$(RM) $(NAME)
 
 re: fclean all
 
-.Phony: fclean all clean re norm run
+norm:
+	@\
+	norminette $(addprefix $(LIBFT_PATH),$(LIBFT_SRCS))\
+	$(addprefix $(LIBFT_PATH),$(LIBFT_INCS))\
+	$(addprefix $(PRINTF_PATH),$(PRINTF_SRCS))\
+	$(addprefix $(PRINTF_PATH),$(PRINTF_INCS))\
+
+run:
+	@$(CC) $(CFLAGS) main.c libftprintf.a
+	@./a.out || true
+	@$(RM) ./a.out
+
+.PHONY: all clean fclean re norm

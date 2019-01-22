@@ -13,6 +13,6 @@ add_executable(ft_printf ${LIBFT}
         ft_printf/ft_printf.c
         main.c
         ft_printf/ft_printf_parse.c
-        ft_printf/ft_printf_convs_diouxx.c ft_printf/ft_printf_fill_funs.c ft_printf/ft_printf_convs_cspf.c ft_printf/ft_printf_flags_base.c libft/ft_strndup.c libft/ft_strinject.c ft_printf/ft_printf_prec_f_width.c)
+        ft_printf/ft_printf_convs_diouxx.c ft_printf/ft_printf_fill_funs.c ft_printf/ft_printf_convs_cspf.c ft_printf/ft_printf_flags_base.c libft/ft_strndup.c libft/ft_strinject.c ft_printf/ft_printf_prec_f_width.c main.c main.c)
 
 link_libraries(libft/libft.a)

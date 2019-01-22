@@ -13,8 +13,8 @@
 NAME = libft.a
 
 CC = clang
-CFLAGS = -Wall -Wextra -Werror
 RM = /bin/rm -rf
+CFLAGS = -Wall -Wextra -Werror
 
 INCS = libft.h
 SRCS = 	ft_atoi.c\
@@ -84,9 +84,9 @@ SRCS = 	ft_atoi.c\
 		ft_strsub.c\
 		ft_strtrim.c\
 		ft_tolower.c\
-		ft_toupper.c
+		ft_toupper.c\
 
-OBJS_DIR = .tmp_objs
+OBJS_DIR = .tmp_libft_o
 OBJS = $(SRCS:%.c=$(OBJS_DIR)/%.o)
 
 all: $(NAME)
