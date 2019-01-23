@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_convs_nothing_.c                         :+:      :+:    :+:   */
+/*   ft_printf_conv_mod0.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dderevyn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,11 +12,11 @@
 
 #include "ft_printf.h"
 
-int		ft_printf_conv_nothing(va_list *args, t_printf_mods mods, t_printf_buff *buff)
+int		ft_printf_conv_mod0(va_list *args, t_printf_mods mods,
+		t_printf_buff *buff)
 {
 	(void)args;
 	(void)mods;
 	buff->buff = ft_strdup("%");
 	return (1);
 }
-

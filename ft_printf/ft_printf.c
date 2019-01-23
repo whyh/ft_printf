@@ -12,10 +12,11 @@
 
 #include "ft_printf.h"
 
-int	ft_printf(const char *format, ...)
+int		ft_printf(const char *format, ...)
 {
-	size_t 			chars_printed;
+	size_t			chars_printed;
 	t_printf_buff	*buff;
+	t_printf_buff	*prev_node;
 	va_list			args;
 
 	chars_printed = 0;
@@ -26,23 +27,24 @@ int	ft_printf(const char *format, ...)
 	ft_printf_iter((char **)&format, &args, buff);
 	while (buff != NULL)
 	{
-		chars_printed += ft_putstr(buff->buff);//unicode putstr
+		chars_printed += ft_putstr(buff->buff);
+		ft_strdel(&(buff->buff));
+		prev_node = buff;
 		buff = buff->next;
+		free(prev_node);
 	}
-	//del list
 	va_end(args);
 	return ((int)chars_printed);
 }
 
-int ft_printf_iter(char **format, va_list *args, t_printf_buff *buff)
+int		ft_printf_iter(char **format, va_list *args, t_printf_buff *buff)
 {
 	while (**format != '\0')
 	{
-		if (**format == '%' && *(*format + 1) != '%')
+		if (**format == '%')
 		{
 			(*format)++;
-			if (!ft_printf_parse_mods(format, args, buff))
-				return (0);
+			ft_printf_parse_mods(format, args, buff);
 		}
 		if (**format != '%')
 			ft_printf_save_to_buff(format, buff);
@@ -71,10 +73,11 @@ void	ft_printf_save_to_buff(char **format, t_printf_buff *buff)
 	(*format) += size;
 }
 
-int ft_printf_parse_mods(char **format, va_list *args, t_printf_buff *buff)
+int		ft_printf_parse_mods(char **format, va_list *args, t_printf_buff *buff)
 {
 	t_printf_mods	mods;
 	t_printf_buff	*new_node;
+	int				ret;
 
 	if (**format == '\0')
 		return (0);
@@ -89,15 +92,18 @@ int ft_printf_parse_mods(char **format, va_list *args, t_printf_buff *buff)
 	new_node = ft_memalloc(sizeof(t_printf_buff *));
 	new_node->next = NULL;
 	buff->next = new_node;
-	if (!(ft_printf_exec(mods, args, new_node)))
+	ret = ft_printf_exec(mods, args, new_node);
+	ft_strdel(&(mods.length));
+	ft_strdel(&(mods.flags));
+	if (ret == 0)
 		return (0);
 	return (1);
 }
 
-int ft_printf_exec(t_printf_mods mods, va_list *args, t_printf_buff *buff)
+int		ft_printf_exec(t_printf_mods mods, va_list *args, t_printf_buff *buff)
 {
 	static t_printf_funs	*funs = NULL;
-	int 					i;
+	int						i;
 
 	if (!funs)
 	{
@@ -105,11 +111,10 @@ int ft_printf_exec(t_printf_mods mods, va_list *args, t_printf_buff *buff)
 		ft_printf_fill_flags(funs);
 		ft_printf_fill_convs(funs);
 	}
-	if (!funs[(int)mods.conv](args, mods, buff)) // check for '\0' if so remove return in func upper
+	if (!funs[(int)mods.conv](args, mods, buff))
 		return (0);
 	if (mods.prec_spec == 1 || mods.conv == 'f')
-		if (!(ft_printf_prec(mods, buff)))
-			return (0);
+		ft_printf_prec(mods, buff);
 	i = 0;
 	while (mods.flags[i])
 	{
@@ -119,6 +124,6 @@ int ft_printf_exec(t_printf_mods mods, va_list *args, t_printf_buff *buff)
 		++i;
 	}
 	if (mods.f_width != 0)
-		ft_printf_f_width(mods, buff);
+		ft_printf_width(mods, buff);
 	return (1);
 }

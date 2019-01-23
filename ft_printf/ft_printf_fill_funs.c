@@ -17,6 +17,7 @@ void	ft_printf_fill_flags(t_printf_funs *funs)
 	funs['#'] = &ft_printf_flag_hash;
 	funs['+'] = &ft_printf_flag_plus;
 	funs[' '] = &ft_printf_flag_blank;
+	funs['0'] = &ft_printf_flag_zero;
 }
 
 void	ft_printf_fill_convs(t_printf_funs *funs)
@@ -31,5 +32,5 @@ void	ft_printf_fill_convs(t_printf_funs *funs)
 	funs['s'] = &ft_printf_conv_s;
 	funs['p'] = &ft_printf_conv_p;
 	funs['f'] = &ft_printf_conv_f;
-	funs['%'] = &ft_printf_conv_nothing;
+	funs['%'] = &ft_printf_conv_mod0;
 }

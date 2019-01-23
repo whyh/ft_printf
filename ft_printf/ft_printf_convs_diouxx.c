@@ -12,7 +12,8 @@
 
 #include "ft_printf.h"
 
-int		ft_printf_convs_di(va_list *args, t_printf_mods mods, t_printf_buff *buff)
+int		ft_printf_convs_di(va_list *args, t_printf_mods mods,
+		t_printf_buff *buff)
 {
 	if (mods.length[0] == '\0')
 		buff->buff = ft_itoabase("0123456789", va_arg(*args, int));
@@ -87,7 +88,8 @@ int		ft_printf_conv_x(va_list *args, t_printf_mods mods, t_printf_buff *buff)
 	return (1);
 }
 
-int		ft_printf_conv_cap_x(va_list *args, t_printf_mods mods, t_printf_buff *buff)
+int		ft_printf_conv_cap_x(va_list *args, t_printf_mods mods,
+		t_printf_buff *buff)
 {
 	if (mods.length[0] == '\0')
 		buff->buff =

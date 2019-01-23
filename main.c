@@ -9,10 +9,11 @@ int main(void)
 
 	i = 2;
 	p = &i;
-	   printf("   printf:-->%0-5s<--\n", "test");
-	ft_printf("ft_printf:-->%0-5s<--\n", "test");
+	   printf("%c", 0);
+	ft_printf("%c", 0);
 	return (1);
 }
 
-//56 after dot
-//21  are same
+//basic 20
+//und 20
+//mouli 31

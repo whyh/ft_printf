@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-void	ft_printf_parse_flags(char **format,t_printf_mods *mods)
+void	ft_printf_parse_flags(char **format, t_printf_mods *mods)
 {
 	int i;
 	int n_of_flags;
@@ -51,7 +51,7 @@ void	ft_printf_parce_prec(char **format, t_printf_mods *mods)
 	int	precis;
 
 	mods->prec_spec = 0;
-	mods->prec = 1;
+	mods->prec = 0;
 	if (**format != '.')
 		return ;
 	mods->prec_spec = 1;
@@ -62,8 +62,7 @@ void	ft_printf_parce_prec(char **format, t_printf_mods *mods)
 		precis = precis * 10 + **format - '0';
 		(*format)++;
 	}
-	if (*(*format - 1) != '.')
-		mods->prec = precis;
+	mods->prec = precis;
 }
 
 void	ft_printf_parce_length(char **format, t_printf_mods *mods)
@@ -88,8 +87,17 @@ int		ft_printf_parce_conv(char **format, t_printf_mods *mods)
 {
 	mods->conv = '\0';
 	if (!ft_is_included(PRINTF_CONVS, **format))
+	{
+		ft_strdel(&(mods->length));
+		ft_strdel(&(mods->flags));
 		return (0);
+	}
 	mods->conv = **format;
 	(*format)++;
+	if (mods->prec_spec == 0 && (ft_is_included(PRINTF_CONVS_UNS, mods->conv)
+	|| ft_is_included(PRINTF_CONVS_SN, mods->conv)))
+		mods->prec = 1;
+	else if (mods->prec_spec == 0 && mods->conv == 'f')
+		mods->prec = 6;
 	return (1);
 }

@@ -98,8 +98,9 @@ PRINTF_SRCS =	ft_printf.c\
 				ft_printf_fill_funs.c\
 				ft_printf_flags_base.c\
 				ft_printf_parse.c\
-				ft_printf_prec_f_width.c\
-				ft_printf_convs_nothing_.c
+				ft_printf_prec.c\
+				ft_printf_width.c\
+				ft_printf_conv_mod0.c
 PRINTF_OBJS = $(PRINTF_SRCS:%.c=$(PRINTF_OBJS_DIR)/%.o)
 PRINTF_OBJS_DIR = $(OBJS_DIR)
 
@@ -127,10 +128,10 @@ re: fclean all
 
 norm:
 	@\
-	norminette $(addprefix $(LIBFT_PATH),$(LIBFT_SRCS))\
-	$(addprefix $(LIBFT_PATH),$(LIBFT_INCS))\
-	$(addprefix $(PRINTF_PATH),$(PRINTF_SRCS))\
-	$(addprefix $(PRINTF_PATH),$(PRINTF_INCS))\
+	norminette $(addprefix $(LIBFT_PATH),$(LIBFT_SRCS)) \
+	$(addprefix $(LIBFT_PATH),$(LIBFT_INCS)) \
+	$(addprefix $(PRINTF_PATH),$(PRINTF_SRCS)) \
+	$(addprefix $(PRINTF_PATH),$(PRINTF_INCS)) \
 
 run:
 	@$(CC) $(CFLAGS) main.c libftprintf.a
@@ -142,15 +143,15 @@ run_warn:
 	@./a.out || true
 	@$(RM) ./a.out
 
-test:
+test: rmt
 	@mkdir -p test
 	@cp -rf $(LIBFT_PATH) test/$(LIBFT_PATH)
 	@cp -rf $(PRINTF_PATH) test/$(PRINTF_PATH)
 	@cp -rf author test/author
 	@cp -rf Makefile test/Makefile
-	cd test && pwd | grep -c "/Users/dderevyn/"
+	@cd test && pwd | cut -c 17-44
 
 rmt:
 	@$(RM) test
 
-.PHONY: all lib clean fclean re norm run run_warn test rmt
+.PHONY: all clean fclean re norm run run_warn test rmt

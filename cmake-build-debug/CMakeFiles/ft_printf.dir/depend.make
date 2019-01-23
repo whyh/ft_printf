@@ -5,6 +5,10 @@ CMakeFiles/ft_printf.dir/ft_printf/ft_printf.c.o: ../ft_printf/ft_printf.c
 CMakeFiles/ft_printf.dir/ft_printf/ft_printf.c.o: ../ft_printf/ft_printf.h
 CMakeFiles/ft_printf.dir/ft_printf/ft_printf.c.o: ../libft/libft.h
 
+CMakeFiles/ft_printf.dir/ft_printf/ft_printf_conv_mod0.c.o: ../ft_printf/ft_printf.h
+CMakeFiles/ft_printf.dir/ft_printf/ft_printf_conv_mod0.c.o: ../ft_printf/ft_printf_conv_mod0.c
+CMakeFiles/ft_printf.dir/ft_printf/ft_printf_conv_mod0.c.o: ../libft/libft.h
+
 CMakeFiles/ft_printf.dir/ft_printf/ft_printf_convs_cspf.c.o: ../ft_printf/ft_printf.h
 CMakeFiles/ft_printf.dir/ft_printf/ft_printf_convs_cspf.c.o: ../ft_printf/ft_printf_convs_cspf.c
 CMakeFiles/ft_printf.dir/ft_printf/ft_printf_convs_cspf.c.o: ../libft/libft.h
@@ -12,10 +16,6 @@ CMakeFiles/ft_printf.dir/ft_printf/ft_printf_convs_cspf.c.o: ../libft/libft.h
 CMakeFiles/ft_printf.dir/ft_printf/ft_printf_convs_diouxx.c.o: ../ft_printf/ft_printf.h
 CMakeFiles/ft_printf.dir/ft_printf/ft_printf_convs_diouxx.c.o: ../ft_printf/ft_printf_convs_diouxx.c
 CMakeFiles/ft_printf.dir/ft_printf/ft_printf_convs_diouxx.c.o: ../libft/libft.h
-
-CMakeFiles/ft_printf.dir/ft_printf/ft_printf_convs_nothing_.c.o: ../ft_printf/ft_printf.h
-CMakeFiles/ft_printf.dir/ft_printf/ft_printf_convs_nothing_.c.o: ../ft_printf/ft_printf_convs_nothing_.c
-CMakeFiles/ft_printf.dir/ft_printf/ft_printf_convs_nothing_.c.o: ../libft/libft.h
 
 CMakeFiles/ft_printf.dir/ft_printf/ft_printf_fill_funs.c.o: ../ft_printf/ft_printf.h
 CMakeFiles/ft_printf.dir/ft_printf/ft_printf_fill_funs.c.o: ../ft_printf/ft_printf_fill_funs.c
@@ -29,9 +29,13 @@ CMakeFiles/ft_printf.dir/ft_printf/ft_printf_parse.c.o: ../ft_printf/ft_printf.h
 CMakeFiles/ft_printf.dir/ft_printf/ft_printf_parse.c.o: ../ft_printf/ft_printf_parse.c
 CMakeFiles/ft_printf.dir/ft_printf/ft_printf_parse.c.o: ../libft/libft.h
 
-CMakeFiles/ft_printf.dir/ft_printf/ft_printf_prec_f_width.c.o: ../ft_printf/ft_printf.h
-CMakeFiles/ft_printf.dir/ft_printf/ft_printf_prec_f_width.c.o: ../ft_printf/ft_printf_prec_f_width.c
-CMakeFiles/ft_printf.dir/ft_printf/ft_printf_prec_f_width.c.o: ../libft/libft.h
+CMakeFiles/ft_printf.dir/ft_printf/ft_printf_prec.c.o: ../ft_printf/ft_printf.h
+CMakeFiles/ft_printf.dir/ft_printf/ft_printf_prec.c.o: ../ft_printf/ft_printf_prec.c
+CMakeFiles/ft_printf.dir/ft_printf/ft_printf_prec.c.o: ../libft/libft.h
+
+CMakeFiles/ft_printf.dir/ft_printf/ft_printf_width.c.o: ../ft_printf/ft_printf.h
+CMakeFiles/ft_printf.dir/ft_printf/ft_printf_width.c.o: ../ft_printf/ft_printf_width.c
+CMakeFiles/ft_printf.dir/ft_printf/ft_printf_width.c.o: ../libft/libft.h
 
 CMakeFiles/ft_printf.dir/libft/ft_atoi.c.o: ../libft/ft_atoi.c
 CMakeFiles/ft_printf.dir/libft/ft_atoi.c.o: ../libft/libft.h
