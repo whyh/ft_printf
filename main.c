@@ -16,4 +16,5 @@ int main(void)
 
 //basic 20
 //und 20
+//spead 21%
 //mouli 31

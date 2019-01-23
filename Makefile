@@ -18,15 +18,16 @@ CFLAGS = -Wall -Wextra -Werror
 RM = /bin/rm -rf
 
 LIBFT_PATH = libft/
-LIBFT_INCS = libft.h
+LIBFT_INCS =	libft.h\
+				ft_gnl_typedefs.h
 LIBFT_SRCS = 	ft_atoi.c\
 				ft_atoibase.c\
 				ft_bzero.c\
 				ft_find_distance_to_char.c\
-				ft_get_next_line.c\
+				ft_gnl.c\
 				ft_intiteri.c\
-				ft_is_included.c\
-				ft_is_whitespace.c\
+				ft_strin.c\
+				ft_iswhitespace.c\
 				ft_isalnum.c\
 				ft_isalpha.c\
 				ft_isascii.c\
@@ -35,12 +36,6 @@ LIBFT_SRCS = 	ft_atoi.c\
 				ft_itoabase.c\
 				ft_linelen.c\
 				ft_linetrim.c\
-				ft_lstadd.c\
-				ft_lstdel.c\
-				ft_lstdelone.c\
-				ft_lstiter.c\
-				ft_lstmap.c\
-				ft_lstnew.c\
 				ft_memalloc.c\
 				ft_memccpy.c\
 				ft_memchr.c\
@@ -71,8 +66,6 @@ LIBFT_SRCS = 	ft_atoi.c\
 				ft_strjoin.c\
 				ft_strlcat.c\
 				ft_strlen.c\
-				ft_strmap.c\
-				ft_strmapi.c\
 				ft_strncat.c\
 				ft_strncmp.c\
 				ft_strncpy.c\
@@ -91,16 +84,17 @@ LIBFT_OBJS = $(LIBFT_SRCS:%.c=$(LIBFT_OBJS_DIR)/%.o)
 LIBFT_OBJS_DIR = $(OBJS_DIR)
 
 PRINTF_PATH = ft_printf/
-PRINTF_INCS = ft_printf.h
+PRINTF_INCS =	ft_printf.h\
+				ft_printf_typedefs
 PRINTF_SRCS =	ft_printf.c\
-				ft_printf_convs_cspf.c\
-				ft_printf_convs_diouxx.c\
+				ft_printf_cspf.c\
+				ft_printf_diouxx.c\
 				ft_printf_fill_funs.c\
-				ft_printf_flags_base.c\
+				ft_printf_hash_zero_blank_plus.c\
 				ft_printf_parse.c\
 				ft_printf_prec.c\
 				ft_printf_width.c\
-				ft_printf_conv_mod0.c
+				ft_printf_mod0.c
 PRINTF_OBJS = $(PRINTF_SRCS:%.c=$(PRINTF_OBJS_DIR)/%.o)
 PRINTF_OBJS_DIR = $(OBJS_DIR)
 
@@ -112,11 +106,11 @@ $(NAME): $(LIBFT_OBJS) $(PRINTF_OBJS)
 
 $(LIBFT_OBJS_DIR)/%.o: $(LIBFT_PATH)%.c
 	@mkdir -p $(LIBFT_OBJS_DIR)
-	@$(CC) $(CFLAGS) -c $< -I.$(addprefix $(LIBFT_PATH),$(LIBFT_INCS)) -o $@
+	@$(CC) $(CFLAGS) -c $< $(addprefix -I.,$(addprefix $(LIBFT_PATH),$(LIBFT_INCS))) -o $@
 
 $(PRINTF_OBJS_DIR)/%.o: $(PRINTF_PATH)%.c
 	@mkdir -p $(LIBFT_OBJS_DIR)
-	@$(CC) $(CFLAGS) -c $< -I.$(addprefix $(PRINTF_PATH),$(PRINTF_INCS)) -o $@
+	@$(CC) $(CFLAGS) -c $< $(addprefix -I.,$(addprefix $(PRINTF_PATH),$(PRINTF_INCS))) -o $@
 
 clean:
 	@$(RM) $(OBJS_DIR)
@@ -127,11 +121,10 @@ fclean: clean
 re: fclean all
 
 norm:
-	@\
-	norminette $(addprefix $(LIBFT_PATH),$(LIBFT_SRCS)) \
+	@norminette $(addprefix $(LIBFT_PATH),$(LIBFT_SRCS)) \
 	$(addprefix $(LIBFT_PATH),$(LIBFT_INCS)) \
 	$(addprefix $(PRINTF_PATH),$(PRINTF_SRCS)) \
-	$(addprefix $(PRINTF_PATH),$(PRINTF_INCS)) \
+	$(addprefix $(PRINTF_PATH),$(PRINTF_INCS))
 
 run:
 	@$(CC) $(CFLAGS) main.c libftprintf.a

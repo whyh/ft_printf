@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_flags_base.c                             :+:      :+:    :+:   */
+/*   ft_printf_hash_zero_blank_plus.c                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dderevyn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int	ft_printf_flag_plus(va_list *args, t_printf_mods mods, t_printf_buff *buff)
+int	ft_printf_plus(va_list *args, t_printf_mods mods, t_printf_buff *buff)
 {
 	size_t	i;
 	char	*tmp;
@@ -20,7 +20,7 @@ int	ft_printf_flag_plus(va_list *args, t_printf_mods mods, t_printf_buff *buff)
 	(void)args;
 	if (mods.conv == '%')
 		return (1);
-	if (!ft_is_included(PRINTF_CONVS_SN, mods.conv))
+	if (!ft_strin(PRINTF_SN, mods.conv))
 		return (0);
 	i = 0;
 	while (buff->buff[i] != '\0' && buff->buff[i] != '-'
@@ -34,7 +34,7 @@ int	ft_printf_flag_plus(va_list *args, t_printf_mods mods, t_printf_buff *buff)
 	return (1);
 }
 
-int	ft_printf_flag_blank(va_list *args, t_printf_mods mods, t_printf_buff *buff)
+int	ft_printf_blank(va_list *args, t_printf_mods mods, t_printf_buff *buff)
 {
 	size_t	i;
 	char	*tmp;
@@ -42,9 +42,9 @@ int	ft_printf_flag_blank(va_list *args, t_printf_mods mods, t_printf_buff *buff)
 	(void)args;
 	if (mods.conv == '%')
 		return (1);
-	if (!ft_is_included(PRINTF_CONVS_SN, mods.conv))
+	if (!ft_strin(PRINTF_SN, mods.conv))
 		return (0);
-	if (ft_is_included(mods.flags, '+'))
+	if (ft_strin(mods.flags, '+'))
 		return (1);
 	i = 0;
 	while (buff->buff[i] != '\0' && buff->buff[i] != '-'
@@ -58,13 +58,13 @@ int	ft_printf_flag_blank(va_list *args, t_printf_mods mods, t_printf_buff *buff)
 	return (1);
 }
 
-int	ft_printf_flag_hash(va_list *args, t_printf_mods mods, t_printf_buff *buff)
+int	ft_printf_hash(va_list *args, t_printf_mods mods, t_printf_buff *buff)
 {
 	char	*tmp;
 
 	(void)args;
 	tmp = NULL;
-	if (!ft_is_included(PRINTF_CONVS_UNS, mods.conv) || mods.conv == 'u')
+	if (!ft_strin(PRINTF_NDEC, mods.conv))
 		return (0);
 	if (mods.conv == 'o' && (buff->buff)[0] != '0')
 		tmp = ft_strjoin("0", buff->buff);
@@ -76,7 +76,7 @@ int	ft_printf_flag_hash(va_list *args, t_printf_mods mods, t_printf_buff *buff)
 	else if (mods.conv == 'X' && !((buff->buff)[0] == '0'
 	&& buff->buff[1] == '\0'))
 		tmp = ft_strjoin("0X", buff->buff);
-	else if (mods.conv == 'f' && !ft_is_included(buff->buff, '.'))
+	else if (ft_strin(PRINTF_FLOAT, mods.conv) && !ft_strin(buff->buff, '.'))
 		tmp = ft_strjoin(buff->buff, ".");
 	if (tmp != NULL)
 	{
@@ -86,13 +86,13 @@ int	ft_printf_flag_hash(va_list *args, t_printf_mods mods, t_printf_buff *buff)
 	return (1);
 }
 
-int	ft_printf_flag_zero(va_list *args, t_printf_mods mods, t_printf_buff *buff)
+int	ft_printf_zero(va_list *args, t_printf_mods mods, t_printf_buff *buff)
 {
 	(void)args;
 	(void)buff;
-	if (ft_is_included(mods.flags, '0') && mods.conv != 'f' && mods.conv != '%'
-	&& !ft_is_included(PRINTF_CONVS_UNS, mods.conv)
-	&& !ft_is_included(PRINTF_CONVS_SN, mods.conv))
+	if (ft_strin(mods.flags, '0') && !ft_strin(PRINTF_FLOAT, mods.conv)
+	&& !ft_strin(PRINTF_MOD0, mods.conv) && !ft_strin(PRINTF_USN, mods.conv)
+	&& !ft_strin(PRINTF_SN, mods.conv) && !ft_strin(PRINTF_NDEC, mods.conv))
 		return (0);
 	return (1);
 }

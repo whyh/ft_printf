@@ -12,20 +12,14 @@
 
 #include "libft.h"
 
-static int	static_ft_is_whitespace(int c)
-{
-	return (c == '\t' || c == '\n' || c == '\v' ||
-	c == '\f' || c == '\r' || c == ' ');
-}
-
-int			ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	long long int	nbr;
 	int				sign;
 
 	sign = 1;
 	nbr = 0;
-	while (static_ft_is_whitespace((int)*str))
+	while (ft_iswhitespace(*str))
 		++str;
 	if (*str == '+' || *str == '-')
 	{
@@ -44,5 +38,5 @@ int			ft_atoi(const char *str)
 		nbr = nbr * 10 + *str - '0';
 		++str;
 	}
-	return (sign * nbr);
+	return ((int)(sign * nbr));
 }

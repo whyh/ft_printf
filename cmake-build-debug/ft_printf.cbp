@@ -91,25 +91,28 @@
 		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf.h">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_conv_mod0.c">
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_cspf.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_convs_cspf.c">
-			<Option target="ft_printf"/>
-		</Unit>
-		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_convs_diouxx.c">
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_diouxx.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_fill_funs.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_flags_base.c">
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_hash_zero_blank_plus.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_mod0.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_parse.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_prec.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_typedefs.h">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_width.c">
@@ -127,16 +130,13 @@
 		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_find_distance_to_char.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_get_next_line.c">
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_gnl.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_gnl_typedefs.h">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_intiteri.c">
-			<Option target="ft_printf"/>
-		</Unit>
-		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_is_included.c">
-			<Option target="ft_printf"/>
-		</Unit>
-		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_is_whitespace.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_isalnum.c">
@@ -154,6 +154,9 @@
 		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_isprint.c">
 			<Option target="ft_printf"/>
 		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_iswhitespace.c">
+			<Option target="ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_itoabase.c">
 			<Option target="ft_printf"/>
 		</Unit>
@@ -161,24 +164,6 @@
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_linetrim.c">
-			<Option target="ft_printf"/>
-		</Unit>
-		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_lstadd.c">
-			<Option target="ft_printf"/>
-		</Unit>
-		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_lstdel.c">
-			<Option target="ft_printf"/>
-		</Unit>
-		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_lstdelone.c">
-			<Option target="ft_printf"/>
-		</Unit>
-		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_lstiter.c">
-			<Option target="ft_printf"/>
-		</Unit>
-		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_lstmap.c">
-			<Option target="ft_printf"/>
-		</Unit>
-		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_lstnew.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_memalloc.c">
@@ -253,6 +238,9 @@
 		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strequ.c">
 			<Option target="ft_printf"/>
 		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strin.c">
+			<Option target="ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strinject.c">
 			<Option target="ft_printf"/>
 		</Unit>
@@ -269,12 +257,6 @@
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strlen.c">
-			<Option target="ft_printf"/>
-		</Unit>
-		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strmap.c">
-			<Option target="ft_printf"/>
-		</Unit>
-		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strmapi.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strncat.c">

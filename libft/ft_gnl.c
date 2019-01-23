@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   ft_gnl.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dderevyn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -98,7 +98,7 @@ static int		gnl_part2(char **line, ssize_t rbl, char rbuf[])
 	return (-42);
 }
 
-int				ft_get_next_line(int fd, char **line)
+int				ft_gnl(int fd, char **line)
 {
 	static t_fd	*fdl;
 	char		rbuf[GNL_BUFF_SIZE + 1];

@@ -12,18 +12,8 @@
 
 #include "ft_printf.h"
 
-void	ft_printf_prec(t_printf_mods mods, t_printf_buff *buff)
-{
-	if ((ft_is_included(PRINTF_CONVS_SN, mods.conv) || mods.conv == 'p'
-	|| ft_is_included(PRINTF_CONVS_UNS, mods.conv)) && mods.conv != '%')
-		ft_printf_prec_sn_uns_p(mods, buff);
-	else if (mods.conv == 'f')
-		ft_printf_prec_float(mods, buff);
-	else if (mods.conv == 's')
-		ft_printf_prec_str(mods, buff);
-}
-
-void	ft_printf_prec_sn_uns_p(t_printf_mods mods, t_printf_buff *buff)
+static void	ft_printf_prec_sn_usn_p_ndec(t_printf_mods mods,
+		t_printf_buff *buff)
 {
 	int		length;
 	char	*head;
@@ -31,7 +21,7 @@ void	ft_printf_prec_sn_uns_p(t_printf_mods mods, t_printf_buff *buff)
 
 	if (mods.prec == 0 && !(i = 0))
 	{
-		if (mods.conv == 'p')
+		if (ft_strin(PRINTF_PTR, mods.conv))
 			i = 2;
 		if (buff->buff[i] == '0' && buff->buff[i + 1] == '\0')
 			buff->buff[i] = '\0';
@@ -51,7 +41,7 @@ void	ft_printf_prec_sn_uns_p(t_printf_mods mods, t_printf_buff *buff)
 	ft_strdel(&head);
 }
 
-void	ft_printf_prec_str(t_printf_mods mods, t_printf_buff *buff)
+static void	ft_printf_prec_str(t_printf_mods mods, t_printf_buff *buff)
 {
 	char	*tmp;
 
@@ -63,34 +53,8 @@ void	ft_printf_prec_str(t_printf_mods mods, t_printf_buff *buff)
 	buff->buff = tmp;
 }
 
-void	ft_printf_prec_float(t_printf_mods mods, t_printf_buff *buff)
-{
-	char	*tmp;
-	char	*tmp2;
-	int		length;
-	int		size;
-
-	tmp = ft_strchr(buff->buff, '.');
-	if (tmp != NULL)
-		length = (int)ft_strlen(tmp + 1) - 1;
-	else
-		length = 0;
-	if (length < mods.prec)
-	{
-		tmp = ft_strnew((size_t)(mods.prec - length));
-		ft_memset(tmp, '0', (size_t)(mods.prec - length));
-		tmp2 = ft_strjoin(buff->buff, tmp);
-		ft_strdel(&(buff->buff));
-		ft_strdel(&tmp);
-		buff->buff = tmp2;
-		return ;
-	}
-	size = (int)ft_strlen(buff->buff) - 1;
-	ft_printf_prec_float_fix(buff, mods, length, size);
-}
-
-void	ft_printf_prec_float_fix(t_printf_buff *buff, t_printf_mods mods,
-		int length, int size)
+static void	ft_printf_prec_float_fix(t_printf_buff *buff, t_printf_mods mods,
+			int length, int size)
 {
 	int i;
 	int mod;
@@ -117,4 +81,41 @@ void	ft_printf_prec_float_fix(t_printf_buff *buff, t_printf_mods mods,
 	}
 	if (mods.prec == 0)
 		buff->buff[size + mod] = '\0';
+}
+
+static void	ft_printf_prec_float(t_printf_mods mods, t_printf_buff *buff)
+{
+	char	*tmp;
+	char	*tmp2;
+	int		length;
+	int		size;
+
+	tmp = ft_strchr(buff->buff, '.');
+	if (tmp != NULL)
+		length = (int)ft_strlen(tmp + 1) - 1;
+	else
+		length = 0;
+	if (length < mods.prec)
+	{
+		tmp = ft_strnew((size_t)(mods.prec - length));
+		ft_memset(tmp, '0', (size_t)(mods.prec - length));
+		tmp2 = ft_strjoin(buff->buff, tmp);
+		ft_strdel(&(buff->buff));
+		ft_strdel(&tmp);
+		buff->buff = tmp2;
+		return ;
+	}
+	size = (int)ft_strlen(buff->buff) - 1;
+	ft_printf_prec_float_fix(buff, mods, length, size);
+}
+
+void		ft_printf_prec(t_printf_mods mods, t_printf_buff *buff)
+{
+	if (ft_strin(PRINTF_SN, mods.conv) || ft_strin(PRINTF_PTR, mods.conv)
+	|| ft_strin(PRINTF_USN, mods.conv) || ft_strin(PRINTF_NDEC, mods.conv))
+		ft_printf_prec_sn_usn_p_ndec(mods, buff);
+	else if (ft_strin(PRINTF_FLOAT, mods.conv))
+		ft_printf_prec_float(mods, buff);
+	else if (ft_strin(PRINTF_STR, mods.conv))
+		ft_printf_prec_str(mods, buff);
 }

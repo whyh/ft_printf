@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdel.c                                        :+:      :+:    :+:   */
+/*   ft_printf_mod0.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dderevyn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/05 17:16:26 by dderevyn          #+#    #+#             */
-/*   Updated: 2018/11/06 15:23:12 by dderevyn         ###   ########.fr       */
+/*   Created: 2019/01/16 18:03:22 by dderevyn          #+#    #+#             */
+/*   Updated: 2019/01/16 18:03:22 by dderevyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
+int		ft_printf_mod0(va_list *args, t_printf_mods mods,
+		t_printf_buff *buff)
 {
-	t_list	*c;
-
-	while ((*alst)->next != NULL)
-	{
-		c = (*alst)->next;
-		ft_lstdelone(&(*alst), del);
-		*alst = c;
-	}
-	ft_lstdelone(&(*alst), del);
-	*alst = NULL;
+	(void)args;
+	(void)mods;
+	buff->buff = ft_strdup(PRINTF_MOD0);
+	return (1);
 }

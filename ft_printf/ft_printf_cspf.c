@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_convs_cspf.c                             :+:      :+:    :+:   */
+/*   ft_printf_cspf.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dderevyn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int		ft_printf_conv_c(va_list *args, t_printf_mods mods, t_printf_buff *buff)
+int			ft_printf_c(va_list *args, t_printf_mods mods, t_printf_buff *buff)
 {
 	char	arg;
 
@@ -24,13 +24,13 @@ int		ft_printf_conv_c(va_list *args, t_printf_mods mods, t_printf_buff *buff)
 	return (1);
 }
 
-int		ft_printf_conv_s(va_list *args, t_printf_mods mods, t_printf_buff *buff)
+int			ft_printf_s(va_list *args, t_printf_mods mods, t_printf_buff *buff)
 {
 	char	*arg;
 
 	if ((mods.length)[0] != '\0')
 		return (0);
-	arg = va_arg(*args, char*);
+	arg = va_arg(*args, char *);
 	if (arg == NULL)
 		buff->buff = ft_strdup("(null)");
 	else
@@ -38,12 +38,12 @@ int		ft_printf_conv_s(va_list *args, t_printf_mods mods, t_printf_buff *buff)
 	return (1);
 }
 
-int		ft_printf_conv_p(va_list *args, t_printf_mods mods, t_printf_buff *buff)
+int			ft_printf_p(va_list *args, t_printf_mods mods, t_printf_buff *buff)
 {
 	char	*tmp;
 
 	(void)mods;
-	buff->buff = ft_itoabase_unsigned(HEX, va_arg(*args, unsigned long long));
+	buff->buff = ft_itoabase_unsigned(HEX, va_arg(*args, ULL));
 	if ((buff->buff)[0] == '\0')
 		tmp = ft_strjoin("0x0", buff->buff);
 	else
@@ -53,7 +53,29 @@ int		ft_printf_conv_p(va_list *args, t_printf_mods mods, t_printf_buff *buff)
 	return (1);
 }
 
-int		ft_printf_conv_f(va_list *args, t_printf_mods mods, t_printf_buff *buff)
+static void	ft_printf_fill_float(t_printf_buff *buff, long long a_args[3])
+{
+	char	*tmp1;
+	char	*tmp2;
+
+	tmp1 = ft_itoabase(DEC, a_args[0]);
+	tmp2 = ft_strjoin(buff->buff, tmp1);
+	ft_strdel(&tmp1);
+	ft_strdel(&(buff->buff));
+	tmp1 = ft_strjoin(tmp2, ".");
+	ft_strdel(&tmp2);
+	tmp2 = ft_itoabase(DEC, a_args[1]);
+	buff->buff = ft_strjoin(tmp1, tmp2);
+	ft_strdel(&tmp1);
+	ft_strdel(&tmp2);
+	tmp1 = ft_itoabase(DEC, a_args[2]);
+	tmp2 = ft_strjoin(buff->buff, tmp1);
+	ft_strdel(&tmp1);
+	ft_strdel(&(buff->buff));
+	buff->buff = tmp2;
+}
+
+int			ft_printf_f(va_list *args, t_printf_mods mods, t_printf_buff *buff)
 {
 	long double	arg;
 	long long	a_args[3];
@@ -62,40 +84,18 @@ int		ft_printf_conv_f(va_list *args, t_printf_mods mods, t_printf_buff *buff)
 	if (mods.length[1] == 'l' || mods.length[0] == 'h')
 		return (0);
 	if (mods.length[0] == 'L')
-		arg = va_arg(*args, long double);
+		arg = va_arg(*args, D);
 	else
-		arg = va_arg(*args, double);
+		arg = va_arg(*args, D);
 	if (arg < 0 && (arg = -arg))
 		buff->buff = ft_strdup("-");
-	a_args[0] = (long long)arg;
+	a_args[0] = (LL)arg;
 	arg -= a_args[0];
 	arg = (arg * 1000000000000000000);
-	a_args[1] = (long long)arg;
+	a_args[1] = (LL)arg;
 	arg -= a_args[1];
 	arg = (arg * 1000000000000000000);
-	a_args[2] = (long long)arg;
+	a_args[2] = (LL)arg;
 	ft_printf_fill_float(buff, a_args);
 	return (1);
-}
-
-void	ft_printf_fill_float(t_printf_buff *buff, long long a_args[3])
-{
-	char	*tmp1;
-	char	*tmp2;
-
-	tmp1 = ft_itoabase("0123456789", a_args[0]);
-	tmp2 = ft_strjoin(buff->buff, tmp1);
-	ft_strdel(&tmp1);
-	ft_strdel(&(buff->buff));
-	tmp1 = ft_strjoin(tmp2, ".");
-	ft_strdel(&tmp2);
-	tmp2 = ft_itoabase("0123456789", a_args[1]);
-	buff->buff = ft_strjoin(tmp1, tmp2);
-	ft_strdel(&tmp1);
-	ft_strdel(&tmp2);
-	tmp1 = ft_itoabase("0123456789", a_args[2]);
-	tmp2 = ft_strjoin(buff->buff, tmp1);
-	ft_strdel(&tmp1);
-	ft_strdel(&(buff->buff));
-	buff->buff = tmp2;
 }

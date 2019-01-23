@@ -13,18 +13,19 @@
 NAME = libft.a
 
 CC = clang
-RM = /bin/rm -rf
 CFLAGS = -Wall -Wextra -Werror
+RM = /bin/rm -rf
 
-INCS = libft.h
+INCS =	libft.h \
+		ft_gnl_typedefs.h
 SRCS = 	ft_atoi.c\
 		ft_atoibase.c\
 		ft_bzero.c\
 		ft_find_distance_to_char.c\
-		ft_get_next_line.c\
+		ft_gnl.c\
 		ft_intiteri.c\
-		ft_is_included.c\
-		ft_is_whitespace.c\
+		ft_strin.c\
+		ft_iswhitespace.c\
 		ft_isalnum.c\
 		ft_isalpha.c\
 		ft_isascii.c\
@@ -33,12 +34,6 @@ SRCS = 	ft_atoi.c\
 		ft_itoabase.c\
 		ft_linelen.c\
 		ft_linetrim.c\
-		ft_lstadd.c\
-		ft_lstdel.c\
-		ft_lstdelone.c\
-		ft_lstiter.c\
-		ft_lstmap.c\
-		ft_lstnew.c\
 		ft_memalloc.c\
 		ft_memccpy.c\
 		ft_memchr.c\
@@ -69,8 +64,6 @@ SRCS = 	ft_atoi.c\
 		ft_strjoin.c\
 		ft_strlcat.c\
 		ft_strlen.c\
-		ft_strmap.c\
-		ft_strmapi.c\
 		ft_strncat.c\
 		ft_strncmp.c\
 		ft_strncpy.c\
@@ -84,9 +77,9 @@ SRCS = 	ft_atoi.c\
 		ft_strsub.c\
 		ft_strtrim.c\
 		ft_tolower.c\
-		ft_toupper.c\
+		ft_toupper.c
 
-OBJS_DIR = .tmp_libft_o
+OBJS_DIR = .libft_objects
 OBJS = $(SRCS:%.c=$(OBJS_DIR)/%.o)
 
 all: $(NAME)
@@ -95,9 +88,9 @@ $(NAME): $(OBJS)
 	@ar rc $(NAME) $^
 	@ranlib $(NAME)
 
-$(OBJS_DIR)/%.o: $(SRCS)%.c
+$(OBJS_DIR)/%.o: %.c
 	@mkdir -p $(OBJS_DIR)
-	@$(CC) $(CFLAGS) -c $< -I.$(INCS) -o $@
+	@$(CC) $(CFLAGS) -c $< $(addprefix -I.,$(INCS)) -o $@
 
 clean:
 	@$(RM) $(OBJS_DIR)

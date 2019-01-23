@@ -52,7 +52,7 @@ int			ft_atoibase(char *set, char *str)
 	base = (int)ft_strlen(set);
 	sign = 1;
 	nbr = 0;
-	while (ft_is_whitespace((int)*str))
+	while (ft_iswhitespace((int)*str))
 		++str;
 	if (*str == '+' || *str == '-')
 	{
@@ -60,7 +60,7 @@ int			ft_atoibase(char *set, char *str)
 			sign = -1;
 		++str;
 	}
-	while (*str && ft_is_included(set, *str))
+	while (*str && ft_strin(set, *str))
 	{
 		nbr = nbr * base + *str - '0';
 		++str;

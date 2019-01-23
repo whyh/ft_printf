@@ -1,22 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_included.c                                   :+:      :+:    :+:   */
+/*   ft_iswhitespace.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dderevyn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/16 14:32:07 by dderevyn          #+#    #+#             */
-/*   Updated: 2018/11/16 14:39:31 by dderevyn         ###   ########.fr       */
+/*   Created: 2018/11/16 14:32:19 by dderevyn          #+#    #+#             */
+/*   Updated: 2018/11/16 14:32:23 by dderevyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_is_included(char *str, char c)
+int	ft_iswhitespace(int c)
 {
-	while (*str)
-	{
-		if (*str == c)
-			return (1);
-		++str;
-	}
+	if (c == ' ' || c == '\t' || c == '\n' || c == '\f'
+	|| c == '\r' || c == '\v')
+		return (1);
 	return (0);
 }
