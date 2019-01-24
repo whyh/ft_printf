@@ -60,6 +60,6 @@ void	ft_printf_fill_float(t_printf_buff *buff, long long a_args[3],
 		t_printf_mods mods);
 int		ft_printf_0(va_list *args, t_printf_mods mods, t_printf_buff *buff);
 char	*ft_printf_base(char conv);
-char	*ft_printf_base_prefix(char conv, t_printf_buff *buff);
+char	*ft_printf_base_prefix(t_printf_mods mods, t_printf_buff *buff);
 
 #endif

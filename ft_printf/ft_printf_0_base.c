@@ -32,19 +32,21 @@ char	*ft_printf_base(char conv)
 		return (DEC);
 }
 
-char	*ft_printf_base_prefix(char conv, t_printf_buff *buff)
+char	*ft_printf_base_prefix(t_printf_mods mods, t_printf_buff *buff)
 {
-	if (conv == 'X' && buff->buff[0] == '0' && buff->buff[1] == '\0')
+	if (mods.conv == 'X'
+	&& ((buff->buff[0] == '0' && buff->buff[1] == '\0') || mods.prec == 0))
 		return (NULL);
-	if (conv == 'x' && buff->buff[0] == '0' && buff->buff[1] == '\0')
+	if (mods.conv == 'x'
+		&& ((buff->buff[0] == '0' && buff->buff[1] == '\0') || mods.prec == 0))
 		return (NULL);
-	if (conv == 'o' && buff->buff[0] == '0')
+	if (mods.conv == 'o' && buff->buff[0] == '0')
 		return (NULL);
-	if (conv == 'X')
+	if (mods.conv == 'X')
 		return ("0X");
-	if (conv == 'x')
+	if (mods.conv == 'x')
 		return ("0x");
-	if (conv == 'o')
+	if (mods.conv == 'o')
 		return ("0");
 	else
 		return (NULL);

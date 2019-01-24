@@ -63,7 +63,7 @@ int	ft_printf_hash(va_list *args, t_printf_mods mods, t_printf_buff *buff)
 		while (buff->buff[i]
 		&& !ft_strin(ft_printf_base(mods.conv), buff->buff[i]))
 			++i;
-		ft_strinject(&(buff->buff), ft_printf_base_prefix(mods.conv, buff), i);
+		ft_strinject(&(buff->buff), ft_printf_base_prefix(mods, buff), i);
 	}
 	else if (ft_strin(PRINTF_FLOAT, mods.conv) && !ft_strin(buff->buff, '.'))
 		ft_strinject(&(buff->buff), ".", ft_strlen(buff->buff) - 1);
