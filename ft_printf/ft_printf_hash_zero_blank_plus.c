@@ -18,13 +18,11 @@ int	ft_printf_plus(va_list *args, t_printf_mods mods, t_printf_buff *buff)
 	char	*tmp;
 
 	(void)args;
-	if (mods.conv == '%')
-		return (1);
 	if (!ft_strin(PRINTF_SN, mods.conv))
-		return (0);
+		return (1);
 	i = 0;
 	while (buff->buff[i] != '\0' && buff->buff[i] != '-'
-	&& !(buff->buff[i] >= '0' && buff->buff[i] <= '9'))
+	&& !ft_isdigit(buff->buff[i]))
 		++i;
 	if (buff->buff[i] == '-')
 		return (1);
@@ -40,15 +38,11 @@ int	ft_printf_blank(va_list *args, t_printf_mods mods, t_printf_buff *buff)
 	char	*tmp;
 
 	(void)args;
-	if (mods.conv == '%')
-		return (1);
-	if (!ft_strin(PRINTF_SN, mods.conv))
-		return (0);
-	if (ft_strin(mods.flags, '+'))
+	if (!ft_strin(PRINTF_SN, mods.conv) || ft_strin(mods.flags, '+'))
 		return (1);
 	i = 0;
 	while (buff->buff[i] != '\0' && buff->buff[i] != '-'
-	&& !(buff->buff[i] >= '0' && buff->buff[i] <= '9'))
+	&& !ft_isdigit(buff->buff[i]))
 		++i;
 	if (buff->buff[i] == '-')
 		return (1);
@@ -60,39 +54,28 @@ int	ft_printf_blank(va_list *args, t_printf_mods mods, t_printf_buff *buff)
 
 int	ft_printf_hash(va_list *args, t_printf_mods mods, t_printf_buff *buff)
 {
-	char	*tmp;
+	size_t	i;
 
 	(void)args;
-	tmp = NULL;
-	if (!ft_strin(PRINTF_NDEC, mods.conv))
-		return (0);
-	if (mods.conv == 'o' && (buff->buff)[0] != '0')
-		tmp = ft_strjoin("0", buff->buff);
-	else if ((mods.conv == 'X' || mods.conv == 'x') && mods.prec == 0)
-		return (1);
-	else if (mods.conv == 'x' && !((buff->buff)[0] == '0'
-	&& buff->buff[1] == '\0'))
-		tmp = ft_strjoin("0x", buff->buff);
-	else if (mods.conv == 'X' && !((buff->buff)[0] == '0'
-	&& buff->buff[1] == '\0'))
-		tmp = ft_strjoin("0X", buff->buff);
-	else if (ft_strin(PRINTF_FLOAT, mods.conv) && !ft_strin(buff->buff, '.'))
-		tmp = ft_strjoin(buff->buff, ".");
-	if (tmp != NULL)
+	if (ft_strin(PRINTF_NDEC, mods.conv))
 	{
-		ft_strdel(&(buff->buff));
-		buff->buff = tmp;
+		i = 0;
+		while (buff->buff[i]
+		&& !ft_strin(ft_printf_base(mods.conv), buff->buff[i]))
+			++i;
+		ft_strinject(&(buff->buff), ft_printf_base_prefix(mods.conv, buff), i);
 	}
+	else if (ft_strin(PRINTF_FLOAT, mods.conv) && !ft_strin(buff->buff, '.'))
+		ft_strinject(&(buff->buff), ".", ft_strlen(buff->buff) - 1);
 	return (1);
 }
 
-int	ft_printf_zero(va_list *args, t_printf_mods mods, t_printf_buff *buff)
+int	ft_printf_zero(t_printf_mods mods)
 {
-	(void)args;
-	(void)buff;
-	if (ft_strin(mods.flags, '0') && !ft_strin(PRINTF_FLOAT, mods.conv)
-	&& !ft_strin(PRINTF_MOD0, mods.conv) && !ft_strin(PRINTF_USN, mods.conv)
-	&& !ft_strin(PRINTF_SN, mods.conv) && !ft_strin(PRINTF_NDEC, mods.conv))
-		return (0);
-	return (1);
+	if (ft_strin(mods.flags, '0') && mods.prec == 1
+	&& (ft_strin(PRINTF_FLOAT, mods.conv) || ft_strin(PRINTF_MOD0, mods.conv)
+	|| ft_strin(PRINTF_USN, mods.conv) || ft_strin(PRINTF_SN, mods.conv)
+	|| ft_strin(PRINTF_NDEC, mods.conv)))
+		return (1);
+	return (0);
 }

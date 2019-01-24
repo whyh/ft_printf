@@ -16,12 +16,13 @@ CC = clang
 CFLAGS = -Wall -Wextra -Werror
 RM = /bin/rm -rf
 
-INCS =	libft.h \
+INCS =	libft.h\
+		libft_typedefs.h\
 		ft_gnl_typedefs.h
 SRCS = 	ft_atoi.c\
 		ft_atoibase.c\
 		ft_bzero.c\
-		ft_find_distance_to_char.c\
+		ft_strfdist.c\
 		ft_gnl.c\
 		ft_intiteri.c\
 		ft_strin.c\

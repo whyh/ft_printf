@@ -23,6 +23,9 @@ add_executable(ft_printf ${LIBFT}
         libft/ft_strinject.c
         ft_printf/ft_printf_prec.c
         ft_printf/ft_printf_mod0.c
-        ft_printf/ft_printf_width.c)
+        ft_printf/ft_printf_width.c
+        libft/libft_typedefs.h
+        ft_printf/ft_printf_lhllhhl.c
+        ft_printf/ft_printf_0_base.c)
 
 link_libraries(libft/libft.a)

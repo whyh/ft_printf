@@ -9,12 +9,15 @@ int main(void)
 
 	i = 2;
 	p = &i;
-	   printf("%c", 0);
-	ft_printf("%c", 0);
+//	   printf("%010lx\n", 42949672);
+	ft_printf("@moulitest: %#.x %#.0x", 0, 0);
 	return (1);
 }
 
 //basic 20
-//und 20
-//spead 21%
+//und 19
+//spead 23%
 //mouli 31
+
+//    7fffffffffffffff LLONG
+//0000ffffffffffffffff INT_MAX INT TYPES

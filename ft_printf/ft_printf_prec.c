@@ -19,8 +19,9 @@ static void	ft_printf_prec_sn_usn_p_ndec(t_printf_mods mods,
 	char	*head;
 	int		i;
 
-	if (mods.prec == 0 && !(i = 0))
+	if (mods.prec == 0)
 	{
+		i = 0;
 		if (ft_strin(PRINTF_PTR, mods.conv))
 			i = 2;
 		if (buff->buff[i] == '0' && buff->buff[i + 1] == '\0')
@@ -29,7 +30,7 @@ static void	ft_printf_prec_sn_usn_p_ndec(t_printf_mods mods,
 	}
 	length = mods.prec - (int)ft_strlen(buff->buff);
 	i = 0;
-	if (mods.conv == 'p' && (i = 2))
+	if (ft_strin(PRINTF_PTR, mods.conv) && (i = 2))
 		length += 2;
 	if (buff->buff[0] == '-' && (i = 1))
 		++length;

@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_find_distance_to_char.c                         :+:      :+:    :+:   */
+/*   ft_strfdist.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dderevyn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,12 +12,22 @@
 
 #include "libft.h"
 
-size_t	ft_find_distance_to_char(char *string, char to_find)
+size_t	ft_strfdist(char *str, char *obj)
 {
 	size_t	distance;
+	int		i;
 
 	distance = 0;
-	while (string[distance] != to_find && string[distance] != '\0')
+	while (str[distance])
+	{
+		i = 0;
+		while (obj[i])
+		{
+			if (str[distance] == obj[i])
+				return (distance);
+			++i;
+		}
 		++distance;
+	}
 	return (distance);
 }

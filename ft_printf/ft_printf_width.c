@@ -34,9 +34,8 @@ static void	ft_printf_width_zero(t_printf_mods mods, t_printf_buff *buff,
 	prefix = ft_strnew((size_t)mods.width - length);
 	prefix = ft_memset(prefix, '0', (size_t)(mods.width - length));
 	--length;
-	while ((buff->buff[length] >= '0' && buff->buff[length] <= '9')
-	|| (mods.conv == 'x' && ft_strin(HEX, buff->buff[length]))
-	|| (mods.conv == 'X' && ft_strin(HEX_CAP, buff->buff[length])))
+	while (ft_isdigit(buff->buff[length]) || (ft_strin(PRINTF_NDEC, mods.conv)
+	&& ft_strin(ft_printf_base(mods.conv), buff->buff[length])))
 		--length;
 	ft_strinject(&buff->buff, prefix, (size_t)(length) + 1);
 	ft_strdel(&prefix);
@@ -63,11 +62,10 @@ void		ft_printf_width(t_printf_mods mods, t_printf_buff *buff)
 	length = (int)ft_strlen(buff->buff);
 	if (length >= mods.width)
 		return ;
-	if (ft_strin(mods.flags, '0') && mods.prec == 1
-		&& !ft_strin(mods.flags, '-'))
-		ft_printf_width_zero(mods, buff, length);
-	else if (ft_strin(mods.flags, '-'))
+	if (ft_strin(mods.flags, '-'))
 		ft_printf_width_minus(mods, buff, length);
+	else if (ft_printf_zero(mods))
+		ft_printf_width_zero(mods, buff, length);
 	else
 		ft_printf_width_std(mods, buff, length);
 }

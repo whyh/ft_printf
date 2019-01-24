@@ -19,11 +19,12 @@ RM = /bin/rm -rf
 
 LIBFT_PATH = libft/
 LIBFT_INCS =	libft.h\
+				libft_typedefs.h\
 				ft_gnl_typedefs.h
 LIBFT_SRCS = 	ft_atoi.c\
 				ft_atoibase.c\
 				ft_bzero.c\
-				ft_find_distance_to_char.c\
+				ft_strfdist.c\
 				ft_gnl.c\
 				ft_intiteri.c\
 				ft_strin.c\
@@ -85,7 +86,7 @@ LIBFT_OBJS_DIR = $(OBJS_DIR)
 
 PRINTF_PATH = ft_printf/
 PRINTF_INCS =	ft_printf.h\
-				ft_printf_typedefs
+				ft_printf_typedefs.h
 PRINTF_SRCS =	ft_printf.c\
 				ft_printf_cspf.c\
 				ft_printf_diouxx.c\
@@ -94,7 +95,9 @@ PRINTF_SRCS =	ft_printf.c\
 				ft_printf_parse.c\
 				ft_printf_prec.c\
 				ft_printf_width.c\
-				ft_printf_mod0.c
+				ft_printf_mod0.c\
+				ft_printf_0_base.c\
+				ft_printf_lhllhhl.c
 PRINTF_OBJS = $(PRINTF_SRCS:%.c=$(PRINTF_OBJS_DIR)/%.o)
 PRINTF_OBJS_DIR = $(OBJS_DIR)
 

@@ -13,10 +13,16 @@ stdint.h
 -
 ../libft/libft.h
 /Users/dderevyn/CLionProjects/ft_printf/libft/libft.h
+ft_printf_typedefs.h
+/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_typedefs.h
 
-/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_prec.c
+/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_hash_zero_blank_plus.c
 ft_printf.h
 /Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf.h
+
+/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_typedefs.h
+
+/Users/dderevyn/CLionProjects/ft_printf/libft/ft_gnl_typedefs.h
 
 /Users/dderevyn/CLionProjects/ft_printf/libft/libft.h
 string.h
@@ -31,4 +37,10 @@ sys/types.h
 -
 sys/stat.h
 -
+libft_typedefs.h
+/Users/dderevyn/CLionProjects/ft_printf/libft/libft_typedefs.h
+ft_gnl_typedefs.h
+/Users/dderevyn/CLionProjects/ft_printf/libft/ft_gnl_typedefs.h
+
+/Users/dderevyn/CLionProjects/ft_printf/libft/libft_typedefs.h
 

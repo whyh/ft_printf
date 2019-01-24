@@ -13,11 +13,12 @@
 #ifndef FT_PRINTF_TYPEDEFS_H
 # define FT_PRINTF_TYPEDEFS_H
 
-# define PRINTF_FLAGS "+- 0#"
-# define PRINTF_LENGTH "lhL"
-# define PRINTF_DLENGTH "lh"
+# define PRINTF_FLAGS "+ #"
+# define PRINTF_PASIVE_FLAGS "-0"
+# define PRINTF_LENGTH1 "lhL"
+# define PRINTF_LENGTH2 "lh"
 # define PRINTF_SN "di"
-# define PRINTF_FLOAT "fF"
+# define PRINTF_FLOAT "f"
 # define PRINTF_STR "s"
 # define PRINTF_PTR "p"
 # define PRINTF_CHR "c"
@@ -37,11 +38,14 @@ typedef struct				s_printf_mods
 	int						width;
 	int						prec;
 	int						prec_spec : 2;
-	char					*length;
+	int						length;
 	char					*flags;
 }							t_printf_mods;
 
 typedef int					(*t_printf_funs)(va_list *args, t_printf_mods mods,
 							t_printf_buff *buff);
+
+typedef int					(*t_printf_convs)(va_list *args, t_printf_mods mods,
+							t_printf_buff *buff, t_printf_funs *funs);
 
 #endif

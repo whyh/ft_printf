@@ -19,23 +19,8 @@
 # include <fcntl.h>
 # include <sys/types.h>
 # include <sys/stat.h>
+# include "libft_typedefs.h"
 # include "ft_gnl_typedefs.h"
-
-# define LLONG_MAX 9223372036854775807
-# define INT_MIN -2147483648
-# define HEX "0123456789abcdef"
-# define HEX_CAP "0123456789ABCDEF"
-# define DEC "0123456789"
-# define OCT "01234567"
-# define ULL unsigned long long
-# define LL long long
-# define UL unsigned long
-# define L long
-# define US unsigned short
-# define S short
-# define D double
-# define UC unsigned char
-# define UI unsigned int
 
 void	ft_putchar(char c);
 size_t	ft_putstr(char const *s);
@@ -92,7 +77,7 @@ int		ft_strin(char *str, char c);
 int		ft_iswhitespace(int c);
 size_t	ft_linetrim(char **str, size_t n);
 size_t	ft_linelen(char *str);
-size_t	ft_find_distance_to_char(char *string, char to_find);
+size_t	ft_strfdist(char *str, char *obj);
 char	*ft_itoabase_unsigned(char *set, unsigned long long nb);
 char	*ft_itoabase(char *set, long long nb);
 char	*ft_strndup(const char *s1, size_t size);

@@ -150,6 +150,33 @@ ft_printf/ft_printf.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf.c.s
 .PHONY : ft_printf/ft_printf.c.s
 
+ft_printf/ft_printf_0_base.o: ft_printf/ft_printf_0_base.c.o
+
+.PHONY : ft_printf/ft_printf_0_base.o
+
+# target to build an object file
+ft_printf/ft_printf_0_base.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_0_base.c.o
+.PHONY : ft_printf/ft_printf_0_base.c.o
+
+ft_printf/ft_printf_0_base.i: ft_printf/ft_printf_0_base.c.i
+
+.PHONY : ft_printf/ft_printf_0_base.i
+
+# target to preprocess a source file
+ft_printf/ft_printf_0_base.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_0_base.c.i
+.PHONY : ft_printf/ft_printf_0_base.c.i
+
+ft_printf/ft_printf_0_base.s: ft_printf/ft_printf_0_base.c.s
+
+.PHONY : ft_printf/ft_printf_0_base.s
+
+# target to generate assembly for a file
+ft_printf/ft_printf_0_base.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_0_base.c.s
+.PHONY : ft_printf/ft_printf_0_base.c.s
+
 ft_printf/ft_printf_cspf.o: ft_printf/ft_printf_cspf.c.o
 
 .PHONY : ft_printf/ft_printf_cspf.o
@@ -257,6 +284,33 @@ ft_printf/ft_printf_hash_zero_blank_plus.s: ft_printf/ft_printf_hash_zero_blank_
 ft_printf/ft_printf_hash_zero_blank_plus.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_hash_zero_blank_plus.c.s
 .PHONY : ft_printf/ft_printf_hash_zero_blank_plus.c.s
+
+ft_printf/ft_printf_lhllhhl.o: ft_printf/ft_printf_lhllhhl.c.o
+
+.PHONY : ft_printf/ft_printf_lhllhhl.o
+
+# target to build an object file
+ft_printf/ft_printf_lhllhhl.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_lhllhhl.c.o
+.PHONY : ft_printf/ft_printf_lhllhhl.c.o
+
+ft_printf/ft_printf_lhllhhl.i: ft_printf/ft_printf_lhllhhl.c.i
+
+.PHONY : ft_printf/ft_printf_lhllhhl.i
+
+# target to preprocess a source file
+ft_printf/ft_printf_lhllhhl.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_lhllhhl.c.i
+.PHONY : ft_printf/ft_printf_lhllhhl.c.i
+
+ft_printf/ft_printf_lhllhhl.s: ft_printf/ft_printf_lhllhhl.c.s
+
+.PHONY : ft_printf/ft_printf_lhllhhl.s
+
+# target to generate assembly for a file
+ft_printf/ft_printf_lhllhhl.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_lhllhhl.c.s
+.PHONY : ft_printf/ft_printf_lhllhhl.c.s
 
 ft_printf/ft_printf_mod0.o: ft_printf/ft_printf_mod0.c.o
 
@@ -446,33 +500,6 @@ libft/ft_bzero.s: libft/ft_bzero.c.s
 libft/ft_bzero.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/ft_bzero.c.s
 .PHONY : libft/ft_bzero.c.s
-
-libft/ft_find_distance_to_char.o: libft/ft_find_distance_to_char.c.o
-
-.PHONY : libft/ft_find_distance_to_char.o
-
-# target to build an object file
-libft/ft_find_distance_to_char.c.o:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/ft_find_distance_to_char.c.o
-.PHONY : libft/ft_find_distance_to_char.c.o
-
-libft/ft_find_distance_to_char.i: libft/ft_find_distance_to_char.c.i
-
-.PHONY : libft/ft_find_distance_to_char.i
-
-# target to preprocess a source file
-libft/ft_find_distance_to_char.c.i:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/ft_find_distance_to_char.c.i
-.PHONY : libft/ft_find_distance_to_char.c.i
-
-libft/ft_find_distance_to_char.s: libft/ft_find_distance_to_char.c.s
-
-.PHONY : libft/ft_find_distance_to_char.s
-
-# target to generate assembly for a file
-libft/ft_find_distance_to_char.c.s:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/ft_find_distance_to_char.c.s
-.PHONY : libft/ft_find_distance_to_char.c.s
 
 libft/ft_gnl.o: libft/ft_gnl.c.o
 
@@ -1419,6 +1446,33 @@ libft/ft_strequ.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/ft_strequ.c.s
 .PHONY : libft/ft_strequ.c.s
 
+libft/ft_strfdist.o: libft/ft_strfdist.c.o
+
+.PHONY : libft/ft_strfdist.o
+
+# target to build an object file
+libft/ft_strfdist.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/ft_strfdist.c.o
+.PHONY : libft/ft_strfdist.c.o
+
+libft/ft_strfdist.i: libft/ft_strfdist.c.i
+
+.PHONY : libft/ft_strfdist.i
+
+# target to preprocess a source file
+libft/ft_strfdist.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/ft_strfdist.c.i
+.PHONY : libft/ft_strfdist.c.i
+
+libft/ft_strfdist.s: libft/ft_strfdist.c.s
+
+.PHONY : libft/ft_strfdist.s
+
+# target to generate assembly for a file
+libft/ft_strfdist.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/ft_strfdist.c.s
+.PHONY : libft/ft_strfdist.c.s
+
 libft/ft_strin.o: libft/ft_strin.c.o
 
 .PHONY : libft/ft_strin.o
@@ -2025,6 +2079,9 @@ help:
 	@echo "... ft_printf/ft_printf.o"
 	@echo "... ft_printf/ft_printf.i"
 	@echo "... ft_printf/ft_printf.s"
+	@echo "... ft_printf/ft_printf_0_base.o"
+	@echo "... ft_printf/ft_printf_0_base.i"
+	@echo "... ft_printf/ft_printf_0_base.s"
 	@echo "... ft_printf/ft_printf_cspf.o"
 	@echo "... ft_printf/ft_printf_cspf.i"
 	@echo "... ft_printf/ft_printf_cspf.s"
@@ -2037,6 +2094,9 @@ help:
 	@echo "... ft_printf/ft_printf_hash_zero_blank_plus.o"
 	@echo "... ft_printf/ft_printf_hash_zero_blank_plus.i"
 	@echo "... ft_printf/ft_printf_hash_zero_blank_plus.s"
+	@echo "... ft_printf/ft_printf_lhllhhl.o"
+	@echo "... ft_printf/ft_printf_lhllhhl.i"
+	@echo "... ft_printf/ft_printf_lhllhhl.s"
 	@echo "... ft_printf/ft_printf_mod0.o"
 	@echo "... ft_printf/ft_printf_mod0.i"
 	@echo "... ft_printf/ft_printf_mod0.s"
@@ -2058,9 +2118,6 @@ help:
 	@echo "... libft/ft_bzero.o"
 	@echo "... libft/ft_bzero.i"
 	@echo "... libft/ft_bzero.s"
-	@echo "... libft/ft_find_distance_to_char.o"
-	@echo "... libft/ft_find_distance_to_char.i"
-	@echo "... libft/ft_find_distance_to_char.s"
 	@echo "... libft/ft_gnl.o"
 	@echo "... libft/ft_gnl.i"
 	@echo "... libft/ft_gnl.s"
@@ -2166,6 +2223,9 @@ help:
 	@echo "... libft/ft_strequ.o"
 	@echo "... libft/ft_strequ.i"
 	@echo "... libft/ft_strequ.s"
+	@echo "... libft/ft_strfdist.o"
+	@echo "... libft/ft_strfdist.i"
+	@echo "... libft/ft_strfdist.s"
 	@echo "... libft/ft_strin.o"
 	@echo "... libft/ft_strin.i"
 	@echo "... libft/ft_strin.s"

@@ -5,10 +5,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf.c" "/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_printf/ft_printf.c.o"
+  "/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_0_base.c" "/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_printf/ft_printf_0_base.c.o"
   "/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_cspf.c" "/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_printf/ft_printf_cspf.c.o"
   "/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_diouxx.c" "/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_printf/ft_printf_diouxx.c.o"
   "/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_fill_funs.c" "/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_printf/ft_printf_fill_funs.c.o"
   "/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_hash_zero_blank_plus.c" "/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_printf/ft_printf_hash_zero_blank_plus.c.o"
+  "/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_lhllhhl.c" "/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_printf/ft_printf_lhllhhl.c.o"
   "/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_mod0.c" "/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_printf/ft_printf_mod0.c.o"
   "/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_parse.c" "/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_printf/ft_printf_parse.c.o"
   "/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_prec.c" "/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_printf/ft_printf_prec.c.o"
@@ -16,7 +18,6 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/dderevyn/CLionProjects/ft_printf/libft/ft_atoi.c" "/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/libft/ft_atoi.c.o"
   "/Users/dderevyn/CLionProjects/ft_printf/libft/ft_atoibase.c" "/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/libft/ft_atoibase.c.o"
   "/Users/dderevyn/CLionProjects/ft_printf/libft/ft_bzero.c" "/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/libft/ft_bzero.c.o"
-  "/Users/dderevyn/CLionProjects/ft_printf/libft/ft_find_distance_to_char.c" "/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/libft/ft_find_distance_to_char.c.o"
   "/Users/dderevyn/CLionProjects/ft_printf/libft/ft_gnl.c" "/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/libft/ft_gnl.c.o"
   "/Users/dderevyn/CLionProjects/ft_printf/libft/ft_intiteri.c" "/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/libft/ft_intiteri.c.o"
   "/Users/dderevyn/CLionProjects/ft_printf/libft/ft_isalnum.c" "/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/libft/ft_isalnum.c.o"
@@ -52,6 +53,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strdel.c" "/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/libft/ft_strdel.c.o"
   "/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strdup.c" "/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/libft/ft_strdup.c.o"
   "/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strequ.c" "/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/libft/ft_strequ.c.o"
+  "/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strfdist.c" "/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/libft/ft_strfdist.c.o"
   "/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strin.c" "/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/libft/ft_strin.c.o"
   "/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strinject.c" "/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/libft/ft_strinject.c.o"
   "/Users/dderevyn/CLionProjects/ft_printf/libft/ft_striter.c" "/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/libft/ft_striter.c.o"

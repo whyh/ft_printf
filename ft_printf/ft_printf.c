@@ -16,20 +16,20 @@ static int	ft_printf_exec(t_printf_mods mods, va_list *args,
 			t_printf_buff *buff)
 {
 	static t_printf_funs	*funs = NULL;
+	static t_printf_convs	*convs = NULL;
 	int						i;
 
-	if (!funs)
-		ft_printf_fill_funs(&funs);
-	if (!funs[(int)mods.conv](args, mods, buff))
+	if (!funs || !convs)
+		ft_printf_fill_funs_convs(&funs, &convs);
+	if (!convs[(int)mods.conv](args, mods, buff, funs))
 		return (0);
-	if (mods.prec_spec == 1 || mods.conv == 'f')
+	if (mods.prec_spec == 1 || ft_strin(PRINTF_FLOAT, mods.conv))
 		ft_printf_prec(mods, buff);
 	i = 0;
 	while (mods.flags[i])
 	{
-		if (funs[(int)mods.flags[i]])
-			if (!(funs[(int)mods.flags[i]](args, mods, buff)))
-				return (0);
+		if (!ft_strin(PRINTF_PASIVE_FLAGS, mods.flags[i]))
+			funs[(int)mods.flags[i]](args, mods, buff);
 		++i;
 	}
 	if (mods.width != 0)
@@ -44,7 +44,7 @@ static int	ft_printf_parse_mods(char **format, va_list *args,
 	t_printf_buff	*new_node;
 	int				ret;
 
-	if (**format == '\0')
+	if (!(**format))
 		return (0);
 	ft_printf_parse_flags(format, &mods);
 	ft_printf_parse_f_width(format, &mods);
@@ -58,7 +58,6 @@ static int	ft_printf_parse_mods(char **format, va_list *args,
 	new_node->next = NULL;
 	buff->next = new_node;
 	ret = ft_printf_exec(mods, args, new_node);
-	ft_strdel(&(mods.length));
 	ft_strdel(&(mods.flags));
 	if (ret == 0)
 		return (0);
@@ -72,19 +71,19 @@ static int	ft_printf_iter(char **format, va_list *args, t_printf_buff *buff)
 
 	while (**format != '\0')
 	{
-		if (**format == '%')
+		if (ft_strin(PRINTF_MOD0, **format))
 		{
 			(*format)++;
 			ft_printf_parse_mods(format, args, buff);
 		}
-		if (**format != '%')
+		if (!ft_strin(PRINTF_MOD0, **format))
 		{
 			while (buff->next != NULL)
 				buff = buff->next;
 			new_node = ft_memalloc(sizeof(t_printf_buff *));
 			new_node->next = NULL;
 			buff->next = new_node;
-			size = ft_find_distance_to_char(*format, '%');
+			size = ft_strfdist(*format, PRINTF_MOD0);
 			new_node->buff = ft_strndup(*format, size);
 			(*format) += size;
 		}

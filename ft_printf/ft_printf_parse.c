@@ -18,9 +18,10 @@ void	ft_printf_parse_flags(char **format, t_printf_mods *mods)
 	int	nb;
 
 	i = 0;
-	nb = (int)ft_strlen(PRINTF_FLAGS);
+	nb = (int)ft_strlen(PRINTF_FLAGS) + (int)ft_strlen(PRINTF_PASIVE_FLAGS);
 	mods->flags = ft_strnew((size_t)nb);
-	while (ft_strin(PRINTF_FLAGS, **format))
+	while (ft_strin(PRINTF_FLAGS, **format)
+	|| ft_strin(PRINTF_PASIVE_FLAGS, **format))
 	{
 		if (i < nb && !ft_strin(mods->flags, **format))
 		{
@@ -72,16 +73,16 @@ void	ft_printf_parce_length(char **format, t_printf_mods *mods)
 {
 	int	i;
 
-	mods->length = ft_strnew(2);
-	if (!ft_strin(PRINTF_LENGTH, **format))
+	mods->length = 0;
+	if (!ft_strin(PRINTF_LENGTH1, **format))
 		return ;
 	i = 0;
-	mods->length[i] = **format;
+	mods->length = **format;
 	++i;
 	(*format)++;
-	if (ft_strin(PRINTF_DLENGTH, **format) && **format == *(*format - 1))
+	if (ft_strin(PRINTF_LENGTH2, **format) && **format == *(*format - 1))
 	{
-		mods->length[i] = **format;
+		mods->length += **format;
 		(*format)++;
 	}
 }
@@ -94,7 +95,6 @@ int		ft_printf_parce_conv(char **format, t_printf_mods *mods)
 	&& !ft_strin(PRINTF_FLOAT, **format) && !ft_strin(PRINTF_PTR, **format)
 	&& !ft_strin(PRINTF_MOD0, **format) && !ft_strin(PRINTF_STR, **format))
 	{
-		ft_strdel(&(mods->length));
 		ft_strdel(&(mods->flags));
 		return (0);
 	}
