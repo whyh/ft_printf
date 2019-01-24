@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_mod0.c                                   :+:      :+:    :+:   */
+/*   ft_printf_zj.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dderevyn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,34 +12,30 @@
 
 #include "ft_printf.h"
 
-int		ft_printf_mod0(va_list *args, t_printf_mods mods, t_printf_buff *buff,
-		t_printf_funs *funs)
-{
-	if (funs[mods.length](args, mods, buff))
-		return (1);
-	buff->buff = ft_strdup(PRINTF_MOD0);
-	return (1);
-}
-
-int		ft_printf_cap_u(va_list *args, t_printf_mods mods, t_printf_buff *buff,
-		t_printf_funs *funs)
-{
-	char	*base;
-
-	(void)funs;
-	base = ft_printf_base(mods.conv);
-	buff->buff = ft_itoabase_unsigned(base, va_arg(*args, ULL));
-	return (1);
-}
-
-int		ft_printf_b(va_list *args, t_printf_mods mods, t_printf_buff *buff,
-		t_printf_funs *funs)
+int	ft_printf_z(va_list *args, t_printf_mods mods, t_printf_buff *buff)
 {
 	char	*base;
 
 	base = ft_printf_base(mods.conv);
-	if (funs[mods.length](args, mods, buff))
-		return (1);
-	buff->buff = ft_itoabase_unsigned(base, va_arg(*args, UI));
+	if (ft_strin(PRINTF_USN, mods.conv) || ft_strin(PRINTF_NDEC, mods.conv))
+		buff->buff = ft_itoabase_unsigned(base, va_arg(*args, size_t));
+	else if (ft_strin(PRINTF_SN, mods.conv))
+		buff->buff = ft_itoabase(base, va_arg(*args, ssize_t));
+	else
+		return (0);
+	return (1);
+}
+
+int	ft_printf_j(va_list *args, t_printf_mods mods, t_printf_buff *buff)
+{
+	char	*base;
+
+	base = ft_printf_base(mods.conv);
+	if (ft_strin(PRINTF_USN, mods.conv) || ft_strin(PRINTF_NDEC, mods.conv))
+		buff->buff = ft_itoabase_unsigned(base, va_arg(*args, uintmax_t));
+	else if (ft_strin(PRINTF_SN, mods.conv))
+		buff->buff = ft_itoabase(base, va_arg(*args, intmax_t));
+	else
+		return (0);
 	return (1);
 }

@@ -420,6 +420,33 @@ ft_printf/ft_printf_width.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_width.c.s
 .PHONY : ft_printf/ft_printf_width.c.s
 
+ft_printf/ft_printf_zj.o: ft_printf/ft_printf_zj.c.o
+
+.PHONY : ft_printf/ft_printf_zj.o
+
+# target to build an object file
+ft_printf/ft_printf_zj.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_zj.c.o
+.PHONY : ft_printf/ft_printf_zj.c.o
+
+ft_printf/ft_printf_zj.i: ft_printf/ft_printf_zj.c.i
+
+.PHONY : ft_printf/ft_printf_zj.i
+
+# target to preprocess a source file
+ft_printf/ft_printf_zj.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_zj.c.i
+.PHONY : ft_printf/ft_printf_zj.c.i
+
+ft_printf/ft_printf_zj.s: ft_printf/ft_printf_zj.c.s
+
+.PHONY : ft_printf/ft_printf_zj.s
+
+# target to generate assembly for a file
+ft_printf/ft_printf_zj.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_zj.c.s
+.PHONY : ft_printf/ft_printf_zj.c.s
+
 libft/ft_atoi.o: libft/ft_atoi.c.o
 
 .PHONY : libft/ft_atoi.o
@@ -2109,6 +2136,9 @@ help:
 	@echo "... ft_printf/ft_printf_width.o"
 	@echo "... ft_printf/ft_printf_width.i"
 	@echo "... ft_printf/ft_printf_width.s"
+	@echo "... ft_printf/ft_printf_zj.o"
+	@echo "... ft_printf/ft_printf_zj.i"
+	@echo "... ft_printf/ft_printf_zj.s"
 	@echo "... libft/ft_atoi.o"
 	@echo "... libft/ft_atoi.i"
 	@echo "... libft/ft_atoi.s"

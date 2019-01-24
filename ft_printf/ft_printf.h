@@ -61,5 +61,11 @@ void	ft_printf_fill_float(t_printf_buff *buff, long long a_args[3],
 int		ft_printf_0(va_list *args, t_printf_mods mods, t_printf_buff *buff);
 char	*ft_printf_base(char conv);
 char	*ft_printf_base_prefix(t_printf_mods mods, t_printf_buff *buff);
+int		ft_printf_z(va_list *args, t_printf_mods mods, t_printf_buff *buff);
+int		ft_printf_j(va_list *args, t_printf_mods mods, t_printf_buff *buff);
+int		ft_printf_cap_u(va_list *args, t_printf_mods mods, t_printf_buff *buff,
+		t_printf_funs *funs);
+int		ft_printf_b(va_list *args, t_printf_mods mods, t_printf_buff *buff,
+		t_printf_funs *funs);
 
 #endif

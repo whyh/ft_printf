@@ -23,7 +23,7 @@ static int	ft_printf_exec(t_printf_mods mods, va_list *args,
 		ft_printf_fill_funs_convs(&funs, &convs);
 	if (!convs[(int)mods.conv](args, mods, buff, funs))
 		return (0);
-	if (mods.prec_spec == 1 || ft_strin(PRINTF_FLOAT, mods.conv))
+	if (mods.prec_spec == 1)
 		ft_printf_prec(mods, buff);
 	i = 0;
 	while (mods.flags[i])

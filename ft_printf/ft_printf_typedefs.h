@@ -15,15 +15,15 @@
 
 # define PRINTF_FLAGS "+ #"
 # define PRINTF_PASIVE_FLAGS "-0"
-# define PRINTF_LENGTH1 "lhL"
+# define PRINTF_LENGTH1 "lhLjz"
 # define PRINTF_LENGTH2 "lh"
 # define PRINTF_SN "di"
-# define PRINTF_FLOAT "f"
+# define PRINTF_FLOAT "fF"
 # define PRINTF_STR "s"
 # define PRINTF_PTR "p"
 # define PRINTF_CHR "c"
-# define PRINTF_NDEC "oxX"
-# define PRINTF_USN "u"
+# define PRINTF_NDEC "boxX"
+# define PRINTF_USN "uU"
 # define PRINTF_MOD0 "%"
 
 typedef struct				s_printf_buff

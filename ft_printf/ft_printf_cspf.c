@@ -43,17 +43,13 @@ int		ft_printf_s(va_list *args, t_printf_mods mods, t_printf_buff *buff,
 int		ft_printf_p(va_list *args, t_printf_mods mods, t_printf_buff *buff,
 		t_printf_funs *funs)
 {
-	char	*tmp;
-
 	if (funs[mods.length](args, mods, buff))
 		return (1);
-	buff->buff = ft_itoabase_unsigned(HEX, va_arg(*args, ULL));
-	if ((buff->buff)[0] == '\0')
-		tmp = ft_strjoin("0x0", buff->buff);
-	else
-		tmp = ft_strjoin("0x", buff->buff);
-	ft_strdel(&(buff->buff));
-	buff->buff = tmp;
+	buff->buff = ft_itoabase_unsigned(ft_printf_base(mods.conv),
+	va_arg(*args, ULL));
+	if (buff->buff == NULL)
+		ft_strinject(&(buff->buff), "0", 0);
+	ft_strinject(&(buff->buff), ft_printf_base_prefix(mods, buff), 0);
 	return (1);
 }
 
@@ -88,6 +84,11 @@ int		ft_printf_f(va_list *args, t_printf_mods mods, t_printf_buff *buff,
 	double		arg;
 	long long	a_args[3];
 
+	if (mods.prec_spec == 0)
+	{
+		mods.prec_spec = 1;
+		mods.prec = 6;
+	}
 	if (funs[mods.length](args, mods, buff))
 		return (1);
 	arg = va_arg(*args, D);

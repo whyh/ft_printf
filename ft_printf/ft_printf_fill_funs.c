@@ -27,6 +27,8 @@ static void	ft_printf_fill_length(t_printf_funs *funs)
 	funs['l' + 'l'] = &ft_printf_ll;
 	funs['h' + 'h'] = &ft_printf_hh;
 	funs[0] = &ft_printf_0;
+	funs['z'] = &ft_printf_z;
+	funs['j'] = &ft_printf_j;
 }
 
 static void	ft_printf_fill_convs(t_printf_convs *convs)
@@ -41,7 +43,10 @@ static void	ft_printf_fill_convs(t_printf_convs *convs)
 	convs['s'] = &ft_printf_s;
 	convs['p'] = &ft_printf_p;
 	convs['f'] = &ft_printf_f;
+	convs['F'] = &ft_printf_f;
 	convs['%'] = &ft_printf_mod0;
+	convs['U'] = &ft_printf_cap_u;
+	convs['b'] = &ft_printf_b;
 }
 
 void		ft_printf_fill_funs_convs(t_printf_funs **funs,

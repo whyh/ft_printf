@@ -100,10 +100,5 @@ int		ft_printf_parce_conv(char **format, t_printf_mods *mods)
 	}
 	mods->conv = **format;
 	(*format)++;
-	if (mods->prec_spec == 0 && (ft_strin(PRINTF_USN, mods->conv)
-	|| ft_strin(PRINTF_SN, mods->conv) || ft_strin(PRINTF_NDEC, mods->conv)))
-		mods->prec = 1;
-	else if (mods->prec_spec == 0 && ft_strin(PRINTF_FLOAT, mods->conv))
-		mods->prec = 6;
 	return (1);
 }

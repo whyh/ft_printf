@@ -124,6 +124,9 @@
 		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_width.c">
 			<Option target="ft_printf"/>
 		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_zj.c">
+			<Option target="ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_atoi.c">
 			<Option target="ft_printf"/>
 		</Unit>

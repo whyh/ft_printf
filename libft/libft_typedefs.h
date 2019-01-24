@@ -19,6 +19,7 @@
 # define HEX_CAP "0123456789ABCDEF"
 # define DEC "0123456789"
 # define OCT "01234567"
+# define BINARY "01"
 # define ULL unsigned long long
 # define LL long long
 # define UL unsigned long

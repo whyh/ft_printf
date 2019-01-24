@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf.c
+ft_printf.h
+/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf.h
+
 /Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf.h
 stdarg.h
 -
@@ -16,11 +20,51 @@ stdint.h
 ft_printf_typedefs.h
 /Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_typedefs.h
 
+/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_0_base.c
+ft_printf.h
+/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf.h
+
+/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_cspf.c
+ft_printf.h
+/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf.h
+
+/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_diouxx.c
+ft_printf.h
+/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf.h
+
+/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_fill_funs.c
+ft_printf.h
+/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf.h
+
 /Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_hash_zero_blank_plus.c
 ft_printf.h
 /Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf.h
 
+/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_lhllhhl.c
+ft_printf.h
+/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf.h
+
+/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_mod0.c
+ft_printf.h
+/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf.h
+
+/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_parse.c
+ft_printf.h
+/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf.h
+
+/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_prec.c
+ft_printf.h
+/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf.h
+
 /Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_typedefs.h
+
+/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_width.c
+ft_printf.h
+/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf.h
+
+/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_zj.c
+ft_printf.h
+/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf.h
 
 /Users/dderevyn/CLionProjects/ft_printf/libft/ft_gnl_typedefs.h
 
@@ -43,4 +87,10 @@ ft_gnl_typedefs.h
 /Users/dderevyn/CLionProjects/ft_printf/libft/ft_gnl_typedefs.h
 
 /Users/dderevyn/CLionProjects/ft_printf/libft/libft_typedefs.h
+
+/Users/dderevyn/CLionProjects/ft_printf/main.c
+ft_printf/ft_printf.h
+/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf.h
+stdio.h
+-
 

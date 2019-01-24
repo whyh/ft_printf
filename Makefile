@@ -97,7 +97,8 @@ PRINTF_SRCS =	ft_printf.c\
 				ft_printf_width.c\
 				ft_printf_mod0.c\
 				ft_printf_0_base.c\
-				ft_printf_lhllhhl.c
+				ft_printf_lhllhhl.c\
+				ft_printf_zj.c
 PRINTF_OBJS = $(PRINTF_SRCS:%.c=$(PRINTF_OBJS_DIR)/%.o)
 PRINTF_OBJS_DIR = $(OBJS_DIR)
 
