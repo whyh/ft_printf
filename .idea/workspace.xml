@@ -11,7 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6ee8640-fb1e-4390-92f8-c5543f14b96d" name="Default Changelist" comment="added length mods z j, and conv U">
+    <list default="true" id="a6ee8640-fb1e-4390-92f8-c5543f14b96d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/depend.make" afterDir="false" />
@@ -82,8 +82,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/ft_printf/ft_printf_cspf.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="476">
-                  <caret line="85" selection-start-line="85" selection-end-line="85" />
+                <state relative-caret-position="116">
+                  <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
                 </state>
               </provider>
             </entry>
@@ -342,6 +342,7 @@
       <workItem from="1548275270663" duration="2146000" />
       <workItem from="1548326420861" duration="17260000" />
       <workItem from="1548416370704" duration="122000" />
+      <workItem from="1548416606337" duration="79000" />
     </task>
     <task id="LOCAL-00001" summary="makefile changes">
       <created>1548165667948</created>
@@ -399,11 +400,18 @@
       <option name="project" value="LOCAL" />
       <updated>1548345198445</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="minor update">
+      <created>1548416664293</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1548416664293</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84864000" />
+    <option name="totallyTimeSpent" value="84943000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -416,8 +424,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="319" y="23" width="2086" height="1417" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4994985" visible="true" weight="0.14138943" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4994985" visible="true" weight="0.1423679" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5005015" side_tool="true" weight="0.11986301" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -455,7 +464,8 @@
     <MESSAGE value="rewritten length and non deciminal conv system" />
     <MESSAGE value="fix" />
     <MESSAGE value="added length mods z j, and conv U" />
-    <option name="LAST_COMMIT_MESSAGE" value="added length mods z j, and conv U" />
+    <MESSAGE value="minor update" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -728,13 +738,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ft_printf/ft_printf_cspf.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="85" selection-start-line="85" selection-end-line="85" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -795,6 +798,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="33" column="6" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ft_printf/ft_printf_cspf.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
         </state>
       </provider>
     </entry>
