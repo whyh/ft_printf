@@ -78,6 +78,13 @@ CMakeFiles/ft_printf.dir/ft_printf/ft_printf_width.c.o
  /Users/dderevyn/CLionProjects/ft_printf/libft/ft_gnl_typedefs.h
  /Users/dderevyn/CLionProjects/ft_printf/libft/libft.h
  /Users/dderevyn/CLionProjects/ft_printf/libft/libft_typedefs.h
+CMakeFiles/ft_printf.dir/ft_printf/ft_printf_zj.c.o
+ /Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf.h
+ /Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_typedefs.h
+ /Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_zj.c
+ /Users/dderevyn/CLionProjects/ft_printf/libft/ft_gnl_typedefs.h
+ /Users/dderevyn/CLionProjects/ft_printf/libft/libft.h
+ /Users/dderevyn/CLionProjects/ft_printf/libft/libft_typedefs.h
 CMakeFiles/ft_printf.dir/libft/ft_atoi.c.o
  /Users/dderevyn/CLionProjects/ft_printf/libft/ft_atoi.c
  /Users/dderevyn/CLionProjects/ft_printf/libft/ft_gnl_typedefs.h
