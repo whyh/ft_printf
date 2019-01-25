@@ -13,7 +13,7 @@
 #include "ft_printf.h"
 
 static void	ft_printf_prec_sn_usn_p_ndec(t_printf_mods mods,
-		t_printf_buff *buff)
+		t_printf_buff *node)
 {
 	int		length;
 	char	*head;
@@ -24,37 +24,37 @@ static void	ft_printf_prec_sn_usn_p_ndec(t_printf_mods mods,
 		i = 0;
 		if (ft_strin(PRINTF_PTR, mods.conv))
 			i = 2;
-		if (buff->buff[i] == '0' && buff->buff[i + 1] == '\0')
-			buff->buff[i] = '\0';
+		if (node->buff[i] == '0' && node->buff[i + 1] == '\0')
+			node->buff[i] = '\0';
 		return ;
 	}
-	length = mods.prec - (int)ft_strlen(buff->buff);
+	length = mods.prec - (int)ft_strlen(node->buff);
 	i = 0;
 	if (ft_strin(PRINTF_PTR, mods.conv) && (i = 2))
 		length += 2;
-	if (buff->buff[0] == '-' && (i = 1))
+	if (node->buff[0] == '-' && (i = 1))
 		++length;
 	if (length <= 0)
 		return ;
 	head = ft_strnew((size_t)length);
 	head = ft_memset(head, '0', (size_t)length);
-	ft_strinject(&(buff->buff), head, (size_t)i);
+	ft_strinject(&(node->buff), head, (size_t)i);
 	ft_strdel(&head);
 }
 
-static void	ft_printf_prec_str(t_printf_mods mods, t_printf_buff *buff)
+static void	ft_printf_prec_str(t_printf_mods mods, t_printf_buff *node)
 {
 	char	*tmp;
 
-	if (mods.prec >= (int)ft_strlen(buff->buff))
+	if (mods.prec >= (int)ft_strlen(node->buff))
 		return ;
 	tmp = ft_strnew((size_t)mods.prec);
-	tmp = ft_strncpy(tmp, buff->buff, (size_t)mods.prec);
-	ft_strdel(&(buff->buff));
-	buff->buff = tmp;
+	tmp = ft_strncpy(tmp, node->buff, (size_t)mods.prec);
+	ft_strdel(&(node->buff));
+	node->buff = tmp;
 }
 
-static void	ft_printf_prec_float_fix(t_printf_buff *buff, t_printf_mods mods,
+static void	ft_printf_prec_float_fix(t_printf_buff *node, t_printf_mods mods,
 			int length, int size)
 {
 	int i;
@@ -63,35 +63,35 @@ static void	ft_printf_prec_float_fix(t_printf_buff *buff, t_printf_mods mods,
 	mod = 0;
 	while (length > mods.prec - 1)
 	{
-		if (buff->buff[size] > '5')
+		if (node->buff[size] > '5')
 		{
 			i = 1;
-			while (buff->buff[size - i] == '9' || buff->buff[size - i] == '.')
-				if (buff->buff[size - i++] == '9')
-					buff->buff[size - i + 1] = '0';
-			if (size - i >= 0 && buff->buff[size - i] != '-')
-				buff->buff[size - i]++;
-			else if (buff->buff[size - i] == '-' && (mod += 1))
-				ft_strinject(&(buff->buff), "1", 1);
+			while (node->buff[size - i] == '9' || node->buff[size - i] == '.')
+				if (node->buff[size - i++] == '9')
+					node->buff[size - i + 1] = '0';
+			if (size - i >= 0 && node->buff[size - i] != '-')
+				node->buff[size - i]++;
+			else if (node->buff[size - i] == '-' && (mod += 1))
+				ft_strinject(&(node->buff), "1", 1);
 			else if ((mod += 1))
-				ft_strinject(&(buff->buff), "1", 0);
+				ft_strinject(&(node->buff), "1", 0);
 		}
-		buff->buff[size] = '\0';
+		node->buff[size] = '\0';
 		--size;
 		--length;
 	}
 	if (mods.prec == 0)
-		buff->buff[size + mod] = '\0';
+		node->buff[size + mod] = '\0';
 }
 
-static void	ft_printf_prec_float(t_printf_mods mods, t_printf_buff *buff)
+static void	ft_printf_prec_float(t_printf_mods mods, t_printf_buff *node)
 {
 	char	*tmp;
 	char	*tmp2;
 	int		length;
 	int		size;
 
-	tmp = ft_strchr(buff->buff, '.');
+	tmp = ft_strchr(node->buff, '.');
 	if (tmp != NULL)
 		length = (int)ft_strlen(tmp + 1) - 1;
 	else
@@ -100,23 +100,23 @@ static void	ft_printf_prec_float(t_printf_mods mods, t_printf_buff *buff)
 	{
 		tmp = ft_strnew((size_t)(mods.prec - length));
 		ft_memset(tmp, '0', (size_t)(mods.prec - length));
-		tmp2 = ft_strjoin(buff->buff, tmp);
-		ft_strdel(&(buff->buff));
+		tmp2 = ft_strjoin(node->buff, tmp);
+		ft_strdel(&(node->buff));
 		ft_strdel(&tmp);
-		buff->buff = tmp2;
+		node->buff = tmp2;
 		return ;
 	}
-	size = (int)ft_strlen(buff->buff) - 1;
-	ft_printf_prec_float_fix(buff, mods, length, size);
+	size = (int)ft_strlen(node->buff) - 1;
+	ft_printf_prec_float_fix(node, mods, length, size);
 }
 
-void		ft_printf_prec(t_printf_mods mods, t_printf_buff *buff)
+void		ft_printf_prec(t_printf_mods mods, t_printf_buff *node)
 {
 	if (ft_strin(PRINTF_SN, mods.conv) || ft_strin(PRINTF_PTR, mods.conv)
 	|| ft_strin(PRINTF_USN, mods.conv) || ft_strin(PRINTF_NDEC, mods.conv))
-		ft_printf_prec_sn_usn_p_ndec(mods, buff);
+		ft_printf_prec_sn_usn_p_ndec(mods, node);
 	else if (ft_strin(PRINTF_FLOAT, mods.conv))
-		ft_printf_prec_float(mods, buff);
+		ft_printf_prec_float(mods, node);
 	else if (ft_strin(PRINTF_STR, mods.conv))
-		ft_printf_prec_str(mods, buff);
+		ft_printf_prec_str(mods, node);
 }

@@ -109,7 +109,7 @@
 		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_lhllhhl.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_mod0.c">
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_mod0_b_cap_udo.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_parse.c">
@@ -118,7 +118,13 @@
 		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_prec.c">
 			<Option target="ft_printf"/>
 		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_r.c">
+			<Option target="ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_typedefs.h">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_unicode.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_width.c">

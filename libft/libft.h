@@ -83,5 +83,16 @@ char	*ft_itoabase(char *set, long long nb);
 char	*ft_strndup(const char *s1, size_t size);
 void	ft_strinject(char **src, char *string, size_t pos);
 int		ft_gnl(int fd, char **line);
+void	ft_wstrdel(wchar_t **as);
+void	ft_wstrinject(wchar_t **src, wchar_t *string, size_t pos);
+wchar_t	*ft_wstrndup(const wchar_t *s1, size_t size);
+wchar_t	*ft_wstrnew(size_t size);
+wchar_t	*ft_wstrncpy(wchar_t *dst, const wchar_t *src, size_t len);
+wchar_t	*ft_wstrdup(const wchar_t *s1);
+wchar_t	*ft_wstrcpy(wchar_t *dst, const wchar_t *src);
+wchar_t	*ft_wstrjoin(wchar_t *s1, wchar_t *s2);
+size_t	ft_wstrlen(const wchar_t *s);
+wchar_t	*ft_wstrcat(wchar_t *s1, const wchar_t *s2);
+size_t	ft_putwstr(wchar_t const *s);
 
 #endif

@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_diouxx.c                                 :+:      :+:    :+:   */
+/*   ft_printf_mod0_b_cap_udo.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dderevyn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,63 +12,55 @@
 
 #include "ft_printf.h"
 
-int		ft_printf_di(va_list *args, t_printf_mods *mods, t_printf_buff *node,
+int		ft_printf_mod0(va_list *args, t_printf_mods *mods, t_printf_buff *node,
+		t_printf_funs *funs)
+{
+	if (funs[mods->length](args, *mods, node))
+		return (1);
+	node->buff = ft_strdup(PRINTF_MOD0);
+	return (1);
+}
+
+int		ft_printf_cap_u(va_list *args, t_printf_mods *mods, t_printf_buff *node,
 		t_printf_funs *funs)
 {
 	char	*base;
 
+	(void)funs;
 	if (mods->prec_spec == 0)
 		mods->prec = 1;
 	base = ft_printf_base(mods->conv);
-	if (funs[mods->length](args, *mods, node))
-		return (1);
-	node->buff = ft_itoabase(base, va_arg(*args, int));
+	node->buff = ft_itoabase_unsigned(base, va_arg(*args, ULL));
 	return (1);
 }
 
-int		ft_printf_o(va_list *args, t_printf_mods *mods, t_printf_buff *node,
+int		ft_printf_cap_d(va_list *args, t_printf_mods *mods, t_printf_buff *node,
 		t_printf_funs *funs)
 {
 	char	*base;
 
+	(void)funs;
 	if (mods->prec_spec == 0)
 		mods->prec = 1;
 	base = ft_printf_base(mods->conv);
-	if (funs[mods->length](args, *mods, node))
-		return (1);
-	node->buff = ft_itoabase_unsigned(base, va_arg(*args, UI));
+	node->buff = ft_itoabase(base, va_arg(*args, L));
 	return (1);
 }
 
-int		ft_printf_u(va_list *args, t_printf_mods *mods, t_printf_buff *node,
+int		ft_printf_cap_o(va_list *args, t_printf_mods *mods, t_printf_buff *node,
 		t_printf_funs *funs)
 {
 	char	*base;
 
+	(void)funs;
 	if (mods->prec_spec == 0)
 		mods->prec = 1;
 	base = ft_printf_base(mods->conv);
-	if (funs[mods->length](args, *mods, node))
-		return (1);
-	node->buff = ft_itoabase_unsigned(base, va_arg(*args, UI));
+	node->buff = ft_itoabase_unsigned(base, va_arg(*args, UL));
 	return (1);
 }
 
-int		ft_printf_x(va_list *args, t_printf_mods *mods, t_printf_buff *node,
-		t_printf_funs *funs)
-{
-	char	*base;
-
-	if (mods->prec_spec == 0)
-		mods->prec = 1;
-	base = ft_printf_base(mods->conv);
-	if (funs[mods->length](args, *mods, node))
-		return (1);
-	node->buff = ft_itoabase_unsigned(base, va_arg(*args, UI));
-	return (1);
-}
-
-int		ft_printf_cap_x(va_list *args, t_printf_mods *mods, t_printf_buff *node,
+int		ft_printf_b(va_list *args, t_printf_mods *mods, t_printf_buff *node,
 		t_printf_funs *funs)
 {
 	char	*base;

@@ -12,11 +12,11 @@
 
 #include "ft_printf.h"
 
-int		ft_printf_0(va_list *args, t_printf_mods mods, t_printf_buff *buff)
+int		ft_printf_0(va_list *args, t_printf_mods mods, t_printf_buff *node)
 {
 	(void)args;
 	(void)mods;
-	(void)buff;
+	(void)node;
 	return (0);
 }
 
@@ -26,7 +26,7 @@ char	*ft_printf_base(char conv)
 		return (HEX_CAP);
 	if (conv == 'x' || conv == 'p')
 		return (HEX);
-	if (conv == 'o')
+	if (conv == 'o' || conv == 'O')
 		return (OCT);
 	if (conv == 'b')
 		return (BINARY);
@@ -34,18 +34,19 @@ char	*ft_printf_base(char conv)
 		return (DEC);
 }
 
-char	*ft_printf_base_prefix(t_printf_mods mods, t_printf_buff *buff)
+char	*ft_printf_base_prefix(t_printf_mods mods, t_printf_buff *node)
 {
 	if ((mods.conv == 'X' || mods.conv == 'x')
-	&& ((buff->buff[0] == '0' && buff->buff[1] == '\0') || mods.prec == 0))
+	&& ((node->buff[0] == '0' && node->buff[1] == '\0') || mods.prec == 0))
 		return (NULL);
-	if (mods.conv == 'o' && buff->buff[0] == '0')
+	if ((mods.conv == 'o' || mods.conv == 'O' || mods.conv == 'b')
+	&& node->buff[0] == '0')
 		return (NULL);
 	if (mods.conv == 'X')
 		return ("0X");
 	if (mods.conv == 'x' || mods.conv == 'p')
 		return ("0x");
-	if (mods.conv == 'o')
+	if (mods.conv == 'o' || mods.conv == 'O')
 		return ("0");
 	if (mods.conv == 'b')
 		return ("0b");

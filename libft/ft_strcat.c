@@ -26,3 +26,18 @@ char	*ft_strcat(char *s1, const char *s2)
 	*s = '\0';
 	return (s1);
 }
+
+wchar_t	*ft_wstrcat(wchar_t *s1, const wchar_t *s2)
+{
+	wchar_t	*s;
+
+	if (s2 == NULL)
+		return (s1);
+	s = s1;
+	while (*s)
+		++s;
+	while (*s2)
+		*s++ = *s2++;
+	*s = '\0';
+	return (s1);
+}

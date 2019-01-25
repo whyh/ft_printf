@@ -17,18 +17,19 @@
 # define PRINTF_PASIVE_FLAGS "-0"
 # define PRINTF_LENGTH1 "lhLjz"
 # define PRINTF_LENGTH2 "lh"
-# define PRINTF_SN "di"
+# define PRINTF_SN "dDi"
 # define PRINTF_FLOAT "fF"
-# define PRINTF_STR "s"
+# define PRINTF_STR "sSr"
 # define PRINTF_PTR "p"
-# define PRINTF_CHR "c"
-# define PRINTF_NDEC "boxX"
+# define PRINTF_CHR "cC"
+# define PRINTF_NDEC "boOxX"
 # define PRINTF_USN "uU"
 # define PRINTF_MOD0 "%"
 
 typedef struct				s_printf_buff
 {
 	char					*buff;
+	wchar_t					*wbuff;
 	struct s_printf_buff	*next;
 }							t_printf_buff;
 
@@ -43,9 +44,10 @@ typedef struct				s_printf_mods
 }							t_printf_mods;
 
 typedef int					(*t_printf_funs)(va_list *args, t_printf_mods mods,
-							t_printf_buff *buff);
+							t_printf_buff *node);
 
-typedef int					(*t_printf_convs)(va_list *args, t_printf_mods mods,
-							t_printf_buff *buff, t_printf_funs *funs);
+typedef int					(*t_printf_convs)(va_list *args,
+							t_printf_mods *mods, t_printf_buff *node,
+							t_printf_funs *funs);
 
 #endif

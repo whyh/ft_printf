@@ -85,6 +85,9 @@ void	ft_printf_parce_length(char **format, t_printf_mods *mods)
 		mods->length += **format;
 		(*format)++;
 	}
+	while (ft_strin(PRINTF_LENGTH2, **format)
+	|| ft_strin(PRINTF_LENGTH1, **format))
+		(*format)++;
 }
 
 int		ft_printf_parce_conv(char **format, t_printf_mods *mods)

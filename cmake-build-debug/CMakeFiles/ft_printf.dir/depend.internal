@@ -50,9 +50,9 @@ CMakeFiles/ft_printf.dir/ft_printf/ft_printf_lhllhhl.c.o
  /Users/dderevyn/CLionProjects/ft_printf/libft/ft_gnl_typedefs.h
  /Users/dderevyn/CLionProjects/ft_printf/libft/libft.h
  /Users/dderevyn/CLionProjects/ft_printf/libft/libft_typedefs.h
-CMakeFiles/ft_printf.dir/ft_printf/ft_printf_mod0.c.o
+CMakeFiles/ft_printf.dir/ft_printf/ft_printf_mod0_b_cap_udo.c.o
  /Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf.h
- /Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_mod0.c
+ /Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_mod0_b_cap_udo.c
  /Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_typedefs.h
  /Users/dderevyn/CLionProjects/ft_printf/libft/ft_gnl_typedefs.h
  /Users/dderevyn/CLionProjects/ft_printf/libft/libft.h
@@ -68,6 +68,20 @@ CMakeFiles/ft_printf.dir/ft_printf/ft_printf_prec.c.o
  /Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf.h
  /Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_prec.c
  /Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_typedefs.h
+ /Users/dderevyn/CLionProjects/ft_printf/libft/ft_gnl_typedefs.h
+ /Users/dderevyn/CLionProjects/ft_printf/libft/libft.h
+ /Users/dderevyn/CLionProjects/ft_printf/libft/libft_typedefs.h
+CMakeFiles/ft_printf.dir/ft_printf/ft_printf_r.c.o
+ /Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf.h
+ /Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_r.c
+ /Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_typedefs.h
+ /Users/dderevyn/CLionProjects/ft_printf/libft/ft_gnl_typedefs.h
+ /Users/dderevyn/CLionProjects/ft_printf/libft/libft.h
+ /Users/dderevyn/CLionProjects/ft_printf/libft/libft_typedefs.h
+CMakeFiles/ft_printf.dir/ft_printf/ft_printf_unicode.c.o
+ /Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf.h
+ /Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_typedefs.h
+ /Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_unicode.c
  /Users/dderevyn/CLionProjects/ft_printf/libft/ft_gnl_typedefs.h
  /Users/dderevyn/CLionProjects/ft_printf/libft/libft.h
  /Users/dderevyn/CLionProjects/ft_printf/libft/libft_typedefs.h

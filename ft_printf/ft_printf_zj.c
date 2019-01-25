@@ -12,29 +12,29 @@
 
 #include "ft_printf.h"
 
-int	ft_printf_z(va_list *args, t_printf_mods mods, t_printf_buff *buff)
+int	ft_printf_z(va_list *args, t_printf_mods mods, t_printf_buff *node)
 {
 	char	*base;
 
 	base = ft_printf_base(mods.conv);
 	if (ft_strin(PRINTF_USN, mods.conv) || ft_strin(PRINTF_NDEC, mods.conv))
-		buff->buff = ft_itoabase_unsigned(base, va_arg(*args, size_t));
+		node->buff = ft_itoabase_unsigned(base, va_arg(*args, size_t));
 	else if (ft_strin(PRINTF_SN, mods.conv))
-		buff->buff = ft_itoabase(base, va_arg(*args, ssize_t));
+		node->buff = ft_itoabase(base, va_arg(*args, ssize_t));
 	else
 		return (0);
 	return (1);
 }
 
-int	ft_printf_j(va_list *args, t_printf_mods mods, t_printf_buff *buff)
+int	ft_printf_j(va_list *args, t_printf_mods mods, t_printf_buff *node)
 {
 	char	*base;
 
 	base = ft_printf_base(mods.conv);
 	if (ft_strin(PRINTF_USN, mods.conv) || ft_strin(PRINTF_NDEC, mods.conv))
-		buff->buff = ft_itoabase_unsigned(base, va_arg(*args, uintmax_t));
+		node->buff = ft_itoabase_unsigned(base, va_arg(*args, uintmax_t));
 	else if (ft_strin(PRINTF_SN, mods.conv))
-		buff->buff = ft_itoabase(base, va_arg(*args, intmax_t));
+		node->buff = ft_itoabase(base, va_arg(*args, intmax_t));
 	else
 		return (0);
 	return (1);

@@ -22,10 +22,10 @@ add_executable(ft_printf ${LIBFT}
         libft/ft_strndup.c
         libft/ft_strinject.c
         ft_printf/ft_printf_prec.c
-        ft_printf/ft_printf_mod0.c
+        ft_printf/ft_printf_mod0_b_cap_udo.c
         ft_printf/ft_printf_width.c
         libft/libft_typedefs.h
         ft_printf/ft_printf_lhllhhl.c
-        ft_printf/ft_printf_0_base.c ft_printf/ft_printf_zj.c)
+        ft_printf/ft_printf_0_base.c ft_printf/ft_printf_zj.c ft_printf/ft_printf_r.c ft_printf/ft_printf_unicode.c)
 
 link_libraries(libft/libft.a)

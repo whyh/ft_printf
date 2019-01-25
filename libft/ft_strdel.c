@@ -19,3 +19,11 @@ void	ft_strdel(char **as)
 	free(*as);
 	*as = NULL;
 }
+
+void	ft_wstrdel(wchar_t **as)
+{
+	if (as == NULL || *as == NULL)
+		return ;
+	free(*as);
+	*as = NULL;
+}

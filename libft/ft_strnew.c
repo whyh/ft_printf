@@ -21,3 +21,13 @@ char	*ft_strnew(size_t size)
 	ft_memset(str, '\0', size + 1);
 	return (str);
 }
+
+wchar_t	*ft_wstrnew(size_t size)
+{
+	wchar_t	*str;
+
+	if (!(str = (wchar_t *)malloc((size + 1) * sizeof(wchar_t))))
+		return (NULL);
+	ft_memset(str, '\0', size + 1);
+	return (str);
+}

@@ -95,10 +95,12 @@ PRINTF_SRCS =	ft_printf.c\
 				ft_printf_parse.c\
 				ft_printf_prec.c\
 				ft_printf_width.c\
-				ft_printf_mod0.c\
+				ft_printf_mod0_b_cap_udo.c\
 				ft_printf_0_base.c\
 				ft_printf_lhllhhl.c\
-				ft_printf_zj.c
+				ft_printf_zj.c\
+				ft_printf_r.c\
+				ft_printf_unicode.c
 PRINTF_OBJS = $(PRINTF_SRCS:%.c=$(PRINTF_OBJS_DIR)/%.o)
 PRINTF_OBJS_DIR = $(OBJS_DIR)
 

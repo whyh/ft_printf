@@ -47,6 +47,11 @@ static void	ft_printf_fill_convs(t_printf_convs *convs)
 	convs['%'] = &ft_printf_mod0;
 	convs['U'] = &ft_printf_cap_u;
 	convs['b'] = &ft_printf_b;
+	convs['D'] = &ft_printf_cap_d;
+	convs['O'] = &ft_printf_cap_o;
+	convs['r'] = &ft_printf_r;
+	convs['C'] = &ft_printf_cap_c;
+	convs['S'] = &ft_printf_cap_s;
 }
 
 void		ft_printf_fill_funs_convs(t_printf_funs **funs,

@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int	ft_printf_plus(va_list *args, t_printf_mods mods, t_printf_buff *buff)
+int	ft_printf_plus(va_list *args, t_printf_mods mods, t_printf_buff *node)
 {
 	size_t	i;
 	char	*tmp;
@@ -21,18 +21,18 @@ int	ft_printf_plus(va_list *args, t_printf_mods mods, t_printf_buff *buff)
 	if (!ft_strin(PRINTF_SN, mods.conv))
 		return (1);
 	i = 0;
-	while (buff->buff[i] != '\0' && buff->buff[i] != '-'
-	&& !ft_isdigit(buff->buff[i]))
+	while (node->buff[i] != '\0' && node->buff[i] != '-'
+	&& !ft_isdigit(node->buff[i]))
 		++i;
-	if (buff->buff[i] == '-')
+	if (node->buff[i] == '-')
 		return (1);
-	tmp = ft_strjoin("+", buff->buff);
-	ft_strdel(&(buff->buff));
-	buff->buff = tmp;
+	tmp = ft_strjoin("+", node->buff);
+	ft_strdel(&(node->buff));
+	node->buff = tmp;
 	return (1);
 }
 
-int	ft_printf_blank(va_list *args, t_printf_mods mods, t_printf_buff *buff)
+int	ft_printf_blank(va_list *args, t_printf_mods mods, t_printf_buff *node)
 {
 	size_t	i;
 	char	*tmp;
@@ -41,18 +41,18 @@ int	ft_printf_blank(va_list *args, t_printf_mods mods, t_printf_buff *buff)
 	if (!ft_strin(PRINTF_SN, mods.conv) || ft_strin(mods.flags, '+'))
 		return (1);
 	i = 0;
-	while (buff->buff[i] != '\0' && buff->buff[i] != '-'
-	&& !ft_isdigit(buff->buff[i]))
+	while (node->buff[i] != '\0' && node->buff[i] != '-'
+	&& !ft_isdigit(node->buff[i]))
 		++i;
-	if (buff->buff[i] == '-')
+	if (node->buff[i] == '-')
 		return (1);
-	tmp = ft_strjoin(" ", buff->buff);
-	ft_strdel(&(buff->buff));
-	buff->buff = tmp;
+	tmp = ft_strjoin(" ", node->buff);
+	ft_strdel(&(node->buff));
+	node->buff = tmp;
 	return (1);
 }
 
-int	ft_printf_hash(va_list *args, t_printf_mods mods, t_printf_buff *buff)
+int	ft_printf_hash(va_list *args, t_printf_mods mods, t_printf_buff *node)
 {
 	size_t	i;
 
@@ -60,13 +60,13 @@ int	ft_printf_hash(va_list *args, t_printf_mods mods, t_printf_buff *buff)
 	if (ft_strin(PRINTF_NDEC, mods.conv))
 	{
 		i = 0;
-		while (buff->buff[i]
-		&& !ft_strin(ft_printf_base(mods.conv), buff->buff[i]))
+		while (node->buff[i]
+		&& !ft_strin(ft_printf_base(mods.conv), node->buff[i]))
 			++i;
-		ft_strinject(&(buff->buff), ft_printf_base_prefix(mods, buff), i);
+		ft_strinject(&(node->buff), ft_printf_base_prefix(mods, node), i);
 	}
-	else if (ft_strin(PRINTF_FLOAT, mods.conv) && !ft_strin(buff->buff, '.'))
-		ft_strinject(&(buff->buff), ".", ft_strlen(buff->buff) - 1);
+	else if (ft_strin(PRINTF_FLOAT, mods.conv) && !ft_strin(node->buff, '.'))
+		ft_strinject(&(node->buff), ".", ft_strlen(node->buff) - 1);
 	return (1);
 }
 

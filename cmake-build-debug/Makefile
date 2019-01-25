@@ -312,32 +312,32 @@ ft_printf/ft_printf_lhllhhl.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_lhllhhl.c.s
 .PHONY : ft_printf/ft_printf_lhllhhl.c.s
 
-ft_printf/ft_printf_mod0.o: ft_printf/ft_printf_mod0.c.o
+ft_printf/ft_printf_mod0_b_cap_udo.o: ft_printf/ft_printf_mod0_b_cap_udo.c.o
 
-.PHONY : ft_printf/ft_printf_mod0.o
+.PHONY : ft_printf/ft_printf_mod0_b_cap_udo.o
 
 # target to build an object file
-ft_printf/ft_printf_mod0.c.o:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_mod0.c.o
-.PHONY : ft_printf/ft_printf_mod0.c.o
+ft_printf/ft_printf_mod0_b_cap_udo.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_mod0_b_cap_udo.c.o
+.PHONY : ft_printf/ft_printf_mod0_b_cap_udo.c.o
 
-ft_printf/ft_printf_mod0.i: ft_printf/ft_printf_mod0.c.i
+ft_printf/ft_printf_mod0_b_cap_udo.i: ft_printf/ft_printf_mod0_b_cap_udo.c.i
 
-.PHONY : ft_printf/ft_printf_mod0.i
+.PHONY : ft_printf/ft_printf_mod0_b_cap_udo.i
 
 # target to preprocess a source file
-ft_printf/ft_printf_mod0.c.i:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_mod0.c.i
-.PHONY : ft_printf/ft_printf_mod0.c.i
+ft_printf/ft_printf_mod0_b_cap_udo.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_mod0_b_cap_udo.c.i
+.PHONY : ft_printf/ft_printf_mod0_b_cap_udo.c.i
 
-ft_printf/ft_printf_mod0.s: ft_printf/ft_printf_mod0.c.s
+ft_printf/ft_printf_mod0_b_cap_udo.s: ft_printf/ft_printf_mod0_b_cap_udo.c.s
 
-.PHONY : ft_printf/ft_printf_mod0.s
+.PHONY : ft_printf/ft_printf_mod0_b_cap_udo.s
 
 # target to generate assembly for a file
-ft_printf/ft_printf_mod0.c.s:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_mod0.c.s
-.PHONY : ft_printf/ft_printf_mod0.c.s
+ft_printf/ft_printf_mod0_b_cap_udo.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_mod0_b_cap_udo.c.s
+.PHONY : ft_printf/ft_printf_mod0_b_cap_udo.c.s
 
 ft_printf/ft_printf_parse.o: ft_printf/ft_printf_parse.c.o
 
@@ -392,6 +392,60 @@ ft_printf/ft_printf_prec.s: ft_printf/ft_printf_prec.c.s
 ft_printf/ft_printf_prec.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_prec.c.s
 .PHONY : ft_printf/ft_printf_prec.c.s
+
+ft_printf/ft_printf_r.o: ft_printf/ft_printf_r.c.o
+
+.PHONY : ft_printf/ft_printf_r.o
+
+# target to build an object file
+ft_printf/ft_printf_r.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_r.c.o
+.PHONY : ft_printf/ft_printf_r.c.o
+
+ft_printf/ft_printf_r.i: ft_printf/ft_printf_r.c.i
+
+.PHONY : ft_printf/ft_printf_r.i
+
+# target to preprocess a source file
+ft_printf/ft_printf_r.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_r.c.i
+.PHONY : ft_printf/ft_printf_r.c.i
+
+ft_printf/ft_printf_r.s: ft_printf/ft_printf_r.c.s
+
+.PHONY : ft_printf/ft_printf_r.s
+
+# target to generate assembly for a file
+ft_printf/ft_printf_r.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_r.c.s
+.PHONY : ft_printf/ft_printf_r.c.s
+
+ft_printf/ft_printf_unicode.o: ft_printf/ft_printf_unicode.c.o
+
+.PHONY : ft_printf/ft_printf_unicode.o
+
+# target to build an object file
+ft_printf/ft_printf_unicode.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_unicode.c.o
+.PHONY : ft_printf/ft_printf_unicode.c.o
+
+ft_printf/ft_printf_unicode.i: ft_printf/ft_printf_unicode.c.i
+
+.PHONY : ft_printf/ft_printf_unicode.i
+
+# target to preprocess a source file
+ft_printf/ft_printf_unicode.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_unicode.c.i
+.PHONY : ft_printf/ft_printf_unicode.c.i
+
+ft_printf/ft_printf_unicode.s: ft_printf/ft_printf_unicode.c.s
+
+.PHONY : ft_printf/ft_printf_unicode.s
+
+# target to generate assembly for a file
+ft_printf/ft_printf_unicode.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_unicode.c.s
+.PHONY : ft_printf/ft_printf_unicode.c.s
 
 ft_printf/ft_printf_width.o: ft_printf/ft_printf_width.c.o
 
@@ -2124,15 +2178,21 @@ help:
 	@echo "... ft_printf/ft_printf_lhllhhl.o"
 	@echo "... ft_printf/ft_printf_lhllhhl.i"
 	@echo "... ft_printf/ft_printf_lhllhhl.s"
-	@echo "... ft_printf/ft_printf_mod0.o"
-	@echo "... ft_printf/ft_printf_mod0.i"
-	@echo "... ft_printf/ft_printf_mod0.s"
+	@echo "... ft_printf/ft_printf_mod0_b_cap_udo.o"
+	@echo "... ft_printf/ft_printf_mod0_b_cap_udo.i"
+	@echo "... ft_printf/ft_printf_mod0_b_cap_udo.s"
 	@echo "... ft_printf/ft_printf_parse.o"
 	@echo "... ft_printf/ft_printf_parse.i"
 	@echo "... ft_printf/ft_printf_parse.s"
 	@echo "... ft_printf/ft_printf_prec.o"
 	@echo "... ft_printf/ft_printf_prec.i"
 	@echo "... ft_printf/ft_printf_prec.s"
+	@echo "... ft_printf/ft_printf_r.o"
+	@echo "... ft_printf/ft_printf_r.i"
+	@echo "... ft_printf/ft_printf_r.s"
+	@echo "... ft_printf/ft_printf_unicode.o"
+	@echo "... ft_printf/ft_printf_unicode.i"
+	@echo "... ft_printf/ft_printf_unicode.s"
 	@echo "... ft_printf/ft_printf_width.o"
 	@echo "... ft_printf/ft_printf_width.i"
 	@echo "... ft_printf/ft_printf_width.s"

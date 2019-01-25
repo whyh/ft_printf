@@ -27,3 +27,19 @@ void	ft_strinject(char **src, char *string, size_t pos)
 	ft_strdel(&tail);
 	ft_strdel(&tmp);
 }
+
+void	ft_wstrinject(wchar_t **src, wchar_t *string, size_t pos)
+{
+	wchar_t	*head;
+	wchar_t	*tail;
+	wchar_t	*tmp;
+
+	head = ft_wstrndup(*src, pos);
+	tail = ft_wstrdup(&((*src)[pos]));
+	ft_wstrdel(src);
+	tmp = ft_wstrjoin(head, string);
+	*src = ft_wstrjoin(tmp, tail);
+	ft_wstrdel(&head);
+	ft_wstrdel(&tail);
+	ft_wstrdel(&tmp);
+}
