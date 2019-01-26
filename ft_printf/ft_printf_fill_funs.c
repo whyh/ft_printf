@@ -29,6 +29,7 @@ static void	ft_printf_fill_length(t_printf_funs *funs)
 	funs[0] = &ft_printf_0;
 	funs['z'] = &ft_printf_z;
 	funs['j'] = &ft_printf_j;
+	funs['q'] = &ft_printf_ll;
 }
 
 static void	ft_printf_fill_convs(t_printf_convs *convs)

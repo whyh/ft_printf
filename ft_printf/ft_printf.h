@@ -14,7 +14,7 @@
 # define FT_PRINTF_H
 
 # include <stdarg.h>
-# include <stdint.h>
+# include <stddef.h>
 # include "../libft/libft.h"
 # include "ft_printf_typedefs.h"
 

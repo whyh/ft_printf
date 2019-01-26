@@ -15,7 +15,7 @@
 
 # define PRINTF_FLAGS "+ #"
 # define PRINTF_PASIVE_FLAGS "-0"
-# define PRINTF_LENGTH1 "lhLjz"
+# define PRINTF_LENGTH1 "lhLjzq"
 # define PRINTF_LENGTH2 "lh"
 # define PRINTF_SN "dDi"
 # define PRINTF_FLOAT "fF"
