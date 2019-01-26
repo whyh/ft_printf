@@ -52,13 +52,11 @@ static int	ft_printf_parse_mods(char **format, va_list *args,
 	ft_printf_parse_f_width(format, &mods);
 	ft_printf_parce_prec(format, &mods);
 	ft_printf_parce_length(format, &mods);
-	if (!ft_printf_parce_conv(format, &mods))
-		return (0);
+	ft_printf_parce_conv(format, &mods);
 	while (node->next != NULL)
 		node = node->next;
 	new_node = ft_memalloc(sizeof(t_printf_buff*));
 	new_node->buff = NULL;
-	new_node->wbuff = NULL;
 	new_node->next = NULL;
 	node->next = new_node;
 	ret = ft_printf_exec(&mods, args, new_node);
@@ -89,7 +87,6 @@ static int	ft_printf_iter(char **format, va_list *args, t_printf_buff *node)
 			node->next = new_node;
 			size = ft_strfdist(*format, PRINTF_MOD0);
 			new_node->buff = ft_strndup(*format, size);
-			new_node->wbuff = NULL;
 			(*format) += size;
 		}
 	}
@@ -107,17 +104,13 @@ int			ft_printf(const char *format, ...)
 	node = ft_memalloc(sizeof(t_printf_buff*));
 	node->next = NULL;
 	node->buff = NULL;
-	node->wbuff = NULL;
 	va_start(args, format);
 	ft_printf_iter((char **)&format, &args, node);
 	while (node != NULL)
 	{
 		if (node->buff != NULL)
 			chars_printed += ft_putstr(node->buff);
-		else if (node->wbuff != NULL)
-			chars_printed += ft_putwstr(node->wbuff);
 		ft_strdel(&(node->buff));
-		ft_wstrdel(&(node->wbuff));
 		prev_node = node;
 		node = node->next;
 		free(prev_node);

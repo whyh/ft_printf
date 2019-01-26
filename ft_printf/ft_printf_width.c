@@ -13,7 +13,7 @@
 #include "ft_printf.h"
 
 static void	ft_printf_width_minus(t_printf_mods mods, t_printf_buff *node,
-		int length)
+			int length)
 {
 	char	*prefix;
 	char	*tmp;
@@ -27,13 +27,15 @@ static void	ft_printf_width_minus(t_printf_mods mods, t_printf_buff *node,
 }
 
 static void	ft_printf_width_zero(t_printf_mods mods, t_printf_buff *node,
-		int length)
+			int length)
 {
 	char	*prefix;
 
 	prefix = ft_strnew((size_t)mods.width - length);
 	prefix = ft_memset(prefix, '0', (size_t)(mods.width - length));
 	--length;
+	if (ft_strin(PRINTF_CHR, mods.conv) || ft_strin(PRINTF_STR, mods.conv))
+		length = 0;
 	while (ft_isdigit(node->buff[length]) || (ft_strin(PRINTF_NDEC, mods.conv)
 	&& ft_strin(ft_printf_base(mods.conv), node->buff[length])))
 		--length;
@@ -42,7 +44,7 @@ static void	ft_printf_width_zero(t_printf_mods mods, t_printf_buff *node,
 }
 
 static void	ft_printf_width_std(t_printf_mods mods, t_printf_buff *node,
-		int length)
+			int length)
 {
 	char	*prefix;
 	char	*tmp;

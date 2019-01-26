@@ -72,10 +72,13 @@ int	ft_printf_hash(va_list *args, t_printf_mods mods, t_printf_buff *node)
 
 int	ft_printf_zero(t_printf_mods mods)
 {
-	if (ft_strin(mods.flags, '0') && mods.prec == 1
-	&& (ft_strin(PRINTF_FLOAT, mods.conv) || ft_strin(PRINTF_MOD0, mods.conv)
-	|| ft_strin(PRINTF_USN, mods.conv) || ft_strin(PRINTF_SN, mods.conv)
-	|| ft_strin(PRINTF_NDEC, mods.conv)))
+	if (!ft_strin(mods.flags, '0'))
+		return (0);
+	if (mods.prec == 1 && (ft_strin(PRINTF_FLOAT, mods.conv)
+	|| ft_strin(PRINTF_MOD0, mods.conv) || ft_strin(PRINTF_NDEC, mods.conv)
+	|| ft_strin(PRINTF_USN, mods.conv) || ft_strin(PRINTF_SN, mods.conv)))
+		return (1);
+	else if (ft_strin(PRINTF_CHR, mods.conv) || ft_strin(PRINTF_STR, mods.conv))
 		return (1);
 	return (0);
 }

@@ -96,12 +96,18 @@ int		ft_printf_parce_conv(char **format, t_printf_mods *mods)
 	if (!ft_strin(PRINTF_SN, **format) && !ft_strin(PRINTF_USN, **format)
 	&& !ft_strin(PRINTF_CHR, **format) && !ft_strin(PRINTF_NDEC, **format)
 	&& !ft_strin(PRINTF_FLOAT, **format) && !ft_strin(PRINTF_PTR, **format)
-	&& !ft_strin(PRINTF_MOD0, **format) && !ft_strin(PRINTF_STR, **format))
+	&& !ft_strin(PRINTF_STR, **format))
 	{
-		ft_strdel(&(mods->flags));
-		return (0);
+		mods->conv = PRINTF_MOD0[0];
+		mods->mod0 = **format;
 	}
-	mods->conv = **format;
+	else
+		mods->conv = **format;
 	(*format)++;
+	if (mods->length == 'l' && ft_strin(PRINTF_CAPL, mods->conv))
+	{
+		mods->conv = (char)ft_toupper(mods->conv);
+		mods->length = '\0';
+	}
 	return (1);
 }

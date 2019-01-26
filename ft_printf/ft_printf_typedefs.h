@@ -24,12 +24,16 @@
 # define PRINTF_CHR "cC"
 # define PRINTF_NDEC "boOxX"
 # define PRINTF_USN "uU"
+# define PRINTF_CAPL "ucsd"
 # define PRINTF_MOD0 "%"
+
+# include <stdarg.h>
+# include <stdint.h>
+# include "../libft/libft.h"
 
 typedef struct				s_printf_buff
 {
 	char					*buff;
-	wchar_t					*wbuff;
 	struct s_printf_buff	*next;
 }							t_printf_buff;
 
@@ -40,6 +44,7 @@ typedef struct				s_printf_mods
 	int						prec;
 	int						prec_spec : 2;
 	int						length;
+	char					mod0;
 	char					*flags;
 }							t_printf_mods;
 

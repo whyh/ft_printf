@@ -1554,6 +1554,33 @@ libft/ft_strfdist.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/ft_strfdist.c.s
 .PHONY : libft/ft_strfdist.c.s
 
+libft/ft_strfdistc.o: libft/ft_strfdistc.c.o
+
+.PHONY : libft/ft_strfdistc.o
+
+# target to build an object file
+libft/ft_strfdistc.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/ft_strfdistc.c.o
+.PHONY : libft/ft_strfdistc.c.o
+
+libft/ft_strfdistc.i: libft/ft_strfdistc.c.i
+
+.PHONY : libft/ft_strfdistc.i
+
+# target to preprocess a source file
+libft/ft_strfdistc.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/ft_strfdistc.c.i
+.PHONY : libft/ft_strfdistc.c.i
+
+libft/ft_strfdistc.s: libft/ft_strfdistc.c.s
+
+.PHONY : libft/ft_strfdistc.s
+
+# target to generate assembly for a file
+libft/ft_strfdistc.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/ft_strfdistc.c.s
+.PHONY : libft/ft_strfdistc.c.s
+
 libft/ft_strin.o: libft/ft_strin.c.o
 
 .PHONY : libft/ft_strin.o
@@ -2316,6 +2343,9 @@ help:
 	@echo "... libft/ft_strfdist.o"
 	@echo "... libft/ft_strfdist.i"
 	@echo "... libft/ft_strfdist.s"
+	@echo "... libft/ft_strfdistc.o"
+	@echo "... libft/ft_strfdistc.i"
+	@echo "... libft/ft_strfdistc.s"
 	@echo "... libft/ft_strin.o"
 	@echo "... libft/ft_strin.i"
 	@echo "... libft/ft_strin.s"

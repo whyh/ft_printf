@@ -93,6 +93,6 @@ wchar_t	*ft_wstrcpy(wchar_t *dst, const wchar_t *src);
 wchar_t	*ft_wstrjoin(wchar_t *s1, wchar_t *s2);
 size_t	ft_wstrlen(const wchar_t *s);
 wchar_t	*ft_wstrcat(wchar_t *s1, const wchar_t *s2);
-size_t	ft_putwstr(wchar_t const *s);
+size_t	ft_strfdistc(char *str, char obj);
 
 #endif

@@ -31,3 +31,17 @@ size_t	ft_strfdist(char *str, char *obj)
 	}
 	return (distance);
 }
+
+size_t	ft_strfdistc(char *str, char obj)
+{
+	size_t	distance;
+
+	distance = 0;
+	while (str[distance])
+	{
+		if (str[distance] == obj)
+			return (distance);
+		++distance;
+	}
+	return (distance);
+}

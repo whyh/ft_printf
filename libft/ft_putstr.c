@@ -22,14 +22,3 @@ size_t	ft_putstr(char const *s)
 	write(1, s, length);
 	return (length);
 }
-
-size_t	ft_putwstr(wchar_t const *s)
-{
-	size_t	length;
-
-	if (s == NULL)
-		return (0);
-	length = ft_wstrlen(s);
-	write(1, s, length);
-	return (length);
-}

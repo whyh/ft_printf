@@ -253,6 +253,9 @@
 		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strfdist.c">
 			<Option target="ft_printf"/>
 		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strfdistc.c">
+			<Option target="ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strin.c">
 			<Option target="ft_printf"/>
 		</Unit>

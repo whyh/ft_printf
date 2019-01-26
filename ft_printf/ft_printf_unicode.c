@@ -12,7 +12,6 @@
 
 #include "ft_printf.h"
 
-
 static size_t	ft_printf_bit_size(wchar_t arg)
 {
 	unsigned int	ui;
@@ -37,85 +36,80 @@ static size_t	ft_printf_bit_size(wchar_t arg)
 		return (0);
 }
 
-static void		ft_printf_bit_char_2(size_t size, unsigned int mask[3],
-				unsigned int ui, wchar_t *ret)
+static void		ft_printf_wchar(unsigned int ui, unsigned int mask[3],
+				size_t size, char **tmp)
 {
-	unsigned int	i;
-
-	i = 0;
-	if (size == 2)
+	if (size == 1)
+		(*tmp)[0] = (char)ui;
+	else if (size == 2)
 	{
-		ret[i++] = (mask[0] >> 8) | (((ui >> 6) << 27) >> 27);
-		ret[i] = ((mask[0] << 24) >> 24) | ((ui << 26) >> 26);
+		(*tmp)[0] = (char)((mask[0] >> 8) | (((ui >> 6) << 27) >> 27));
+		(*tmp)[1] = (char)(((mask[0] << 24) >> 24) | ((ui << 26) >> 26));
 	}
 	else if (size == 3)
 	{
-		ret[i++] = (mask[1] >> 16) | (((ui >> 12) << 28) >> 28);
-		ret[i++] = ((mask[1] << 16) >> 24) | (((ui >> 6) << 26) >> 26);
-		ret[i] = ((mask[1] << 24) >> 24) | ((ui << 26) >> 26);
+		(*tmp)[0] = (char)((mask[1] >> 16) | (((ui >> 12) << 28) >> 28));
+		(*tmp)[1] = (char)(((mask[1] << 16) >> 24) | (((ui >> 6) << 26) >> 26));
+		(*tmp)[2] = (char)(((mask[1] << 24) >> 24) | ((ui << 26) >> 26));
 	}
 	else if (size == 4)
 	{
-		ret[i++] = (((mask[2] >> 24) << 24) | (((ui >> 18) << 29) >> 29));
-		ret[i++] = (((mask[2] >> 16) << 24) >> 24) | (((ui >> 12) << 26) >> 26);
-		ret[i++] = (((mask[2] >> 8) << 24) >> 24) | (((ui >> 6) << 26) >> 26);
-		ret[i] = ((mask[2] << 24) >> 24) | ((ui << 26) >> 26);
+		(*tmp)[0] = (char)
+		((((mask[2] >> 24) << 24) | (((ui >> 18) << 29) >> 29)));
+		(*tmp)[1] = (char)
+		((((mask[2] >> 16) << 24) >> 24) | (((ui >> 12) << 26) >> 26));
+		(*tmp)[2] = (char)
+		((((mask[2] >> 8) << 24) >> 24) | (((ui >> 6) << 26) >> 26));
+		(*tmp)[3] = (char)(((mask[2] << 24) >> 24) | ((ui << 26) >> 26));
 	}
+	(*tmp)[size] = '\0';
 }
 
-static wchar_t	*ft_printf_wchar(wchar_t arg)
+int				ft_printf_cap_c(va_list *args, t_printf_mods *mods,
+				t_printf_buff *node, t_printf_funs *funs)
 {
-	wchar_t			*ret;
-	unsigned int	mask[3];
-	unsigned int	ui;
-	unsigned int 	i;
+	wchar_t			arg;
 	size_t			size;
+	unsigned int	mask[3];
 
+	(void)funs;
+	(void)mods;
 	mask[0] = 49280;
 	mask[1] = 14712960;
 	mask[2] = 4034953344;
-	i = 0;
-	size = ft_printf_bit_size(arg);
-	ret = ft_wstrnew(size);
-	ui = (unsigned int)arg;
-	if (size == 0)
-		return (NULL);
-	else if (size == 1)
-		ret[i] = ui;
-	else
-		ft_printf_bit_char_2(size, mask, ui, ret);
-	return (ret);
-}
-
-int			ft_printf_cap_c(va_list *args, t_printf_mods *mods,
-			t_printf_buff *node, t_printf_funs *funs)
-{
-	wchar_t	arg;
-
-	(void)funs;
-	(void)mods;
 	arg = va_arg(*args, wchar_t);
-	node->wbuff = ft_printf_wchar(arg);
+	size = ft_printf_bit_size(arg);
+	node->buff = ft_strnew(size);
+	ft_printf_wchar((unsigned int)arg, mask, size, &(node->buff));
 	return (1);
 }
 
-int			ft_printf_cap_s(va_list *args, t_printf_mods *mods,
-			t_printf_buff *node, t_printf_funs *funs)
+int				ft_printf_cap_s(va_list *args, t_printf_mods *mods,
+				t_printf_buff *node, t_printf_funs *funs)
 {
-	wchar_t	*arg;
-	wchar_t	*tmp;
-	size_t 	i;
+	wchar_t			*arg;
+	char			*tmp;
+	size_t			size;
+	unsigned int	i[5];
 
 	(void)funs;
 	(void)mods;
+	i[0] = 49280;
+	i[1] = 14712960;
+	i[2] = 4034953344;
 	arg = va_arg(*args, wchar_t*);
-	i = 0;
-	while (arg[i])
+	i[3] = 0;
+	i[4] = 0;
+	if (arg == NULL)
+		node->buff = ft_strdup("(null)");
+	while (arg != NULL && arg[i[3]])
 	{
-		tmp = ft_printf_wchar(arg[i]);
-		ft_wstrinject(&(node->wbuff), tmp, 0);
-		ft_wstrdel(&tmp);
-		++i;
+		size = ft_printf_bit_size(arg[i[3]]);
+		tmp = ft_strnew(size);
+		ft_printf_wchar((unsigned int)arg[i[3]], i, size, &tmp);
+		ft_strinject(&(node->buff), tmp, (i[3])++ + i[4]);
+		i[4] += size - 1;
+		ft_strdel(&tmp);
 	}
 	return (1);
 }

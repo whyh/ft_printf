@@ -17,7 +17,7 @@ int		ft_printf_mod0(va_list *args, t_printf_mods *mods, t_printf_buff *node,
 {
 	if (funs[mods->length](args, *mods, node))
 		return (1);
-	node->buff = ft_strdup(PRINTF_MOD0);
+	node->buff = ft_strndup(&(mods->mod0), 1);
 	return (1);
 }
 

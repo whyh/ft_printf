@@ -21,7 +21,9 @@ int		ft_printf_c(va_list *args, t_printf_mods *mods, t_printf_buff *node,
 		return (1);
 	arg = (char)va_arg(*args, int);
 	node->buff = ft_strnew(1);
-	(node->buff)[0] = arg;
+	node->buff[0] = arg;
+	if (arg == '\0')
+		node->buff[0] = '\001';
 	return (1);
 }
 
