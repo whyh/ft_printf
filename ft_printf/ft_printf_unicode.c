@@ -78,6 +78,11 @@ int				ft_printf_cap_c(va_list *args, t_printf_mods *mods,
 	mask[1] = 14712960;
 	mask[2] = 4034953344;
 	arg = va_arg(*args, wchar_t);
+	if (arg == '\0')
+	{
+		node->buff = ft_strdup(PRINTF_MOD3);
+		return (1);
+	}
 	size = ft_printf_bit_size(arg);
 	node->buff = ft_strnew(size);
 	ft_printf_wchar((unsigned int)arg, mask, size, &(node->buff));

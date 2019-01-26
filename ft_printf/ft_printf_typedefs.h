@@ -26,10 +26,7 @@
 # define PRINTF_USN "uU"
 # define PRINTF_CAPL "ucsd"
 # define PRINTF_MOD0 "%"
-
-# include <stdarg.h>
-# include <stdint.h>
-# include "../libft/libft.h"
+# define PRINTF_MOD3 "\03"
 
 typedef struct				s_printf_buff
 {

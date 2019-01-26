@@ -38,7 +38,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/ft_printf.dir/libft/ft_strdup.c.o"
   "CMakeFiles/ft_printf.dir/libft/ft_strequ.c.o"
   "CMakeFiles/ft_printf.dir/libft/ft_strfdist.c.o"
-  "CMakeFiles/ft_printf.dir/libft/ft_strfdistc.c.o"
   "CMakeFiles/ft_printf.dir/libft/ft_strin.c.o"
   "CMakeFiles/ft_printf.dir/libft/ft_strinject.c.o"
   "CMakeFiles/ft_printf.dir/libft/ft_striter.c.o"

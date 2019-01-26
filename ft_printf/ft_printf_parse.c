@@ -34,39 +34,56 @@ void	ft_printf_parse_flags(char **format, t_printf_mods *mods)
 	}
 }
 
-void	ft_printf_parse_f_width(char **format, t_printf_mods *mods)
+void	ft_printf_parse_f_width(char **format, t_printf_mods *mods,
+		va_list *args)
 {
 	int	width;
 
+	(void)args;
 	mods->width = 0;
 	if (**format == '0')
 		return ;
-	width = 0;
-	while (ft_isdigit(**format))
+	if (**format == '*')
+		ft_printf_get_asterix(mods, args, "width", format);
+	if (ft_isdigit(**format))
 	{
-		width = width * 10 + **format - '0';
-		(*format)++;
+		width = 0;
+		while (ft_isdigit(**format))
+		{
+			width = width * 10 + **format - '0';
+			(*format)++;
+		}
+		mods->width = width;
 	}
-	mods->width = width;
+	if (**format == '*')
+		ft_printf_get_asterix(mods, args, "width", format);
 }
 
-void	ft_printf_parce_prec(char **format, t_printf_mods *mods)
+void	ft_printf_parce_prec(char **format, t_printf_mods *mods, va_list *args)
 {
-	int	precis;
+	int	prec;
 
+	(void)args;
 	mods->prec_spec = 0;
 	mods->prec = 0;
 	if (**format != '.')
 		return ;
 	mods->prec_spec = 1;
 	(*format)++;
-	precis = 0;
-	while (ft_isdigit(**format))
+	if (**format == '*')
+		ft_printf_get_asterix(mods, args, "prec", format);
+	if (ft_isdigit(**format))
 	{
-		precis = precis * 10 + **format - '0';
-		(*format)++;
+		prec = 0;
+		while (ft_isdigit(**format))
+		{
+			prec = prec * 10 + **format - '0';
+			(*format)++;
+		}
+		mods->prec = prec;
 	}
-	mods->prec = precis;
+	if (**format == '*')
+		ft_printf_get_asterix(mods, args, "prec", format);
 }
 
 void	ft_printf_parce_length(char **format, t_printf_mods *mods)

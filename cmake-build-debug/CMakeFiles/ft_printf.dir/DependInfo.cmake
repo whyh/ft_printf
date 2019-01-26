@@ -57,7 +57,6 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strdup.c" "/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/libft/ft_strdup.c.o"
   "/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strequ.c" "/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/libft/ft_strequ.c.o"
   "/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strfdist.c" "/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/libft/ft_strfdist.c.o"
-  "/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strfdistc.c" "/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/libft/ft_strfdistc.c.o"
   "/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strin.c" "/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/libft/ft_strin.c.o"
   "/Users/dderevyn/CLionProjects/ft_printf/libft/ft_strinject.c" "/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/libft/ft_strinject.c.o"
   "/Users/dderevyn/CLionProjects/ft_printf/libft/ft_striter.c" "/Users/dderevyn/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/libft/ft_striter.c.o"

@@ -23,7 +23,7 @@
 # include "ft_gnl_typedefs.h"
 
 void	ft_putchar(char c);
-size_t	ft_putstr(char const *s);
+void	ft_putstr(char *s);
 void	ft_putnbr(int n);
 int		ft_atoi(const char *string);
 size_t	ft_strlen(const char *s);

@@ -20,8 +20,9 @@
 
 int		ft_printf(const char *format, ...);
 void	ft_printf_parse_flags(char **format, t_printf_mods *mods);
-void	ft_printf_parse_f_width(char **format, t_printf_mods *mods);
-void	ft_printf_parce_prec(char **format, t_printf_mods *mods);
+void	ft_printf_parse_f_width(char **format, t_printf_mods *mods,
+		va_list *args);
+void	ft_printf_parce_prec(char **format, t_printf_mods *mods, va_list *args);
 void	ft_printf_parce_length(char **format, t_printf_mods *mods);
 int		ft_printf_parce_conv(char **format, t_printf_mods *mods);
 void	ft_printf_fill_funs_convs(t_printf_funs **funs, t_printf_convs **convs);
@@ -77,5 +78,8 @@ char	*ft_printf_base(char conv);
 char	*ft_printf_base_prefix(t_printf_mods mods, t_printf_buff *node);
 int		ft_printf_z(va_list *args, t_printf_mods mods, t_printf_buff *node);
 int		ft_printf_j(va_list *args, t_printf_mods mods, t_printf_buff *node);
+size_t	ft_printf_putstr(char *s);
+void	ft_printf_get_asterix(t_printf_mods *mods, va_list *args, char *mod,
+		char **format);
 
 #endif

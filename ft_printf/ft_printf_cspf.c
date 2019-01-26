@@ -6,7 +6,7 @@
 /*   By: dderevyn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/16 18:03:22 by dderevyn          #+#    #+#             */
-/*   Updated: 2019/01/16 18:03:22 by dderevyn         ###   ########.fr       */
+/*   Updated: 2019/01/26 19:42:25 by dderevyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,13 @@ int		ft_printf_c(va_list *args, t_printf_mods *mods, t_printf_buff *node,
 	if (funs[mods->length](args, *mods, node))
 		return (1);
 	arg = (char)va_arg(*args, int);
+	if (arg == '\0')
+	{
+		node->buff = ft_strdup(PRINTF_MOD3);
+		return (1);
+	}
 	node->buff = ft_strnew(1);
 	node->buff[0] = arg;
-	if (arg == '\0')
-		node->buff[0] = '\001';
 	return (1);
 }
 

@@ -53,3 +53,45 @@ char	*ft_printf_base_prefix(t_printf_mods mods, t_printf_buff *node)
 	else
 		return (NULL);
 }
+
+size_t	ft_printf_putstr(char *s)
+{
+	size_t	length;
+
+	if (s == NULL)
+		return (0);
+	length = 0;
+	while (s[length])
+	{
+		if (ft_strin(PRINTF_MOD3, s[length]))
+			s[length] = '\0';
+		++length;
+	}
+	write(1, s, length);
+	return (length);
+}
+
+void	ft_printf_get_asterix(t_printf_mods *mods, va_list *args,
+		char *mod, char **format)
+{
+	int		i;
+
+	(*format)++;
+	i = va_arg(*args, int);
+	if (ft_strequ(mod, "width"))
+	{
+		if (i < 0)
+		{
+			i *= -1;
+			ft_strinject(&(mods->flags), "-", 0);
+		}
+		mods->width = i;
+	}
+	else if (ft_strequ(mod, "prec"))
+	{
+		if (i >= 0)
+			mods->prec = i;
+		else
+			mods->prec_spec = 0;
+	}
+}

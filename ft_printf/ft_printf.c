@@ -49,8 +49,8 @@ static int	ft_printf_parse_mods(char **format, va_list *args,
 	if (!(**format))
 		return (0);
 	ft_printf_parse_flags(format, &mods);
-	ft_printf_parse_f_width(format, &mods);
-	ft_printf_parce_prec(format, &mods);
+	ft_printf_parse_f_width(format, &mods, args);
+	ft_printf_parce_prec(format, &mods, args);
 	ft_printf_parce_length(format, &mods);
 	ft_printf_parce_conv(format, &mods);
 	while (node->next != NULL)
@@ -109,7 +109,7 @@ int			ft_printf(const char *format, ...)
 	while (node != NULL)
 	{
 		if (node->buff != NULL)
-			chars_printed += ft_putstr(node->buff);
+			chars_printed += ft_printf_putstr(node->buff);
 		ft_strdel(&(node->buff));
 		prev_node = node;
 		node = node->next;

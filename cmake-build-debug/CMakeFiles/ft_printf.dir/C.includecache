@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf.c
-ft_printf.h
-/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf.h
-
 /Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf.h
 stdarg.h
 -
@@ -24,61 +20,7 @@ ft_printf_typedefs.h
 ft_printf.h
 /Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf.h
 
-/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_cspf.c
-ft_printf.h
-/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf.h
-
-/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_diouxx.c
-ft_printf.h
-/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf.h
-
-/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_fill_funs.c
-ft_printf.h
-/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf.h
-
-/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_hash_zero_blank_plus.c
-ft_printf.h
-/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf.h
-
-/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_lhllhhl.c
-ft_printf.h
-/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf.h
-
-/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_mod0_b_cap_udo.c
-ft_printf.h
-/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf.h
-
-/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_parse.c
-ft_printf.h
-/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf.h
-
-/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_prec.c
-ft_printf.h
-/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf.h
-
-/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_r.c
-ft_printf.h
-/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf.h
-
 /Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_typedefs.h
-stdarg.h
--
-stdint.h
--
-../libft/libft.h
-/Users/dderevyn/CLionProjects/ft_printf/libft/libft.h
-
-/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_unicode.c
-ft_printf.h
-/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf.h
-
-/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_width.c
-ft_printf.h
-/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf.h
-
-/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_zj.c
-ft_printf.h
-/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf.h
 
 /Users/dderevyn/CLionProjects/ft_printf/libft/ft_gnl_typedefs.h
 

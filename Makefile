@@ -133,7 +133,7 @@ norm:
 	$(addprefix $(PRINTF_PATH),$(PRINTF_INCS))
 
 run:
-	@$(CC) $(CFLAGS) main.c libftprintf.a
+	@$(CC) $(CFLAGS) main.c libftprintf.a | cat -e
 	@./a.out || true
 	@$(RM) ./a.out
 
