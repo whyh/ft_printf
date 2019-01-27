@@ -24,7 +24,6 @@ SRCS = 	ft_atoi.c\
 		ft_bzero.c\
 		ft_strfdist.c\
 		ft_gnl.c\
-		ft_intiteri.c\
 		ft_strin.c\
 		ft_iswhitespace.c\
 		ft_isalnum.c\
@@ -44,13 +43,8 @@ SRCS = 	ft_atoi.c\
 		ft_memmove.c\
 		ft_memset.c\
 		ft_putchar.c\
-		ft_putchar_fd.c\
-		ft_putendl.c\
-		ft_putendl_fd.c\
 		ft_putnbr.c\
-		ft_putnbr_fd.c\
 		ft_putstr.c\
-		ft_putstr_fd.c\
 		ft_strcat.c\
 		ft_strchr.c\
 		ft_strclr.c\
@@ -61,7 +55,6 @@ SRCS = 	ft_atoi.c\
 		ft_strequ.c\
 		ft_strinject.c\
 		ft_striter.c\
-		ft_striteri.c\
 		ft_strjoin.c\
 		ft_strlcat.c\
 		ft_strlen.c\

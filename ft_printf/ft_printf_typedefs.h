@@ -25,7 +25,7 @@
 # define PRINTF_NDEC "boOxX"
 # define PRINTF_USN "uU"
 # define PRINTF_CAPL "ucsd"
-# define PRINTF_PARCE_CONST ".*$m"
+# define PRINTF_PARCE_CONST ".*"
 # define PRINTF_MOD0 "%"
 # define PRINTF_MOD3 "\003"
 
