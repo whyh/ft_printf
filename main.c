@@ -7,8 +7,8 @@ int main(void)
 {
 	setlocale(LC_ALL, "");
 //	printf("%C\n", L'α');
-//       printf("%.1S\n", L"ÊM-M-^QÊM-^XØ‰∏M-ÂM-^O™ÁM-^L´„M-M-^B");
-	ft_printf("%.1S\n", L"ÊM-M-^QÊM-^XØ‰∏M-ÂM-^O™ÁM-^L´„M-M-^B");
+       printf("%.d\n", 123);
+//	ft_printf("%.1S\n", L"ÊM-M-^QÊM-^XØ‰∏M-ÂM-^O™ÁM-^L´„M-M-^B");
 //	wchar_t a = '\316';
 //	wchar_t b = '\261';
 //	write(1, L'Î', 1);
