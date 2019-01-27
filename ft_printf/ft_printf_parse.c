@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_flags.c                                  :+:      :+:    :+:   */
+/*   ft_printf_parce.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dderevyn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -14,18 +14,20 @@
 
 void	ft_printf_parse_flags(char **format, t_printf_mods *mods)
 {
-	int	i;
-	int	nb;
+	int		i;
+	char	*tmp;
 
+	if (**format == '\0')
+		return ;
 	i = 0;
-	nb = (int)ft_strlen(PRINTF_FLAGS) + (int)ft_strlen(PRINTF_PASIVE_FLAGS);
-	mods->flags = ft_strnew((size_t)nb);
 	while (ft_strin(PRINTF_FLAGS, **format)
 	|| ft_strin(PRINTF_PASIVE_FLAGS, **format))
 	{
-		if (i < nb && !ft_strin(mods->flags, **format))
+		if (!mods->flags || !ft_strin(mods->flags, **format))
 		{
-			mods->flags[i] = **format;
+			tmp = ft_strndup(*format, 1);
+			ft_strinject(&(mods->flags), tmp, 0);
+			ft_strdel(&tmp);
 			++i;
 		}
 		while (**format == *(*format + 1))
@@ -39,9 +41,7 @@ void	ft_printf_parse_f_width(char **format, t_printf_mods *mods,
 {
 	int	width;
 
-	(void)args;
-	mods->width = 0;
-	if (**format == '0')
+	if (**format == '\0' || **format == '0')
 		return ;
 	if (**format == '*')
 		ft_printf_get_asterix(mods, args, "width", format);
@@ -63,12 +63,10 @@ void	ft_printf_parce_prec(char **format, t_printf_mods *mods, va_list *args)
 {
 	int	prec;
 
-	(void)args;
-	mods->prec_spec = 0;
-	mods->prec = 0;
 	if (**format != '.')
 		return ;
 	mods->prec_spec = 1;
+	mods->prec = 0;
 	(*format)++;
 	if (**format == '*')
 		ft_printf_get_asterix(mods, args, "prec", format);
@@ -88,28 +86,26 @@ void	ft_printf_parce_prec(char **format, t_printf_mods *mods, va_list *args)
 
 void	ft_printf_parce_length(char **format, t_printf_mods *mods)
 {
-	int	i;
+	int		length;
 
-	mods->length = 0;
 	if (!ft_strin(PRINTF_LENGTH1, **format))
 		return ;
-	i = 0;
-	mods->length = **format;
-	++i;
+	length = **format;
 	(*format)++;
 	if (ft_strin(PRINTF_LENGTH2, **format) && **format == *(*format - 1))
 	{
-		mods->length += **format;
+		length += **format;
 		(*format)++;
 	}
-	while (ft_strin(PRINTF_LENGTH2, **format)
-	|| ft_strin(PRINTF_LENGTH1, **format))
-		(*format)++;
+	if (mods->length == 0
+	|| ft_printf_compare_length(length, mods->length, -1, 0))
+		mods->length = length;
 }
 
 int		ft_printf_parce_conv(char **format, t_printf_mods *mods)
 {
-	mods->conv = '\0';
+	if (**format == '\0')
+		return (0);
 	if (!ft_strin(PRINTF_SN, **format) && !ft_strin(PRINTF_USN, **format)
 	&& !ft_strin(PRINTF_CHR, **format) && !ft_strin(PRINTF_NDEC, **format)
 	&& !ft_strin(PRINTF_FLOAT, **format) && !ft_strin(PRINTF_PTR, **format)

@@ -177,6 +177,33 @@ ft_printf/ft_printf_0_base.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_0_base.c.s
 .PHONY : ft_printf/ft_printf_0_base.c.s
 
+ft_printf/ft_printf_collor.o: ft_printf/ft_printf_collor.c.o
+
+.PHONY : ft_printf/ft_printf_collor.o
+
+# target to build an object file
+ft_printf/ft_printf_collor.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_collor.c.o
+.PHONY : ft_printf/ft_printf_collor.c.o
+
+ft_printf/ft_printf_collor.i: ft_printf/ft_printf_collor.c.i
+
+.PHONY : ft_printf/ft_printf_collor.i
+
+# target to preprocess a source file
+ft_printf/ft_printf_collor.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_collor.c.i
+.PHONY : ft_printf/ft_printf_collor.c.i
+
+ft_printf/ft_printf_collor.s: ft_printf/ft_printf_collor.c.s
+
+.PHONY : ft_printf/ft_printf_collor.s
+
+# target to generate assembly for a file
+ft_printf/ft_printf_collor.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_collor.c.s
+.PHONY : ft_printf/ft_printf_collor.c.s
+
 ft_printf/ft_printf_cspf.o: ft_printf/ft_printf_cspf.c.o
 
 .PHONY : ft_printf/ft_printf_cspf.o
@@ -339,6 +366,33 @@ ft_printf/ft_printf_mod0_b_cap_udo.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_mod0_b_cap_udo.c.s
 .PHONY : ft_printf/ft_printf_mod0_b_cap_udo.c.s
 
+ft_printf/ft_printf_parce_funs.o: ft_printf/ft_printf_parce_funs.c.o
+
+.PHONY : ft_printf/ft_printf_parce_funs.o
+
+# target to build an object file
+ft_printf/ft_printf_parce_funs.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_parce_funs.c.o
+.PHONY : ft_printf/ft_printf_parce_funs.c.o
+
+ft_printf/ft_printf_parce_funs.i: ft_printf/ft_printf_parce_funs.c.i
+
+.PHONY : ft_printf/ft_printf_parce_funs.i
+
+# target to preprocess a source file
+ft_printf/ft_printf_parce_funs.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_parce_funs.c.i
+.PHONY : ft_printf/ft_printf_parce_funs.c.i
+
+ft_printf/ft_printf_parce_funs.s: ft_printf/ft_printf_parce_funs.c.s
+
+.PHONY : ft_printf/ft_printf_parce_funs.s
+
+# target to generate assembly for a file
+ft_printf/ft_printf_parce_funs.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_parce_funs.c.s
+.PHONY : ft_printf/ft_printf_parce_funs.c.s
+
 ft_printf/ft_printf_parse.o: ft_printf/ft_printf_parse.c.o
 
 .PHONY : ft_printf/ft_printf_parse.o
@@ -474,32 +528,32 @@ ft_printf/ft_printf_width.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_width.c.s
 .PHONY : ft_printf/ft_printf_width.c.s
 
-ft_printf/ft_printf_zj.o: ft_printf/ft_printf_zj.c.o
+ft_printf/ft_printf_zjt.o: ft_printf/ft_printf_zjt.c.o
 
-.PHONY : ft_printf/ft_printf_zj.o
+.PHONY : ft_printf/ft_printf_zjt.o
 
 # target to build an object file
-ft_printf/ft_printf_zj.c.o:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_zj.c.o
-.PHONY : ft_printf/ft_printf_zj.c.o
+ft_printf/ft_printf_zjt.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_zjt.c.o
+.PHONY : ft_printf/ft_printf_zjt.c.o
 
-ft_printf/ft_printf_zj.i: ft_printf/ft_printf_zj.c.i
+ft_printf/ft_printf_zjt.i: ft_printf/ft_printf_zjt.c.i
 
-.PHONY : ft_printf/ft_printf_zj.i
+.PHONY : ft_printf/ft_printf_zjt.i
 
 # target to preprocess a source file
-ft_printf/ft_printf_zj.c.i:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_zj.c.i
-.PHONY : ft_printf/ft_printf_zj.c.i
+ft_printf/ft_printf_zjt.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_zjt.c.i
+.PHONY : ft_printf/ft_printf_zjt.c.i
 
-ft_printf/ft_printf_zj.s: ft_printf/ft_printf_zj.c.s
+ft_printf/ft_printf_zjt.s: ft_printf/ft_printf_zjt.c.s
 
-.PHONY : ft_printf/ft_printf_zj.s
+.PHONY : ft_printf/ft_printf_zjt.s
 
 # target to generate assembly for a file
-ft_printf/ft_printf_zj.c.s:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_zj.c.s
-.PHONY : ft_printf/ft_printf_zj.c.s
+ft_printf/ft_printf_zjt.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf/ft_printf_zjt.c.s
+.PHONY : ft_printf/ft_printf_zjt.c.s
 
 libft/ft_atoi.o: libft/ft_atoi.c.o
 
@@ -2163,6 +2217,9 @@ help:
 	@echo "... ft_printf/ft_printf_0_base.o"
 	@echo "... ft_printf/ft_printf_0_base.i"
 	@echo "... ft_printf/ft_printf_0_base.s"
+	@echo "... ft_printf/ft_printf_collor.o"
+	@echo "... ft_printf/ft_printf_collor.i"
+	@echo "... ft_printf/ft_printf_collor.s"
 	@echo "... ft_printf/ft_printf_cspf.o"
 	@echo "... ft_printf/ft_printf_cspf.i"
 	@echo "... ft_printf/ft_printf_cspf.s"
@@ -2181,6 +2238,9 @@ help:
 	@echo "... ft_printf/ft_printf_mod0_b_cap_udo.o"
 	@echo "... ft_printf/ft_printf_mod0_b_cap_udo.i"
 	@echo "... ft_printf/ft_printf_mod0_b_cap_udo.s"
+	@echo "... ft_printf/ft_printf_parce_funs.o"
+	@echo "... ft_printf/ft_printf_parce_funs.i"
+	@echo "... ft_printf/ft_printf_parce_funs.s"
 	@echo "... ft_printf/ft_printf_parse.o"
 	@echo "... ft_printf/ft_printf_parse.i"
 	@echo "... ft_printf/ft_printf_parse.s"
@@ -2196,9 +2256,9 @@ help:
 	@echo "... ft_printf/ft_printf_width.o"
 	@echo "... ft_printf/ft_printf_width.i"
 	@echo "... ft_printf/ft_printf_width.s"
-	@echo "... ft_printf/ft_printf_zj.o"
-	@echo "... ft_printf/ft_printf_zj.i"
-	@echo "... ft_printf/ft_printf_zj.s"
+	@echo "... ft_printf/ft_printf_zjt.o"
+	@echo "... ft_printf/ft_printf_zjt.i"
+	@echo "... ft_printf/ft_printf_zjt.s"
 	@echo "... libft/ft_atoi.o"
 	@echo "... libft/ft_atoi.i"
 	@echo "... libft/ft_atoi.s"

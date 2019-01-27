@@ -73,7 +73,8 @@ int		ft_printf_hh(va_list *args, t_printf_mods mods, t_printf_buff *node);
 int		ft_printf_cap_l(va_list *args, t_printf_mods mods, t_printf_buff *node);
 void	ft_printf_fill_float(t_printf_buff *node, long long a_args[3],
 		t_printf_mods mods);
-int		ft_printf_0(va_list *args, t_printf_mods mods, t_printf_buff *node);
+int		ft_printf_length0(va_list *args, t_printf_mods mods,
+		t_printf_buff *node);
 char	*ft_printf_base(char conv);
 char	*ft_printf_base_prefix(t_printf_mods mods, t_printf_buff *node);
 int		ft_printf_z(va_list *args, t_printf_mods mods, t_printf_buff *node);
@@ -81,5 +82,11 @@ int		ft_printf_j(va_list *args, t_printf_mods mods, t_printf_buff *node);
 size_t	ft_printf_putstr(char *s);
 void	ft_printf_get_asterix(t_printf_mods *mods, va_list *args, char *mod,
 		char **format);
+int		ft_printf_t(va_list *args, t_printf_mods mods, t_printf_buff *node);
+int		ft_printf_conv0(va_list *args, t_printf_mods *mods, t_printf_buff *node,
+		t_printf_funs *funs);
+int		ft_printf_compare_length(int length, int modslength, int i2, int i);
+void	ft_printf_collor(t_printf_buff *node, int i, char *tail,
+		char *mod);
 
 #endif

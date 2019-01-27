@@ -12,12 +12,20 @@
 
 #include "ft_printf.h"
 
-int		ft_printf_0(va_list *args, t_printf_mods mods, t_printf_buff *node)
+int		ft_printf_length0(va_list *args, t_printf_mods mods,
+		t_printf_buff *node)
 {
 	(void)args;
 	(void)mods;
 	(void)node;
 	return (0);
+}
+
+int		ft_printf_conv0(va_list *args, t_printf_mods *mods, t_printf_buff *node,
+		t_printf_funs *funs)
+{
+	funs[mods->length](args, *mods, node);
+	return (1);
 }
 
 char	*ft_printf_base(char conv)
@@ -69,29 +77,4 @@ size_t	ft_printf_putstr(char *s)
 	}
 	write(1, s, length);
 	return (length);
-}
-
-void	ft_printf_get_asterix(t_printf_mods *mods, va_list *args,
-		char *mod, char **format)
-{
-	int		i;
-
-	(*format)++;
-	i = va_arg(*args, int);
-	if (ft_strequ(mod, "width"))
-	{
-		if (i < 0)
-		{
-			i *= -1;
-			ft_strinject(&(mods->flags), "-", 0);
-		}
-		mods->width = i;
-	}
-	else if (ft_strequ(mod, "prec"))
-	{
-		if (i >= 0)
-			mods->prec = i;
-		else
-			mods->prec_spec = 0;
-	}
 }

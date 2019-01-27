@@ -30,7 +30,7 @@ int		ft_printf_cap_u(va_list *args, t_printf_mods *mods, t_printf_buff *node,
 	if (mods->prec_spec == 0)
 		mods->prec = 1;
 	base = ft_printf_base(mods->conv);
-	node->buff = ft_itoabase_unsigned(base, va_arg(*args, ULL));
+	node->buff = ft_uitoabase(base, va_arg(*args, ULL));
 	return (1);
 }
 
@@ -56,7 +56,7 @@ int		ft_printf_cap_o(va_list *args, t_printf_mods *mods, t_printf_buff *node,
 	if (mods->prec_spec == 0)
 		mods->prec = 1;
 	base = ft_printf_base(mods->conv);
-	node->buff = ft_itoabase_unsigned(base, va_arg(*args, UL));
+	node->buff = ft_uitoabase(base, va_arg(*args, UL));
 	return (1);
 }
 
@@ -70,6 +70,6 @@ int		ft_printf_b(va_list *args, t_printf_mods *mods, t_printf_buff *node,
 	base = ft_printf_base(mods->conv);
 	if (funs[mods->length](args, *mods, node))
 		return (1);
-	node->buff = ft_itoabase_unsigned(base, va_arg(*args, UI));
+	node->buff = ft_uitoabase(base, va_arg(*args, UI));
 	return (1);
 }

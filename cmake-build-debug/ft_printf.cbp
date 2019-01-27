@@ -94,6 +94,9 @@
 		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_0_base.c">
 			<Option target="ft_printf"/>
 		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_collor.c">
+			<Option target="ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_cspf.c">
 			<Option target="ft_printf"/>
 		</Unit>
@@ -110,6 +113,9 @@
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_mod0_b_cap_udo.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_parce_funs.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_parse.c">
@@ -130,7 +136,7 @@
 		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_width.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_zj.c">
+		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_zjt.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/dderevyn/CLionProjects/ft_printf/libft/ft_atoi.c">

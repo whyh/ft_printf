@@ -26,7 +26,6 @@ LIBFT_SRCS = 	ft_atoi.c\
 				ft_bzero.c\
 				ft_strfdist.c\
 				ft_gnl.c\
-				ft_intiteri.c\
 				ft_strin.c\
 				ft_iswhitespace.c\
 				ft_isalnum.c\
@@ -46,13 +45,8 @@ LIBFT_SRCS = 	ft_atoi.c\
 				ft_memmove.c\
 				ft_memset.c\
 				ft_putchar.c\
-				ft_putchar_fd.c\
-				ft_putendl.c\
-				ft_putendl_fd.c\
 				ft_putnbr.c\
-				ft_putnbr_fd.c\
 				ft_putstr.c\
-				ft_putstr_fd.c\
 				ft_strcat.c\
 				ft_strchr.c\
 				ft_strclr.c\
@@ -63,7 +57,6 @@ LIBFT_SRCS = 	ft_atoi.c\
 				ft_strequ.c\
 				ft_strinject.c\
 				ft_striter.c\
-				ft_striteri.c\
 				ft_strjoin.c\
 				ft_strlcat.c\
 				ft_strlen.c\
@@ -98,9 +91,11 @@ PRINTF_SRCS =	ft_printf.c\
 				ft_printf_mod0_b_cap_udo.c\
 				ft_printf_0_base.c\
 				ft_printf_lhllhhl.c\
-				ft_printf_zj.c\
+				ft_printf_zjt.c\
 				ft_printf_r.c\
-				ft_printf_unicode.c
+				ft_printf_unicode.c\
+				ft_printf_parce_funs.c\
+				ft_printf_collor.c
 PRINTF_OBJS = $(PRINTF_SRCS:%.c=$(PRINTF_OBJS_DIR)/%.o)
 PRINTF_OBJS_DIR = $(OBJS_DIR)
 

@@ -5,20 +5,11 @@
 
 int main(void)
 {
-	setlocale(LC_ALL, "");
-//	printf("%C\n", L'α');
-       printf("%.d\n", 123);
-//	ft_printf("%.1S\n", L"ÊM-M-^QÊM-^XØ‰∏M-ÂM-^O™ÁM-^L´„M-M-^B");
-//	wchar_t a = '\316';
-//	wchar_t b = '\261';
-//	write(1, L'Î', 1);
-//	write(1, L"", 1);
-//	write(1, L"ą", 1);
-//	ft_printf("α");
-//	system("leaks a.out");
+//	printf("%0**d\n", 10, 7, 1);
+//       printf("string %n", );
+//	ft_printf("      |%s|  \033[nbrm    string2", "string");
+	ft_printf("[red%*...   d]~ blue", 1, 1);
 	return (1);
 }
-//basic 0
-//und 12
 //spead 22%
 //mouli 1

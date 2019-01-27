@@ -50,7 +50,7 @@ int		ft_printf_p(va_list *args, t_printf_mods *mods, t_printf_buff *node,
 {
 	if (funs[mods->length](args, *mods, node))
 		return (1);
-	node->buff = ft_itoabase_unsigned(ft_printf_base(mods->conv),
+	node->buff = ft_uitoabase(ft_printf_base(mods->conv),
 	va_arg(*args, ULL));
 	if (node->buff == NULL)
 		ft_strinject(&(node->buff), "0", 0);

@@ -15,6 +15,13 @@ CMakeFiles/ft_printf.dir/ft_printf/ft_printf_0_base.c.o: ../libft/ft_gnl_typedef
 CMakeFiles/ft_printf.dir/ft_printf/ft_printf_0_base.c.o: ../libft/libft.h
 CMakeFiles/ft_printf.dir/ft_printf/ft_printf_0_base.c.o: ../libft/libft_typedefs.h
 
+CMakeFiles/ft_printf.dir/ft_printf/ft_printf_collor.c.o: ../ft_printf/ft_printf.h
+CMakeFiles/ft_printf.dir/ft_printf/ft_printf_collor.c.o: ../ft_printf/ft_printf_collor.c
+CMakeFiles/ft_printf.dir/ft_printf/ft_printf_collor.c.o: ../ft_printf/ft_printf_typedefs.h
+CMakeFiles/ft_printf.dir/ft_printf/ft_printf_collor.c.o: ../libft/ft_gnl_typedefs.h
+CMakeFiles/ft_printf.dir/ft_printf/ft_printf_collor.c.o: ../libft/libft.h
+CMakeFiles/ft_printf.dir/ft_printf/ft_printf_collor.c.o: ../libft/libft_typedefs.h
+
 CMakeFiles/ft_printf.dir/ft_printf/ft_printf_cspf.c.o: ../ft_printf/ft_printf.h
 CMakeFiles/ft_printf.dir/ft_printf/ft_printf_cspf.c.o: ../ft_printf/ft_printf_cspf.c
 CMakeFiles/ft_printf.dir/ft_printf/ft_printf_cspf.c.o: ../ft_printf/ft_printf_typedefs.h
@@ -57,6 +64,13 @@ CMakeFiles/ft_printf.dir/ft_printf/ft_printf_mod0_b_cap_udo.c.o: ../libft/ft_gnl
 CMakeFiles/ft_printf.dir/ft_printf/ft_printf_mod0_b_cap_udo.c.o: ../libft/libft.h
 CMakeFiles/ft_printf.dir/ft_printf/ft_printf_mod0_b_cap_udo.c.o: ../libft/libft_typedefs.h
 
+CMakeFiles/ft_printf.dir/ft_printf/ft_printf_parce_funs.c.o: ../ft_printf/ft_printf.h
+CMakeFiles/ft_printf.dir/ft_printf/ft_printf_parce_funs.c.o: ../ft_printf/ft_printf_parce_funs.c
+CMakeFiles/ft_printf.dir/ft_printf/ft_printf_parce_funs.c.o: ../ft_printf/ft_printf_typedefs.h
+CMakeFiles/ft_printf.dir/ft_printf/ft_printf_parce_funs.c.o: ../libft/ft_gnl_typedefs.h
+CMakeFiles/ft_printf.dir/ft_printf/ft_printf_parce_funs.c.o: ../libft/libft.h
+CMakeFiles/ft_printf.dir/ft_printf/ft_printf_parce_funs.c.o: ../libft/libft_typedefs.h
+
 CMakeFiles/ft_printf.dir/ft_printf/ft_printf_parse.c.o: ../ft_printf/ft_printf.h
 CMakeFiles/ft_printf.dir/ft_printf/ft_printf_parse.c.o: ../ft_printf/ft_printf_parse.c
 CMakeFiles/ft_printf.dir/ft_printf/ft_printf_parse.c.o: ../ft_printf/ft_printf_typedefs.h
@@ -92,12 +106,12 @@ CMakeFiles/ft_printf.dir/ft_printf/ft_printf_width.c.o: ../libft/ft_gnl_typedefs
 CMakeFiles/ft_printf.dir/ft_printf/ft_printf_width.c.o: ../libft/libft.h
 CMakeFiles/ft_printf.dir/ft_printf/ft_printf_width.c.o: ../libft/libft_typedefs.h
 
-CMakeFiles/ft_printf.dir/ft_printf/ft_printf_zj.c.o: ../ft_printf/ft_printf.h
-CMakeFiles/ft_printf.dir/ft_printf/ft_printf_zj.c.o: ../ft_printf/ft_printf_typedefs.h
-CMakeFiles/ft_printf.dir/ft_printf/ft_printf_zj.c.o: ../ft_printf/ft_printf_zj.c
-CMakeFiles/ft_printf.dir/ft_printf/ft_printf_zj.c.o: ../libft/ft_gnl_typedefs.h
-CMakeFiles/ft_printf.dir/ft_printf/ft_printf_zj.c.o: ../libft/libft.h
-CMakeFiles/ft_printf.dir/ft_printf/ft_printf_zj.c.o: ../libft/libft_typedefs.h
+CMakeFiles/ft_printf.dir/ft_printf/ft_printf_zjt.c.o: ../ft_printf/ft_printf.h
+CMakeFiles/ft_printf.dir/ft_printf/ft_printf_zjt.c.o: ../ft_printf/ft_printf_typedefs.h
+CMakeFiles/ft_printf.dir/ft_printf/ft_printf_zjt.c.o: ../ft_printf/ft_printf_zjt.c
+CMakeFiles/ft_printf.dir/ft_printf/ft_printf_zjt.c.o: ../libft/ft_gnl_typedefs.h
+CMakeFiles/ft_printf.dir/ft_printf/ft_printf_zjt.c.o: ../libft/libft.h
+CMakeFiles/ft_printf.dir/ft_printf/ft_printf_zjt.c.o: ../libft/libft_typedefs.h
 
 CMakeFiles/ft_printf.dir/libft/ft_atoi.c.o: ../libft/ft_atoi.c
 CMakeFiles/ft_printf.dir/libft/ft_atoi.c.o: ../libft/ft_gnl_typedefs.h

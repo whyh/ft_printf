@@ -21,13 +21,3 @@ char	*ft_strndup(const char *s1, size_t size)
 	s2 = ft_strncpy(s2, s1, size);
 	return (s2);
 }
-
-wchar_t	*ft_wstrndup(const wchar_t *s1, size_t size)
-{
-	wchar_t	*s2;
-
-	if (!(s2 = ft_wstrnew(size)))
-		return (NULL);
-	s2 = ft_wstrncpy(s2, s1, size);
-	return (s2);
-}

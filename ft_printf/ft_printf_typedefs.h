@@ -15,8 +15,8 @@
 
 # define PRINTF_FLAGS "+ #"
 # define PRINTF_PASIVE_FLAGS "-0"
-# define PRINTF_LENGTH1 "lhLjzq"
-# define PRINTF_LENGTH2 "lh"
+# define PRINTF_LENGTH1 "htzljqL"
+# define PRINTF_LENGTH2 "hl"
 # define PRINTF_SN "dDi"
 # define PRINTF_FLOAT "fF"
 # define PRINTF_STR "sSr"
@@ -25,8 +25,9 @@
 # define PRINTF_NDEC "boOxX"
 # define PRINTF_USN "uU"
 # define PRINTF_CAPL "ucsd"
+# define PRINTF_PARCE_CONST ".*$m"
 # define PRINTF_MOD0 "%"
-# define PRINTF_MOD3 "\03"
+# define PRINTF_MOD3 "\003"
 
 typedef struct				s_printf_buff
 {

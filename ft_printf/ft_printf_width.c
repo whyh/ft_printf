@@ -65,7 +65,7 @@ void		ft_printf_width(t_printf_mods mods, t_printf_buff *node)
 	length = (int)ft_strlen(node->buff);
 	if (length >= mods.width)
 		return ;
-	if (ft_strin(mods.flags, '-'))
+	if (mods.flags && ft_strin(mods.flags, '-'))
 		ft_printf_width_minus(mods, node, length);
 	else if (ft_printf_zero(mods))
 		ft_printf_width_zero(mods, node, length);

@@ -95,7 +95,7 @@ char		*ft_itoabase(char *set, long long nb)
 	return (str);
 }
 
-char		*ft_itoabase_unsigned(char *set, unsigned long long nb)
+char		*ft_uitoabase(char *set, unsigned long long nb)
 {
 	char	*str;
 	int		base;
