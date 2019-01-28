@@ -16,6 +16,10 @@ stddef.h
 ft_printf_typedefs.h
 /Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_typedefs.h
 
+/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_0_base.c
+ft_printf.h
+/Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf.h
+
 /Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf_typedefs.h
 
 /Users/dderevyn/CLionProjects/ft_printf/libft/ft_gnl_typedefs.h
@@ -45,6 +49,4 @@ ft_printf/ft_printf.h
 /Users/dderevyn/CLionProjects/ft_printf/ft_printf/ft_printf.h
 stdio.h
 -
-locale.h
-/Users/dderevyn/CLionProjects/ft_printf/locale.h
 

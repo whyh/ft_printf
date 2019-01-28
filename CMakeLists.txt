@@ -29,6 +29,8 @@ add_executable(ft_printf ${LIBFT}
         ft_printf/ft_printf_0_base.c
         ft_printf/ft_printf_zjt.c
         ft_printf/ft_printf_r.c
-        ft_printf/ft_printf_unicode.c ft_printf/ft_printf_parce_funs.c ft_printf/ft_printf_collor.c)
+        ft_printf/ft_printf_unicode.c
+        ft_printf/ft_printf_parce_funs.c
+        ft_printf/ft_printf_collor.c)
 
 link_libraries(libft/libft.a)

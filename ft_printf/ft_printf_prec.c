@@ -98,8 +98,8 @@ static void	ft_printf_prec_float(t_printf_mods mods, t_printf_buff *node)
 		length = 0;
 	if (length < mods.prec)
 	{
-		tmp = ft_strnew((size_t)(mods.prec - length));
-		ft_memset(tmp, '0', (size_t)(mods.prec - length));
+		tmp = ft_strnew((size_t)(mods.prec - length - 1));
+		ft_memset(tmp, '0', (size_t)(mods.prec - length - 1));
 		tmp2 = ft_strjoin(node->buff, tmp);
 		ft_strdel(&(node->buff));
 		ft_strdel(&tmp);

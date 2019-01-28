@@ -44,8 +44,12 @@ char	*ft_printf_base(char conv)
 
 char	*ft_printf_base_prefix(t_printf_mods mods, t_printf_buff *node)
 {
-	if ((mods.conv == 'X' || mods.conv == 'x')
-	&& ((node->buff[0] == '0' && node->buff[1] == '\0') || mods.prec == 0))
+	int	i;
+
+	i = 0;
+	while (node->buff[i] == '0')
+		++i;
+	if ((mods.conv == 'X' || mods.conv == 'x') && node->buff[i] == '\0')
 		return (NULL);
 	if ((mods.conv == 'o' || mods.conv == 'O' || mods.conv == 'b')
 	&& node->buff[0] == '0')

@@ -133,8 +133,6 @@ CMakeFiles/ft_printf.dir/libft/ft_gnl.c.o
  /Users/dderevyn/CLionProjects/ft_printf/libft/ft_gnl_typedefs.h
  /Users/dderevyn/CLionProjects/ft_printf/libft/libft.h
  /Users/dderevyn/CLionProjects/ft_printf/libft/libft_typedefs.h
-CMakeFiles/ft_printf.dir/libft/ft_intiteri.c.o
- /Users/dderevyn/CLionProjects/ft_printf/libft/ft_intiteri.c
 CMakeFiles/ft_printf.dir/libft/ft_isalnum.c.o
  /Users/dderevyn/CLionProjects/ft_printf/libft/ft_gnl_typedefs.h
  /Users/dderevyn/CLionProjects/ft_printf/libft/ft_isalnum.c
@@ -210,39 +208,14 @@ CMakeFiles/ft_printf.dir/libft/ft_putchar.c.o
  /Users/dderevyn/CLionProjects/ft_printf/libft/ft_putchar.c
  /Users/dderevyn/CLionProjects/ft_printf/libft/libft.h
  /Users/dderevyn/CLionProjects/ft_printf/libft/libft_typedefs.h
-CMakeFiles/ft_printf.dir/libft/ft_putchar_fd.c.o
- /Users/dderevyn/CLionProjects/ft_printf/libft/ft_gnl_typedefs.h
- /Users/dderevyn/CLionProjects/ft_printf/libft/ft_putchar_fd.c
- /Users/dderevyn/CLionProjects/ft_printf/libft/libft.h
- /Users/dderevyn/CLionProjects/ft_printf/libft/libft_typedefs.h
-CMakeFiles/ft_printf.dir/libft/ft_putendl.c.o
- /Users/dderevyn/CLionProjects/ft_printf/libft/ft_gnl_typedefs.h
- /Users/dderevyn/CLionProjects/ft_printf/libft/ft_putendl.c
- /Users/dderevyn/CLionProjects/ft_printf/libft/libft.h
- /Users/dderevyn/CLionProjects/ft_printf/libft/libft_typedefs.h
-CMakeFiles/ft_printf.dir/libft/ft_putendl_fd.c.o
- /Users/dderevyn/CLionProjects/ft_printf/libft/ft_gnl_typedefs.h
- /Users/dderevyn/CLionProjects/ft_printf/libft/ft_putendl_fd.c
- /Users/dderevyn/CLionProjects/ft_printf/libft/libft.h
- /Users/dderevyn/CLionProjects/ft_printf/libft/libft_typedefs.h
 CMakeFiles/ft_printf.dir/libft/ft_putnbr.c.o
  /Users/dderevyn/CLionProjects/ft_printf/libft/ft_gnl_typedefs.h
  /Users/dderevyn/CLionProjects/ft_printf/libft/ft_putnbr.c
  /Users/dderevyn/CLionProjects/ft_printf/libft/libft.h
  /Users/dderevyn/CLionProjects/ft_printf/libft/libft_typedefs.h
-CMakeFiles/ft_printf.dir/libft/ft_putnbr_fd.c.o
- /Users/dderevyn/CLionProjects/ft_printf/libft/ft_gnl_typedefs.h
- /Users/dderevyn/CLionProjects/ft_printf/libft/ft_putnbr_fd.c
- /Users/dderevyn/CLionProjects/ft_printf/libft/libft.h
- /Users/dderevyn/CLionProjects/ft_printf/libft/libft_typedefs.h
 CMakeFiles/ft_printf.dir/libft/ft_putstr.c.o
  /Users/dderevyn/CLionProjects/ft_printf/libft/ft_gnl_typedefs.h
  /Users/dderevyn/CLionProjects/ft_printf/libft/ft_putstr.c
- /Users/dderevyn/CLionProjects/ft_printf/libft/libft.h
- /Users/dderevyn/CLionProjects/ft_printf/libft/libft_typedefs.h
-CMakeFiles/ft_printf.dir/libft/ft_putstr_fd.c.o
- /Users/dderevyn/CLionProjects/ft_printf/libft/ft_gnl_typedefs.h
- /Users/dderevyn/CLionProjects/ft_printf/libft/ft_putstr_fd.c
  /Users/dderevyn/CLionProjects/ft_printf/libft/libft.h
  /Users/dderevyn/CLionProjects/ft_printf/libft/libft_typedefs.h
 CMakeFiles/ft_printf.dir/libft/ft_strcat.c.o
@@ -297,11 +270,6 @@ CMakeFiles/ft_printf.dir/libft/ft_strinject.c.o
 CMakeFiles/ft_printf.dir/libft/ft_striter.c.o
  /Users/dderevyn/CLionProjects/ft_printf/libft/ft_gnl_typedefs.h
  /Users/dderevyn/CLionProjects/ft_printf/libft/ft_striter.c
- /Users/dderevyn/CLionProjects/ft_printf/libft/libft.h
- /Users/dderevyn/CLionProjects/ft_printf/libft/libft_typedefs.h
-CMakeFiles/ft_printf.dir/libft/ft_striteri.c.o
- /Users/dderevyn/CLionProjects/ft_printf/libft/ft_gnl_typedefs.h
- /Users/dderevyn/CLionProjects/ft_printf/libft/ft_striteri.c
  /Users/dderevyn/CLionProjects/ft_printf/libft/libft.h
  /Users/dderevyn/CLionProjects/ft_printf/libft/libft_typedefs.h
 CMakeFiles/ft_printf.dir/libft/ft_strjoin.c.o

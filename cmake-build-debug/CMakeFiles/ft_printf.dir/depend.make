@@ -133,8 +133,6 @@ CMakeFiles/ft_printf.dir/libft/ft_gnl.c.o: ../libft/ft_gnl_typedefs.h
 CMakeFiles/ft_printf.dir/libft/ft_gnl.c.o: ../libft/libft.h
 CMakeFiles/ft_printf.dir/libft/ft_gnl.c.o: ../libft/libft_typedefs.h
 
-CMakeFiles/ft_printf.dir/libft/ft_intiteri.c.o: ../libft/ft_intiteri.c
-
 CMakeFiles/ft_printf.dir/libft/ft_isalnum.c.o: ../libft/ft_gnl_typedefs.h
 CMakeFiles/ft_printf.dir/libft/ft_isalnum.c.o: ../libft/ft_isalnum.c
 CMakeFiles/ft_printf.dir/libft/ft_isalnum.c.o: ../libft/libft.h
@@ -210,40 +208,15 @@ CMakeFiles/ft_printf.dir/libft/ft_putchar.c.o: ../libft/ft_putchar.c
 CMakeFiles/ft_printf.dir/libft/ft_putchar.c.o: ../libft/libft.h
 CMakeFiles/ft_printf.dir/libft/ft_putchar.c.o: ../libft/libft_typedefs.h
 
-CMakeFiles/ft_printf.dir/libft/ft_putchar_fd.c.o: ../libft/ft_gnl_typedefs.h
-CMakeFiles/ft_printf.dir/libft/ft_putchar_fd.c.o: ../libft/ft_putchar_fd.c
-CMakeFiles/ft_printf.dir/libft/ft_putchar_fd.c.o: ../libft/libft.h
-CMakeFiles/ft_printf.dir/libft/ft_putchar_fd.c.o: ../libft/libft_typedefs.h
-
-CMakeFiles/ft_printf.dir/libft/ft_putendl.c.o: ../libft/ft_gnl_typedefs.h
-CMakeFiles/ft_printf.dir/libft/ft_putendl.c.o: ../libft/ft_putendl.c
-CMakeFiles/ft_printf.dir/libft/ft_putendl.c.o: ../libft/libft.h
-CMakeFiles/ft_printf.dir/libft/ft_putendl.c.o: ../libft/libft_typedefs.h
-
-CMakeFiles/ft_printf.dir/libft/ft_putendl_fd.c.o: ../libft/ft_gnl_typedefs.h
-CMakeFiles/ft_printf.dir/libft/ft_putendl_fd.c.o: ../libft/ft_putendl_fd.c
-CMakeFiles/ft_printf.dir/libft/ft_putendl_fd.c.o: ../libft/libft.h
-CMakeFiles/ft_printf.dir/libft/ft_putendl_fd.c.o: ../libft/libft_typedefs.h
-
 CMakeFiles/ft_printf.dir/libft/ft_putnbr.c.o: ../libft/ft_gnl_typedefs.h
 CMakeFiles/ft_printf.dir/libft/ft_putnbr.c.o: ../libft/ft_putnbr.c
 CMakeFiles/ft_printf.dir/libft/ft_putnbr.c.o: ../libft/libft.h
 CMakeFiles/ft_printf.dir/libft/ft_putnbr.c.o: ../libft/libft_typedefs.h
 
-CMakeFiles/ft_printf.dir/libft/ft_putnbr_fd.c.o: ../libft/ft_gnl_typedefs.h
-CMakeFiles/ft_printf.dir/libft/ft_putnbr_fd.c.o: ../libft/ft_putnbr_fd.c
-CMakeFiles/ft_printf.dir/libft/ft_putnbr_fd.c.o: ../libft/libft.h
-CMakeFiles/ft_printf.dir/libft/ft_putnbr_fd.c.o: ../libft/libft_typedefs.h
-
 CMakeFiles/ft_printf.dir/libft/ft_putstr.c.o: ../libft/ft_gnl_typedefs.h
 CMakeFiles/ft_printf.dir/libft/ft_putstr.c.o: ../libft/ft_putstr.c
 CMakeFiles/ft_printf.dir/libft/ft_putstr.c.o: ../libft/libft.h
 CMakeFiles/ft_printf.dir/libft/ft_putstr.c.o: ../libft/libft_typedefs.h
-
-CMakeFiles/ft_printf.dir/libft/ft_putstr_fd.c.o: ../libft/ft_gnl_typedefs.h
-CMakeFiles/ft_printf.dir/libft/ft_putstr_fd.c.o: ../libft/ft_putstr_fd.c
-CMakeFiles/ft_printf.dir/libft/ft_putstr_fd.c.o: ../libft/libft.h
-CMakeFiles/ft_printf.dir/libft/ft_putstr_fd.c.o: ../libft/libft_typedefs.h
 
 CMakeFiles/ft_printf.dir/libft/ft_strcat.c.o: ../libft/ft_gnl_typedefs.h
 CMakeFiles/ft_printf.dir/libft/ft_strcat.c.o: ../libft/ft_strcat.c
@@ -298,11 +271,6 @@ CMakeFiles/ft_printf.dir/libft/ft_striter.c.o: ../libft/ft_gnl_typedefs.h
 CMakeFiles/ft_printf.dir/libft/ft_striter.c.o: ../libft/ft_striter.c
 CMakeFiles/ft_printf.dir/libft/ft_striter.c.o: ../libft/libft.h
 CMakeFiles/ft_printf.dir/libft/ft_striter.c.o: ../libft/libft_typedefs.h
-
-CMakeFiles/ft_printf.dir/libft/ft_striteri.c.o: ../libft/ft_gnl_typedefs.h
-CMakeFiles/ft_printf.dir/libft/ft_striteri.c.o: ../libft/ft_striteri.c
-CMakeFiles/ft_printf.dir/libft/ft_striteri.c.o: ../libft/libft.h
-CMakeFiles/ft_printf.dir/libft/ft_striteri.c.o: ../libft/libft_typedefs.h
 
 CMakeFiles/ft_printf.dir/libft/ft_strjoin.c.o: ../libft/ft_gnl_typedefs.h
 CMakeFiles/ft_printf.dir/libft/ft_strjoin.c.o: ../libft/ft_strjoin.c

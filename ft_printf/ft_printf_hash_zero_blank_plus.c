@@ -18,7 +18,7 @@ int	ft_printf_plus(va_list *args, t_printf_mods mods, t_printf_buff *node)
 	char	*tmp;
 
 	(void)args;
-	if (!ft_strin(PRINTF_SN, mods.conv))
+	if (!ft_strin(PRINTF_SN, mods.conv) && !ft_strin(PRINTF_FLOAT, mods.conv))
 		return (1);
 	i = 0;
 	while (node->buff[i] != '\0' && node->buff[i] != '-'
@@ -66,7 +66,7 @@ int	ft_printf_hash(va_list *args, t_printf_mods mods, t_printf_buff *node)
 		ft_strinject(&(node->buff), ft_printf_base_prefix(mods, node), i);
 	}
 	else if (ft_strin(PRINTF_FLOAT, mods.conv) && !ft_strin(node->buff, '.'))
-		ft_strinject(&(node->buff), ".", ft_strlen(node->buff) - 1);
+		ft_strinject(&(node->buff), ".", ft_strlen(node->buff));
 	return (1);
 }
 
