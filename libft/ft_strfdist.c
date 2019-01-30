@@ -18,6 +18,8 @@ size_t	ft_strfdist(char *str, char *obj)
 	int		i;
 
 	distance = 0;
+	if (str == NULL)
+		return (0);
 	while (str[distance])
 	{
 		i = 0;
@@ -37,6 +39,8 @@ size_t	ft_strfdistc(char *str, char obj)
 	size_t	distance;
 
 	distance = 0;
+	if (str == NULL)
+		return (0);
 	while (str[distance])
 	{
 		if (str[distance] == obj)

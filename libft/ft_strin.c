@@ -10,8 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_strin(char *str, char c)
 {
+	if (str == NULL)
+		return (0);
 	while (*str)
 	{
 		if (*str == c)
