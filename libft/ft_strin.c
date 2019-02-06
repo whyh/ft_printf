@@ -6,21 +6,22 @@
 /*   By: dderevyn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 14:32:07 by dderevyn          #+#    #+#             */
-/*   Updated: 2018/11/16 14:39:31 by dderevyn         ###   ########.fr       */
+/*   Updated: 2019/02/06 19:55:25 by dderevyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strin(char *str, char c)
+int	ft_strin(const char *str, char c)
 {
-	if (str == NULL)
-		return (0);
-	while (*str)
+	size_t	i;
+
+	i = 0;
+	while (str[i])
 	{
-		if (*str == c)
+		if (str[i] == c)
 			return (1);
-		++str;
+		++i;
 	}
 	return (0);
 }

@@ -16,8 +16,8 @@ void	*ft_memalloc(size_t size)
 {
 	void	*area;
 
-	area = (void*)malloc(size * sizeof(*area));
+	area = (void*)malloc(sizeof(*area) * size);
 	if (area != NULL)
-		ft_memset(area, 0, size);
+		ft_memset(area, '\0', size);
 	return (area);
 }

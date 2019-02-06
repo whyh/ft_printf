@@ -12,10 +12,11 @@
 
 #include "libft.h"
 
-void	ft_strdel(char **as)
+void	ft_strdel(char **ptr)
 {
-	if (as == NULL || *as == NULL)
-		return ;
-	free(*as);
-	*as = NULL;
+	if (ptr != NULL && *ptr != NULL)
+	{
+		free(*ptr);
+		*ptr = NULL;
+	}
 }

@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_strninject.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dderevyn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/26 16:42:14 by dderevyn          #+#    #+#             */
-/*   Updated: 2018/11/19 21:36:11 by dderevyn         ###   ########.fr       */
+/*   Created: 2019/01/16 18:03:22 by dderevyn          #+#    #+#             */
+/*   Updated: 2019/02/06 18:36:26 by dderevyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr(int n)
+void	ft_strninject(char **dst, const char *src, long pos, long n)
 {
-	if (n == INT_MIN)
-	{
-		ft_putstr("-2147483648");
-		return ;
-	}
+	char	*head;
+	char	*tail;
+	char	*inj;
+	char	*tmp;
+
+	if (pos < 0)
+		pos = ft_strlen(*dst);
 	if (n < 0)
-	{
-		ft_putchar('-');
-		n = -n;
-	}
-	if (n > 9)
-	{
-		ft_putnbr(n / 10);
-		ft_putchar(n % 10 + '0');
-	}
-	if (n < 10)
-		ft_putchar(n + '0');
+		n = ft_strlen(src);
+	head = ft_strndup(*dst, pos);
+	tail = ft_strndup(&((*dst)[pos]), -1);
+	inj = ft_strndup(src, n);
+	ft_strdel(dst);
+	tmp = ft_strjoin(head, inj);
+	ft_strdel(&head);
+	ft_strdel(&inj);
+	*dst = ft_strjoin(tmp, tail);
+	ft_strdel(&tmp);
+	ft_strdel(&tail);
 }

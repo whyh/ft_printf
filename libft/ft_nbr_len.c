@@ -1,16 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_nbr_len.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dderevyn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/30 12:08:52 by dderevyn          #+#    #+#             */
-/*   Updated: 2018/10/30 12:21:00 by dderevyn         ###   ########.fr       */
+/*   Created: 2019/02/06 18:57:30 by dderevyn          #+#    #+#             */
+/*   Updated: 2019/02/06 19:07:19 by dderevyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int c)
+#include "libft.h"
+
+size_t	ft_nbr_len(long long nbr, size_t base)
 {
-	return (31 < c && c < 127 ? 1 : 0);
+	size_t	len;
+
+	len = 1;
+	if (nbr < 0)
+	{
+		nbr = -nbr;
+		++len;
+	}
+	while (nbr / base > 0)
+	{
+		nbr = nbr / base;
+		++len;
+	}
+	return (len);
+}
+
+size_t	ft_unbr_len(unsigned long long nbr, size_t base)
+{
+	size_t	len;
+
+	len = 1;
+	while (nbr / base > 0)
+	{
+		nbr = nbr / base;
+		++len;
+	}
+	return (len);
 }

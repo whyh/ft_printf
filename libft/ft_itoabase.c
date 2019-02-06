@@ -6,36 +6,11 @@
 /*   By: dderevyn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 14:33:00 by dderevyn          #+#    #+#             */
-/*   Updated: 2018/11/16 14:42:39 by dderevyn         ###   ########.fr       */
+/*   Updated: 2019/02/06 19:07:19 by dderevyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int	static_ft_size(int size, long long nb, int base)
-{
-	if (nb < 0)
-	{
-		nb = -nb;
-		++size;
-	}
-	while (nb / base > 0)
-	{
-		nb = nb / base;
-		++size;
-	}
-	return (size);
-}
-
-static int	static_ft_size_unsigned(int size, unsigned long long nb, int base)
-{
-	while (nb / base > 0)
-	{
-		nb = nb / base;
-		++size;
-	}
-	return (size);
-}
 
 static int	static_ft_fdset(char *set)
 {
@@ -45,7 +20,8 @@ static int	static_ft_fdset(char *set)
 	i = 0;
 	while (set[i])
 	{
-		if (!ft_isalnum((int)set[i]))
+		if (!ft_strin(ALPHABET, set[i]) && !ft_strin(ALPHABET_CAP, set[i])
+		&& !ft_strin(DEC, set[i]))
 			return (1);
 		++i;
 	}
@@ -54,11 +30,8 @@ static int	static_ft_fdset(char *set)
 	{
 		i2 = i + 1;
 		while (set[i2])
-		{
-			if (set[i] == set[i2])
+			if (set[i] == set[i2++])
 				return (1);
-			++i2;
-		}
 		++i;
 	}
 	if (i < 2)
@@ -66,54 +39,54 @@ static int	static_ft_fdset(char *set)
 	return (0);
 }
 
-char		*ft_itoabase(char *set, long long nb)
+char		*ft_itoabase(char *set, long long nbr)
 {
 	char	*str;
-	int		base;
-	int		size;
+	size_t	base;
+	size_t	len;
 
 	if (!set || static_ft_fdset(set))
 		return (NULL);
-	base = (int)ft_strlen(set);
-	if (nb == 0)
-		return (ft_strdup("0"));
-	if (nb + 1 == -9223372036854775807)
-		return (ft_strdup("-9223372036854775808"));
-	size = static_ft_size(1, nb, base);
-	if (!(str = ft_strnew((size_t)size)))
+	base = ft_strlen(set);
+	if (nbr == 0)
+		return (ft_strndup("0", -1));
+	if (nbr + 1 == -LLONG_MAX)
+		return (ft_strndup(LLONG_MIN_S, -1));
+	len = ft_nbr_len(nbr, base);
+	if (!(str = ft_strnew(len)))
 		return (NULL);
-	if (nb < 0)
+	if (nbr < 0)
 	{
-		nb = -nb;
+		nbr = -nbr;
 		str[0] = '-';
 	}
-	while (nb != 0 && size-- > 0)
+	while (nbr != 0 && len-- > 0)
 	{
-		str[size] = set[nb % base];
-		nb = nb / base;
+		str[len] = set[nbr % base];
+		nbr = nbr / base;
 	}
 	return (str);
 }
 
-char		*ft_uitoabase(char *set, unsigned long long nb)
+char		*ft_uitoabase(char *set, unsigned long long nbr)
 {
 	char	*str;
-	int		base;
-	int		size;
+	size_t	base;
+	size_t	len;
 
 	if (!set || static_ft_fdset(set))
 		return (NULL);
-	base = (int)ft_strlen(set);
-	if (nb == 0)
-		return (ft_strdup("0"));
-	size = static_ft_size_unsigned(1, nb, base);
-	if (!(str = ft_strnew((size_t)size)))
+	base = ft_strlen(set);
+	if (nbr == 0)
+		return (ft_strndup("0", -1));
+	len = ft_unbr_len(nbr, base);
+	if (!(str = ft_strnew(len)))
 		return (NULL);
-	while (nb != 0)
+	while (len > 0)
 	{
-		--size;
-		str[size] = set[nb % base];
-		nb = nb / base;
+		--len;
+		str[len] = set[nbr % base];
+		nbr = nbr / base;
 	}
 	return (str);
 }

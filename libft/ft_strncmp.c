@@ -5,19 +5,34 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dderevyn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/06 16:26:17 by dderevyn          #+#    #+#             */
-/*   Updated: 2018/11/27 16:55:27 by dderevyn         ###   ########.fr       */
+/*   Created: 2018/10/30 19:47:29 by dderevyn          #+#    #+#             */
+/*   Updated: 2019/02/06 19:26:19 by dderevyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_strncmp(char const *str1, char const *str2, long n)
 {
-	if (n == 0)
+	size_t	len1;
+
+	if (n == 0 || (str1 == NULL && str2 == NULL))
+		return (1);
+	if (str1 == NULL || str2 == NULL)
 		return (0);
-	while (*s1 && *s2 && --n > 0)
-		if (*s1++ != *s2++)
-			return ((unsigned char)*(s1 - 1) - (unsigned char)*(s2 - 1));
-	return ((unsigned char)*s1 - (unsigned char)*s2);
+	if (n < 0)
+	{
+		len1 = ft_strlen(str1);
+		if (len1 != ft_strlen(str2))
+			return (0);
+		n = (int)len1;
+	}
+	--n;
+	while (n >= 0 && str1[n] && str2[n])
+	{
+		if (str1[n] != str2[n])
+			return (0);
+		--n;
+	}
+	return (1);
 }

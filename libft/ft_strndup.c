@@ -6,18 +6,20 @@
 /*   By: dderevyn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/29 15:25:16 by dderevyn          #+#    #+#             */
-/*   Updated: 2018/11/28 19:30:17 by dderevyn         ###   ########.fr       */
+/*   Updated: 2019/02/06 18:05:37 by dderevyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strndup(const char *s1, size_t size)
+char	*ft_strndup(const char *src, long n)
 {
-	char	*s2;
+	char	*dst;
 
-	if (!(s2 = ft_strnew(size)))
+	if (n < 0)
+		n = ft_strlen(src);
+	if (!(dst = ft_strnew((size_t)n)))
 		return (NULL);
-	s2 = ft_strncpy(s2, s1, size);
-	return (s2);
+	dst = ft_strncpy(dst, src, n);
+	return (dst);
 }
