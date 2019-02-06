@@ -22,7 +22,7 @@ int	ft_printf_plus(va_list *args, t_printf_mods mods, t_printf_buff *node)
 		return (1);
 	i = 0;
 	while (node->buff[i] != '\0' && node->buff[i] != '-'
-	&& !ft_isdigit(node->buff[i]))
+	&& !ft_strin(DEC, node->buff[i]))
 		++i;
 	if (node->buff[i] == '-')
 		return (1);
@@ -42,7 +42,7 @@ int	ft_printf_blank(va_list *args, t_printf_mods mods, t_printf_buff *node)
 		return (1);
 	i = 0;
 	while (node->buff[i] != '\0' && node->buff[i] != '-'
-	&& !ft_isdigit(node->buff[i]))
+	&& ft_strin(DEC, node->buff[i]))
 		++i;
 	if (node->buff[i] == '-')
 		return (1);
@@ -54,7 +54,7 @@ int	ft_printf_blank(va_list *args, t_printf_mods mods, t_printf_buff *node)
 
 int	ft_printf_hash(va_list *args, t_printf_mods mods, t_printf_buff *node)
 {
-	size_t	i;
+	int i;
 
 	(void)args;
 	if (ft_strin(PRINTF_NDEC, mods.conv))
@@ -63,10 +63,10 @@ int	ft_printf_hash(va_list *args, t_printf_mods mods, t_printf_buff *node)
 		while (node->buff[i]
 		&& !ft_strin(ft_printf_base(mods.conv), node->buff[i]))
 			++i;
-		ft_strinject(&(node->buff), ft_printf_base_prefix(mods, node), i);
+		ft_strninject(&(node->buff), ft_printf_base_prefix(mods, node), i, -1);
 	}
 	else if (ft_strin(PRINTF_FLOAT, mods.conv) && !ft_strin(node->buff, '.'))
-		ft_strinject(&(node->buff), ".", ft_strlen(node->buff));
+		ft_strninject(&(node->buff), ".", -1, -1);
 	return (1);
 }
 

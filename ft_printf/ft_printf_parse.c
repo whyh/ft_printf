@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_parce.c                                  :+:      :+:    :+:   */
+/*   ft_printf_parse.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dderevyn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/16 18:03:22 by dderevyn          #+#    #+#             */
-/*   Updated: 2019/01/16 18:03:22 by dderevyn         ###   ########.fr       */
+/*   Updated: 2019/02/06 20:37:21 by dderevyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	ft_printf_parse_flags(char **format, t_printf_mods *mods)
 		if (!mods->flags || !ft_strin(mods->flags, **format))
 		{
 			tmp = ft_strndup(*format, 1);
-			ft_strinject(&(mods->flags), tmp, 0);
+			ft_strninject(&(mods->flags), tmp, 0, -1);
 			ft_strdel(&tmp);
 			++i;
 		}
@@ -45,10 +45,10 @@ void	ft_printf_parse_f_width(char **format, t_printf_mods *mods,
 		return ;
 	if (**format == '*')
 		ft_printf_get_asterix(mods, args, "width", format);
-	if (ft_isdigit(**format))
+	if (ft_strin(DEC, **format))
 	{
 		width = 0;
-		while (ft_isdigit(**format))
+		while (ft_strin(DEC, **format))
 		{
 			width = width * 10 + **format - '0';
 			(*format)++;
@@ -70,10 +70,10 @@ void	ft_printf_parce_prec(char **format, t_printf_mods *mods, va_list *args)
 	(*format)++;
 	if (**format == '*')
 		ft_printf_get_asterix(mods, args, "prec", format);
-	if (ft_isdigit(**format))
+	if (ft_strin(DEC, **format))
 	{
 		prec = 0;
-		while (ft_isdigit(**format))
+		while (ft_strin(DEC, **format))
 		{
 			prec = prec * 10 + **format - '0';
 			(*format)++;
@@ -119,7 +119,7 @@ int		ft_printf_parce_conv(char **format, t_printf_mods *mods)
 	(*format)++;
 	if (mods->length == 'l' && ft_strin(PRINTF_CAPL, mods->conv))
 	{
-		mods->conv = (char)ft_toupper(mods->conv);
+		mods->conv -= ASCII_SHIFT;
 		mods->length = '\0';
 	}
 	return (1);

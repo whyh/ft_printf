@@ -19,17 +19,17 @@ void	ft_printf_get_asterix(t_printf_mods *mods, va_list *args,
 
 	(*format)++;
 	i = va_arg(*args, int);
-	if (ft_strequ(mod, "width"))
+	if (ft_strncmp(mod, "width", -1))
 	{
 		if (i < 0)
 		{
 			i *= -1;
 			if (!mods->flags || !ft_strin(mods->flags, '-'))
-				ft_strinject(&(mods->flags), "-", 0);
+				ft_strninject(&(mods->flags), "-", 0, -1);
 		}
 		mods->width = i;
 	}
-	else if (ft_strequ(mod, "prec"))
+	else if (ft_strncmp(mod, "prec", -1))
 	{
 		if (i >= 0)
 			mods->prec = i;

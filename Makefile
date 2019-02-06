@@ -6,7 +6,7 @@
 #    By: dderevyn <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/21 20:30:28 by dderevyn          #+#    #+#              #
-#    Updated: 2019/01/21 20:30:33 by dderevyn         ###   ########.fr        #
+#    Updated: 2019/02/06 20:50:55 by dderevyn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,61 +19,26 @@ RM = /bin/rm -rf
 
 LIBFT_PATH = libft/
 LIBFT_INCS =	libft.h\
-				libft_typedefs.h\
-				ft_gnl_typedefs.h
-LIBFT_SRCS = 	ft_atoi.c\
-				ft_atoibase.c\
-				ft_bzero.c\
-				ft_strfdist.c\
-				ft_gnl.c\
-				ft_strin.c\
-				ft_iswhitespace.c\
-				ft_isalnum.c\
-				ft_isalpha.c\
-				ft_isascii.c\
-				ft_isdigit.c\
-				ft_isprint.c\
+				libft_typedefs.h
+LIBFT_SRCS = 	ft_atoibase.c\
 				ft_itoabase.c\
-				ft_linelen.c\
-				ft_linetrim.c\
 				ft_memalloc.c\
-				ft_memccpy.c\
-				ft_memchr.c\
 				ft_memcmp.c\
-				ft_memcpy.c\
 				ft_memdel.c\
 				ft_memmove.c\
 				ft_memset.c\
-				ft_putchar.c\
-				ft_putnbr.c\
-				ft_putstr.c\
-				ft_strcat.c\
+				ft_nbr_len.c\
 				ft_strchr.c\
-				ft_strclr.c\
-				ft_strcmp.c\
-				ft_strcpy.c\
 				ft_strdel.c\
-				ft_strdup.c\
-				ft_strequ.c\
-				ft_strinject.c\
-				ft_striter.c\
+				ft_strin.c\
 				ft_strjoin.c\
-				ft_strlcat.c\
 				ft_strlen.c\
-				ft_strncat.c\
-				ft_strncmp.c\
 				ft_strncpy.c\
 				ft_strndup.c\
-				ft_strnequ.c\
+				ft_strncmp.c\
 				ft_strnew.c\
-				ft_strnstr.c\
-				ft_strrchr.c\
-				ft_strsplit.c\
-				ft_strstr.c\
-				ft_strsub.c\
-				ft_strtrim.c\
-				ft_tolower.c\
-				ft_toupper.c
+				ft_strninject.c\
+				ft_strrchr.c
 LIBFT_OBJS = $(LIBFT_SRCS:%.c=$(LIBFT_OBJS_DIR)/%.o)
 LIBFT_OBJS_DIR = $(OBJS_DIR)
 
@@ -95,7 +60,7 @@ PRINTF_SRCS =	ft_printf.c\
 				ft_printf_r.c\
 				ft_printf_unicode.c\
 				ft_printf_parce_funs.c\
-				ft_printf_collor.c
+				ft_printf_color.c
 PRINTF_OBJS = $(PRINTF_SRCS:%.c=$(PRINTF_OBJS_DIR)/%.o)
 PRINTF_OBJS_DIR = $(OBJS_DIR)
 

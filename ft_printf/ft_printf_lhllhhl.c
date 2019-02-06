@@ -78,7 +78,7 @@ int	ft_printf_cap_l(va_list *args, t_printf_mods mods, t_printf_buff *node)
 	{
 		arg = va_arg(*args, LD);
 		if (arg < 0 && (arg = -arg))
-			node->buff = ft_strdup("-");
+			node->buff = ft_strndup("-", -1);
 		a_args[0] = (LL)arg;
 		arg -= a_args[0];
 		arg = (arg * 1000000000000000000);

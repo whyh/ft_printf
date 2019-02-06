@@ -6,7 +6,7 @@
 /*   By: dderevyn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/16 18:03:22 by dderevyn          #+#    #+#             */
-/*   Updated: 2019/01/16 18:03:22 by dderevyn         ###   ########.fr       */
+/*   Updated: 2019/02/06 21:31:23 by dderevyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,14 +50,17 @@ int			ft_printf_r(va_list *args, t_printf_mods *mods, t_printf_buff *node,
 	arg = va_arg(*args, char *);
 	if (arg == NULL)
 	{
-		node->buff = ft_strdup("(null)");
+		node->buff = ft_strndup("(null)", -1);
 		return (0);
 	}
-	i = -1;
+	i = 0;
 	i2 = 0;
-	while (arg[++i])
+	while (arg[i])
+	{
 		if ((arg[i] > 0 && arg[i] < ' ') || (arg[i] == 127))
 			++i2;
+		++i;
+	}
 	node->buff = ft_strnew((size_t)i + i2);
 	ft_printf_unprint(node, arg);
 	return (1);

@@ -22,7 +22,7 @@ int		ft_printf_c(va_list *args, t_printf_mods *mods, t_printf_buff *node,
 	arg = (char)va_arg(*args, int);
 	if (arg == '\0')
 	{
-		node->buff = ft_strdup(PRINTF_MOD3);
+		node->buff = ft_strndup(PRINTF_MOD3, -1);
 		return (1);
 	}
 	node->buff = ft_strnew(1);
@@ -39,9 +39,9 @@ int		ft_printf_s(va_list *args, t_printf_mods *mods, t_printf_buff *node,
 		return (1);
 	arg = va_arg(*args, char *);
 	if (arg == NULL)
-		node->buff = ft_strdup("(null)");
+		node->buff = ft_strndup("(null)", -1);
 	else
-		node->buff = ft_strdup(arg);
+		node->buff = ft_strndup(arg, -1);
 	return (1);
 }
 
@@ -53,8 +53,8 @@ int		ft_printf_p(va_list *args, t_printf_mods *mods, t_printf_buff *node,
 	node->buff = ft_uitoabase(ft_printf_base(mods->conv),
 	va_arg(*args, ULL));
 	if (node->buff == NULL)
-		ft_strinject(&(node->buff), "0", 0);
-	ft_strinject(&(node->buff), ft_printf_base_prefix(*mods, node), 0);
+		ft_strninject(&(node->buff), "0", 0, -1);
+	ft_strninject(&(node->buff), ft_printf_base_prefix(*mods, node), 0, -1);
 	return (1);
 }
 
@@ -98,7 +98,7 @@ int		ft_printf_f(va_list *args, t_printf_mods *mods, t_printf_buff *buff,
 		return (1);
 	arg = va_arg(*args, D);
 	if (arg < 0 && (arg = -arg))
-		buff->buff = ft_strdup("-");
+		buff->buff = ft_strndup("-", -1);
 	a_args[0] = (LL)arg;
 	arg -= a_args[0];
 	arg = (arg * 1000000000000000000);

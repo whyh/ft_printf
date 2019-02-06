@@ -6,7 +6,7 @@
 /*   By: dderevyn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/16 18:03:22 by dderevyn          #+#    #+#             */
-/*   Updated: 2019/01/16 18:03:22 by dderevyn         ###   ########.fr       */
+/*   Updated: 2019/02/06 20:38:54 by dderevyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,11 @@ static void	ft_printf_width_zero(t_printf_mods mods, t_printf_buff *node,
 	if (ft_strin(PRINTF_CHR, mods.conv) || ft_strin(PRINTF_STR, mods.conv)
 	|| ft_strin(PRINTF_MOD0, mods.conv))
 		length = -1;
-	while (ft_isdigit(node->buff[length]) || (ft_strin(PRINTF_NDEC, mods.conv)
+	while (ft_strin(DEC, node->buff[length])
+	|| (ft_strin(PRINTF_NDEC, mods.conv)
 	&& ft_strin(ft_printf_base(mods.conv), node->buff[length])))
 		--length;
-	ft_strinject(&node->buff, prefix, (size_t)(length) + 1);
+	ft_strninject(&node->buff, prefix, (size_t)(length) + 1, -1);
 	ft_strdel(&prefix);
 }
 

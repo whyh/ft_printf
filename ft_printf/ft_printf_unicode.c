@@ -80,7 +80,7 @@ int				ft_printf_cap_c(va_list *args, t_printf_mods *mods,
 	arg = va_arg(*args, wchar_t);
 	if (arg == '\0')
 	{
-		node->buff = ft_strdup(PRINTF_MOD3);
+		node->buff = ft_strndup(PRINTF_MOD3, -1);
 		return (1);
 	}
 	size = ft_printf_bit_size(arg);
@@ -106,13 +106,13 @@ int				ft_printf_cap_s(va_list *args, t_printf_mods *mods,
 	i[3] = 0;
 	i[4] = 0;
 	if (arg == NULL)
-		node->buff = ft_strdup("(null)");
+		node->buff = ft_strndup("(null)", -1);
 	while (arg != NULL && arg[i[3]])
 	{
 		size = ft_printf_bit_size(arg[i[3]]);
 		tmp = ft_strnew(size);
 		ft_printf_wchar((unsigned int)arg[i[3]], i, size, &tmp);
-		ft_strinject(&(node->buff), tmp, (i[3])++ + i[4]);
+		ft_strninject(&(node->buff), tmp, (i[3])++ + i[4], -1);
 		i[4] += size - 1;
 		ft_strdel(&tmp);
 	}
