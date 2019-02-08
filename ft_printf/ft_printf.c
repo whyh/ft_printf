@@ -6,7 +6,7 @@
 /*   By: dderevyn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/16 18:03:22 by dderevyn          #+#    #+#             */
-/*   Updated: 2019/02/06 21:14:14 by dderevyn         ###   ########.fr       */
+/*   Updated: 2019/02/08 12:28:17 by dderevyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ static int	ft_printf_parce_loop(char **format, va_list *args,
 	mods->length = 0;
 	mods->conv = '\0';
 	mods->flags = NULL;
+	mods->mod0 = '\0';
 	while (ft_strin(PRINTF_FLAGS, **format) || ft_strin(DEC, **format)
 	|| ft_strin(PRINTF_LENGTH1, **format) || ft_strin(PRINTF_LENGTH2, **format)
 	|| ft_strin(PRINTF_PASIVE_FLAGS, **format)
@@ -106,9 +107,9 @@ static int	ft_printf_iter(char **format, va_list *args, t_printf_buff *node)
 			new_node = ft_memalloc(sizeof(t_printf_buff *) * 1);
 			new_node->next = NULL;
 			node->next = new_node;
-			size = ft_strchr_i(*format, PRINTF_MOD0_C);
+			size = ft_strchr_i(*format, PRINTF_MOD0[0]);
 			new_node->buff = ft_strndup(*format, size);
-			if (ft_strin(new_node->buff, '[') || ft_strin(new_node->buff, ']'))
+			if (ft_strin(new_node->buff, '[') || ft_strin(new_node->buff, '~'))
 				ft_printf_collor(new_node, -1, NULL, NULL);
 			(*format) += size;
 		}

@@ -24,7 +24,7 @@ size_t	ft_nbr_len(long long nbr, size_t base)
 	}
 	while (nbr / base > 0)
 	{
-		nbr = nbr / base;
+		nbr = (LL)(nbr / base);
 		++len;
 	}
 	return (len);

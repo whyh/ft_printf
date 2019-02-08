@@ -18,16 +18,16 @@ char	*ft_strrchr(const char *str, char c)
 	unsigned char		uc;
 	size_t				i;
 
-	ustr = (UC*)str;
+	ustr = (CUC*)str;
 	uc = (UC)c;
-	i = ft_strlen(str);
+	i = ft_strlen((char*)ustr);
 	while (i > 0)
 	{
-		if (str[i] == c)
-			return ((char*)(&(str[i])));
+		if (ustr[i] == uc)
+			return ((char*)(&(ustr[i])));
 		--i;
 	}
-	if (str[i] == c)
-		return ((char*)(&(str[i])));
+	if (ustr[i] == uc)
+		return ((char*)(&(ustr[i])));
 	return (NULL);
 }

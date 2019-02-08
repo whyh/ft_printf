@@ -104,8 +104,6 @@ void	ft_printf_parce_length(char **format, t_printf_mods *mods)
 
 int		ft_printf_parce_conv(char **format, t_printf_mods *mods)
 {
-	if (**format == '\0')
-		return (0);
 	if (!ft_strin(PRINTF_SN, **format) && !ft_strin(PRINTF_USN, **format)
 	&& !ft_strin(PRINTF_CHR, **format) && !ft_strin(PRINTF_NDEC, **format)
 	&& !ft_strin(PRINTF_FLOAT, **format) && !ft_strin(PRINTF_PTR, **format)
@@ -116,7 +114,8 @@ int		ft_printf_parce_conv(char **format, t_printf_mods *mods)
 	}
 	else
 		mods->conv = **format;
-	(*format)++;
+	if (**format != '\0')
+		(*format)++;
 	if (mods->length == 'l' && ft_strin(PRINTF_CAPL, mods->conv))
 	{
 		mods->conv -= ASCII_SHIFT;

@@ -27,7 +27,6 @@
 # define PRINTF_CAPL "ucsd"
 # define PRINTF_PARCE_CONST ".*"
 # define PRINTF_MOD0 "%"
-# define PRINTF_MOD0_C '%'
 # define PRINTF_MOD3 "\003"
 
 typedef struct				s_printf_buff

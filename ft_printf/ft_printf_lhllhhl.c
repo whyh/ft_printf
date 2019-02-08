@@ -20,7 +20,7 @@ int	ft_printf_l(va_list *args, t_printf_mods mods, t_printf_buff *node)
 	if (ft_strin(PRINTF_NDEC, mods.conv) || ft_strin(PRINTF_USN, mods.conv))
 		node->buff = ft_uitoabase(base, va_arg(*args, UL));
 	else if (ft_strin(PRINTF_FLOAT, mods.conv)
-	|| ft_strin(PRINTF_SN, mods.conv))
+	|| ft_strin(PRINTF_SN, mods.conv) || ft_strin(PRINTF_MOD0, mods.conv))
 		node->buff = ft_itoabase(base, va_arg(*args, L));
 	else
 		return (0);
@@ -34,7 +34,7 @@ int	ft_printf_h(va_list *args, t_printf_mods mods, t_printf_buff *node)
 	base = ft_printf_base(mods.conv);
 	if (ft_strin(PRINTF_USN, mods.conv) || ft_strin(PRINTF_NDEC, mods.conv))
 		node->buff = ft_uitoabase(base, (US)va_arg(*args, int));
-	else if (ft_strin(PRINTF_SN, mods.conv))
+	else if (ft_strin(PRINTF_SN, mods.conv) || ft_strin(PRINTF_MOD0, mods.conv))
 		node->buff = ft_itoabase(base, (S)va_arg(*args, int));
 	else
 		return (0);
@@ -48,7 +48,7 @@ int	ft_printf_ll(va_list *args, t_printf_mods mods, t_printf_buff *node)
 	base = ft_printf_base(mods.conv);
 	if (ft_strin(PRINTF_NDEC, mods.conv) || ft_strin(PRINTF_USN, mods.conv))
 		node->buff = ft_uitoabase(base, va_arg(*args, ULL));
-	else if (ft_strin(PRINTF_SN, mods.conv))
+	else if (ft_strin(PRINTF_SN, mods.conv) || ft_strin(PRINTF_MOD0, mods.conv))
 		node->buff = ft_itoabase(base, va_arg(*args, LL));
 	else
 		return (0);
@@ -62,7 +62,7 @@ int	ft_printf_hh(va_list *args, t_printf_mods mods, t_printf_buff *node)
 	base = ft_printf_base(mods.conv);
 	if (ft_strin(PRINTF_NDEC, mods.conv) || ft_strin(PRINTF_USN, mods.conv))
 		node->buff = ft_uitoabase(base, (UC)va_arg(*args, int));
-	else if (ft_strin(PRINTF_SN, mods.conv))
+	else if (ft_strin(PRINTF_SN, mods.conv) || ft_strin(PRINTF_MOD0, mods.conv))
 		node->buff = ft_itoabase(base, (char)va_arg(*args, int));
 	else
 		return (0);
@@ -74,7 +74,7 @@ int	ft_printf_cap_l(va_list *args, t_printf_mods mods, t_printf_buff *node)
 	long double	arg;
 	long long	a_args[3];
 
-	if (ft_strin(PRINTF_FLOAT, mods.conv))
+	if (ft_strin(PRINTF_FLOAT, mods.conv) || ft_strin(PRINTF_MOD0, mods.conv))
 	{
 		arg = va_arg(*args, LD);
 		if (arg < 0 && (arg = -arg))

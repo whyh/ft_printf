@@ -63,7 +63,7 @@ char		*ft_itoabase(char *set, long long nbr)
 	while (nbr != 0 && len-- > 0)
 	{
 		str[len] = set[nbr % base];
-		nbr = nbr / base;
+		nbr = (LL)(nbr / base);
 	}
 	return (str);
 }

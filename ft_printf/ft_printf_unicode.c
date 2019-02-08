@@ -6,7 +6,7 @@
 /*   By: dderevyn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/16 18:03:22 by dderevyn          #+#    #+#             */
-/*   Updated: 2019/01/16 18:03:22 by dderevyn         ###   ########.fr       */
+/*   Updated: 2019/02/08 13:05:22 by dderevyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static size_t	ft_printf_bit_size(wchar_t arg)
 	unsigned int	ui;
 	size_t			i;
 
-	ui = (unsigned int)arg;
+	ui = (UI)arg;
 	i = 0;
 	while (ui > 0)
 	{
@@ -36,7 +36,7 @@ static size_t	ft_printf_bit_size(wchar_t arg)
 		return (0);
 }
 
-static void		ft_printf_wchar(unsigned int ui, unsigned int mask[3],
+static void		ft_printf_wchar(unsigned int ui, const unsigned int *mask,
 				size_t size, char **tmp)
 {
 	if (size == 1)
@@ -65,18 +65,28 @@ static void		ft_printf_wchar(unsigned int ui, unsigned int mask[3],
 	(*tmp)[size] = '\0';
 }
 
+static void		ft_printf_compose_mask(unsigned **mask)
+{
+	if (mask && *mask == NULL)
+	{
+		*mask = ft_memalloc(sizeof(unsigned) * 3);
+		(*mask)[0] = 49280;
+		(*mask)[1] = 14712960;
+		(*mask)[2] = 4034953344;
+	}
+	else if (mask)
+		ft_memdel((void**)mask);
+}
+
 int				ft_printf_cap_c(va_list *args, t_printf_mods *mods,
 				t_printf_buff *node, t_printf_funs *funs)
 {
-	wchar_t			arg;
-	size_t			size;
-	unsigned int	mask[3];
+	wchar_t		arg;
+	size_t		size;
+	unsigned	*mask;
 
 	(void)funs;
 	(void)mods;
-	mask[0] = 49280;
-	mask[1] = 14712960;
-	mask[2] = 4034953344;
 	arg = va_arg(*args, wchar_t);
 	if (arg == '\0')
 	{
@@ -85,36 +95,39 @@ int				ft_printf_cap_c(va_list *args, t_printf_mods *mods,
 	}
 	size = ft_printf_bit_size(arg);
 	node->buff = ft_strnew(size);
-	ft_printf_wchar((unsigned int)arg, mask, size, &(node->buff));
+	mask = NULL;
+	ft_printf_compose_mask(&mask);
+	ft_printf_wchar((UI)arg, mask, size, &(node->buff));
+	ft_printf_compose_mask(&mask);
 	return (1);
 }
 
 int				ft_printf_cap_s(va_list *args, t_printf_mods *mods,
 				t_printf_buff *node, t_printf_funs *funs)
 {
-	wchar_t			*arg;
-	char			*tmp;
-	size_t			size;
-	unsigned int	i[5];
+	wchar_t		*arg;
+	char		*tmp;
+	size_t		size;
+	unsigned	*mask;
+	size_t 		i[2];
 
 	(void)funs;
 	(void)mods;
-	i[0] = 49280;
-	i[1] = 14712960;
-	i[2] = 4034953344;
-	arg = va_arg(*args, wchar_t*);
-	i[3] = 0;
-	i[4] = 0;
-	if (arg == NULL)
+	if (!(arg = va_arg(*args, wchar_t*)))
 		node->buff = ft_strndup("(null)", -1);
-	while (arg != NULL && arg[i[3]])
+	i[0] = 0;
+	i[1] = 0;
+	mask = NULL;
+	ft_printf_compose_mask(&mask);
+	while (arg != NULL && arg[i[0]])
 	{
-		size = ft_printf_bit_size(arg[i[3]]);
+		size = ft_printf_bit_size(arg[i[0]]);
 		tmp = ft_strnew(size);
-		ft_printf_wchar((unsigned int)arg[i[3]], i, size, &tmp);
-		ft_strninject(&(node->buff), tmp, (i[3])++ + i[4], -1);
-		i[4] += size - 1;
+		ft_printf_wchar((UI)arg[i[0]], mask, size, &tmp);
+		ft_strninject(&(node->buff), tmp, (i[0])++ + i[1], -1);
 		ft_strdel(&tmp);
+		i[1] += size - 1;
 	}
+	ft_printf_compose_mask(&mask);
 	return (1);
 }

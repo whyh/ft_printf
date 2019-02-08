@@ -58,7 +58,7 @@ long long			ft_atoibase(char *set, char *str)
 	}
 	while (*str && ft_strin(set, *str))
 	{
-		nbr = (long long)(nbr * base + *str - '0');
+		nbr = (LL)(nbr * base + *str - '0');
 		++str;
 	}
 	return (sign * nbr);
