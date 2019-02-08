@@ -6,19 +6,15 @@
 /*   By: dderevyn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 16:10:22 by dderevyn          #+#    #+#             */
-/*   Updated: 2019/02/06 20:19:02 by dderevyn         ###   ########.fr       */
+/*   Updated: 2019/02/08 14:22:55 by dderevyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include <fcntl.h>
-# include <sys/types.h>
-# include <sys/stat.h>
 # include "libft_typedefs.h"
 
 long long	ft_atoibase(char *set, char *str);
