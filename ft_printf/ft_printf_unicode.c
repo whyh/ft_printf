@@ -109,7 +109,7 @@ int				ft_printf_cap_s(va_list *args, t_printf_mods *mods,
 	char		*tmp;
 	size_t		size;
 	unsigned	*mask;
-	size_t 		i[2];
+	size_t		i[2];
 
 	(void)funs;
 	(void)mods;
