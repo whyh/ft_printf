@@ -16,7 +16,7 @@ void     va_end(va_list ap);
 ```
 ## ft_printf supports
 - conversions `i` `d` `o` `u` `x` `f` `c` `s` `p` `%`
-- as well as `D` `F` `X` `S` `C`
+- as well as `D` `F` `X` `S` `C` `O` `U`
 - flags `+` `space` `-` `#`
 - length modifiers `hh` `h` `l` `ll` `L` `q` `j` `z` `t`
 - precision and field width. Value of which replaced with `*` will be taken from arguments list, just as in ptintf.
