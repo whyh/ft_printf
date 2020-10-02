@@ -63,7 +63,8 @@ ft_printf("wrong order of specification %hh3ll17S", L"¥ ¢ £ ¤ ¶");
 ![](.screenshots/wrong_order_spec.png)
 
 ## Benefits
-My implementation is easily modifiable. To add new functionality, just include corresponding symbol to [categorizing defines](ft_printf/ft_printf_typedefs.h) and corresponding function pointer to [array of functions](ft_printf/ft_printf_fill_funs.c)
+My implementation is easily modifiable. To add new functionality, just add a symbol to the [categorizing defines](ft_printf/ft_printf_typedefs.h) and corresponding function pointer to the [array of functions](ft_printf/ft_printf_fill_funs.c)
+
 
 Those are the only places, that have to be modified to add new functionality (conversions, length modifiers, and flags)
 
