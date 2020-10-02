@@ -23,7 +23,7 @@ void     va_end(va_list ap);
 - length modifiers `hh` `h` `l` `ll` `L` `q` `j` `z` `t`
 - precision and field width. Value of which replaced with `*` will be taken from arguments list, just as in `ptintf`
 
-### Additionally created my own conversion
+### Additionally, created my own conversion
 - `r` requires (char*), outputs it with unprintable symbols
 ```c
 ft_printf("the true symbols of %r", " new line \012, tab \011, start of text \002");
