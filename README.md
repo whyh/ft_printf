@@ -1,11 +1,12 @@
 # ft_printf
 ### My implementation of printf function in C
 
-An objective was to replicate functional of
+Replicated functional of
 ```c
 int printf(const char *format, ...);
 ```
-using just few basic standard library functions:
+
+Using just 6 standard C library functions
 ```c
 ssize_t  write(int fd, const void *buf, size_t count);
 void     *malloc(size_t size);
@@ -14,14 +15,15 @@ void     va_start(va_list ap, argN);
 argT     va_arg(va_list ap, argT);
 void     va_end(va_list ap);
 ```
+
 ## ft_printf supports
 - conversions `i` `d` `o` `u` `x` `f` `c` `s` `p` `%`
-- as well as `D` `F` `X` `S` `C` `O` `U`
+- more conversions `D` `F` `X` `S` `C` `O` `U`
 - flags `+` `space` `-` `#`
 - length modifiers `hh` `h` `l` `ll` `L` `q` `j` `z` `t`
-- precision and field width. Value of which replaced with `*` will be taken from arguments list, just as in ptintf.
+- precision and field width. Value of which replaced with `*` will be taken from arguments list, just as in `ptintf`
 
-### Besides, I've added few useful conversions
+### Additionally created my own conversion
 - `r` requires (char*), outputs it with unprintable symbols
 ```c
 ft_printf("the true symbols of %r", " new line \012, tab \011, start of text \002");
@@ -32,17 +34,17 @@ ft_printf("the true symbols of %r", " new line \012, tab \011, start of text \00
 ft_printf("5 in binary looks like %#b, and 9999 is definitely %b", 5, 9999);
 ```
 ![](.screenshots/binary_conv.png)
-### And basic text formatting
+### Implemented text colouring
 - available colors `white` `black` `red` `green` `yellow` `blue` `magenta` `cyan`
 - available text transformations `bold`
 
-Use `[color` `[colorb` `[trsf` to specify text, background color and text transformation accordingly. Color should not be followed by lowercase letters. Specify the end of formatting with `~]` .
+Use `[color` `[colorb` `[trsf` to specify text, background color and text transformation accordingly. Color should not be followed by lowercase letters. Specify the end of formatting with `~]`
 ```c
 ft_printf("[blueb[white Ukra~][yellowb[whiteIne  ~][green,[red[bold %s~]", "yep");
 ```
 ![](.screenshots/color_mod.png)
 
-### ft_printf also mimics printf undefined behavior cases, such as
+### ft_printf mimics printf undefined behavior cases, such as
 ```c
 ft_printf("unspecified conversion %ll", 123);
 ```
@@ -61,15 +63,12 @@ ft_printf("wrong order of specification %hh3ll17S", L"¥ ¢ £ ¤ ¶");
 ![](.screenshots/wrong_order_spec.png)
 
 ## Benefits
-My implementation is easily modifiable. To add new functionality, just include corresponding symbol to [categorizing defines](ft_printf/ft_printf_typedefs.h) and corresponding function pointer to [array of functions](ft_printf/ft_printf_fill_funs.c). Whole project is purposely build on these defines, so if you decided to add ~~or remove~~ functionality, that's the only thing you'll have to deal with. This way not just conversions, but also length modifiers and flags can be changed.
+My implementation is easily modifiable. To add new functionality, just include corresponding symbol to [categorizing defines](ft_printf/ft_printf_typedefs.h) and corresponding function pointer to [array of functions](ft_printf/ft_printf_fill_funs.c)
+
+Those are the only places, that have to be modified to add new functionality (conversions, length modifiers, and flags)
 
 ## How to use
-`libftprintf.a` library is in the root of repository, download and link it with ` clang main.c libftprintf.a ` or ` clang main.c -Lpath/ -lftprintf ` where `path/` is path to libftprintf. I've also included all required CLion files, to make it easier for ones familiar with this IDE to modify and debug.`ft_printf` is compatible with MacOS(10.12 and later), Ubuntu(18.04.1 and later). May work on other OS/versions, but I don't guarantee it will.
+Download and run with` clang main.c libftprintf.a `
 
-#### notation
-libft is self made library, based on the next standard library functions:
-```c
-void     *malloc(size_t size);
-void     free(void *ptr);
-```
-so it does not violate assignment requirements to use it.
+
+Tested for compatibility with MacOS 10.12, Ubuntu 18.04.1
